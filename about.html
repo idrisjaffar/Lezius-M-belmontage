@@ -3,52 +3,51 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Über mich – Raphael Lezius | Möbelmontage München & Augsburg</title>
-    <meta name="description" content="Raphael Lezius – Ihr Experte für präzise Möbel- und Küchenmontage in München und Augsburg. 8+ Jahre Erfahrung, 1.200+ Montagen, 5,0 ★ Bewertung und 12 Monate Garantie." />
+    <title>Raphael Lezius – Ihr Montage-Experte aus Augsburg</title>
+    <meta name="description" content="Professionelle Möbelmontage in Augsburg & München. Präzision, Transparenz & 1 Jahr Garantie. Jetzt unverbindlich anfragen." />
     <meta name="theme-color" content="#0B0A09" id="themeColorMeta" />
-    <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="Über mich – Raphael Lezius" />
-    <meta property="og:description" content="Präzision ist kein Zufall – sie ist Methode. Lernen Sie den Mann hinter Lezius Möbelmontage kennen." />
+    <meta property="og:title" content="Raphael Lezius – Ihr Montage-Experte" />
+    <meta property="og:description" content="Präzise, staubfrei, garantiert. Ihre Möbel – meine Verantwortung." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://raphael-lezius.de/about.html" />
-    <meta property="og:locale" content="de_DE" />
+    <meta name="robots" content="index, follow" />
 
+    <!-- JSON-LD Schema: LocalBusiness -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Raphael Lezius",
-        "jobTitle": "Möbelmonteur & Inhaber",
-        "worksFor": {
+        {
+            "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "Lezius Möbelmontage",
-            "url": "https://raphael-lezius.de",
-            "telephone": "+49 160 8194018",
+            "name": "Raphael Lezius – Premium Montage",
+            "image": "https://raphael-lezius.de/assets/images/raphael-lezius-logo-front.webp",
+            "telephone": "+491608194018",
             "email": "info@raphael-lezius.de",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Augsburg",
-                "addressRegion": "Bayern",
                 "addressCountry": "DE"
             },
             "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "5.0",
-                "reviewCount": "110",
-                "bestRating": "5"
-            }
-        },
-        "url": "https://raphael-lezius.de/about.html",
-        "description": "Professioneller Möbel- und Systemmonteur mit Fokus auf USM Haller, Premium-Küchen und Designmöbel in München und Augsburg."
-    }
+                "reviewCount": "110"
+            },
+            "priceRange": "€€",
+            "openingHours": "Mo-Fr 08:00-20:00, Sa 09:00-16:00"
+        }
     </script>
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet" />
+
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
     <style>
+        /* ============================================================
+           CSS VARIABLES & RESET (Dark & Light Mode)
+           ============================================================ */
         :root {
             --rl-primary: #D4A574;
             --rl-primary-hover: #E4B98A;
@@ -60,6 +59,9 @@
             --rl-accent-hover: #F09B78;
             --rl-amber: #F5B942;
             --rl-amber-hover: #FFCF5C;
+            --rl-teal: #2A9D8F;
+            --rl-coral: #F4A261;
+            --rl-sage: #A8C4B8;
             --rl-bg: #0B0A09;
             --rl-surface: #141210;
             --rl-card: #1A1815;
@@ -74,6 +76,7 @@
             --rl-shadow-glow-secondary: 0 8px 32px rgba(46, 154, 140, 0.25);
             --rl-shadow-glow-accent: 0 8px 32px rgba(232, 141, 106, 0.25);
             --rl-shadow-glow-amber: 0 8px 32px rgba(245, 185, 66, 0.25);
+            --rl-gradient-primary: linear-gradient(135deg, #D4A574, #B88A55);
             --rl-gradient-cta: linear-gradient(135deg, #E88D6A 0%, #D4A574 50%, #2E9A8C 100%);
             --rl-gradient-cta-hover: linear-gradient(135deg, #F09B78 0%, #E4B98A 50%, #3DB09F 100%);
             --rl-gradient-gold: linear-gradient(135deg, #F5B942, #D4A574);
@@ -87,7 +90,7 @@
             --font-head: 'Space Grotesk', system-ui, sans-serif;
             --font-body: 'Inter', system-ui, sans-serif;
             --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-            --font-signature: 'Caveat', cursive;
+            --font-signature: 'Mrs Saint Delafield', cursive;
 
             --ease: cubic-bezier(0.22, 1, 0.36, 1);
             --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -104,7 +107,6 @@
             --rl-accent: #D97A54;
             --rl-accent-hover: #E88D6A;
             --rl-amber: #D9A335;
-            --rl-amber-hover: #F5B942;
             --rl-bg: #F9F7F2;
             --rl-surface: #FFFFFF;
             --rl-card: #FFFFFF;
@@ -120,22 +122,13 @@
             --rl-shadow-glow-accent: 0 8px 32px rgba(217, 122, 84, 0.20);
             --rl-shadow-glow-amber: 0 8px 32px rgba(217, 163, 53, 0.20);
             --rl-gradient-cta: linear-gradient(135deg, #D97A54 0%, #A67C4A 50%, #2A7A6E 100%);
-            --rl-gradient-cta-hover: linear-gradient(135deg, #E88D6A 0%, #C08F5A 50%, #3E9587 100%);
             --rl-gradient-gold: linear-gradient(135deg, #D9A335, #A67C4A);
             --rl-gradient-multi: linear-gradient(135deg, #D97A54, #A67C4A, #2A7A6E, #D9A335);
-            --rl-gradient-subtle: linear-gradient(160deg, rgba(166, 124, 74, 0.06), transparent 70%);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
-        body {
-            background: var(--rl-bg);
-            color: var(--rl-text);
-            font-family: var(--font-body);
-            line-height: 1.65;
-            transition: background var(--transition), color var(--transition);
-            overflow-x: hidden;
-        }
+        body { background: var(--rl-bg); color: var(--rl-text); font-family: var(--font-body); line-height: 1.65; transition: background var(--transition), color var(--transition); overflow-x: hidden; }
         a { color: inherit; text-decoration: none; }
         button { font-family: inherit; border: none; background: none; cursor: pointer; color: inherit; }
         ul { list-style: none; }
@@ -145,161 +138,118 @@
         ::-webkit-scrollbar-thumb { background: var(--rl-gradient-multi); border-radius: 10px; border: 2px solid var(--rl-bg); }
 
         .container { max-width: 1180px; margin: 0 auto; padding: 0 clamp(18px, 4vw, 28px); }
-        .section { padding: clamp(70px, 9vw, 100px) 0; }
-        .section-alt {
-            background: var(--rl-surface);
-            border-top: 1px solid var(--rl-border);
-            border-bottom: 1px solid var(--rl-border);
-        }
+        .section-padding { padding: clamp(70px, 9vw, 110px) 0; }
+        .gold-text { background: var(--rl-gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .gold { background: var(--rl-gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 
+        /* ============================================================
+           ANIMATIONS & REVEAL
+           ============================================================ */
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
         @keyframes pulse-dot { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.6); opacity: 0.4; } }
         @keyframes pulseRing { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(1.5); opacity: 0; } }
-        @keyframes shimmer-text { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
-        @keyframes glow-pulse { 0%, 100% { box-shadow: 0 0 20px rgba(212,165,116,0.15); } 50% { box-shadow: 0 0 40px rgba(212,165,116,0.3), 0 0 60px rgba(46,154,140,0.15); } }
         @keyframes borderFlow { 0% { background-position: 0% 0%; } 100% { background-position: 300% 0%; } }
-        @keyframes driftAurora { 0% { transform: translate(0, 0) scale(1); } 50% { transform: translate(-5vw, 10vh) scale(1.1); } 100% { transform: translate(10vw, -5vh) scale(0.9); } }
-        @keyframes pulseDot { 0%,100% { opacity:1; } 50% { opacity:.35; } }
 
-        .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.65s var(--ease), transform 0.65s var(--ease); }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.7s var(--ease); }
         .reveal.visible { opacity: 1; transform: translateY(0); }
 
-        .btn {
-            display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-            padding: 14px 28px; border-radius: 12px; font-weight: 600; font-size: 0.95rem;
-            transition: all 0.3s var(--ease); border: none; cursor: pointer; position: relative; overflow: hidden; min-height: 52px;
-        }
+        /* ============================================================
+           BUTTONS
+           ============================================================ */
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 28px; border-radius: 12px; font-weight: 600; font-size: 0.95rem; transition: all 0.3s var(--ease); cursor: pointer; min-height: 52px; position: relative; overflow: hidden; }
         .btn-primary { background: var(--rl-gradient-cta); color: #1C1917; box-shadow: var(--rl-shadow-glow); }
         .btn-primary:hover { transform: translateY(-3px) scale(1.02); box-shadow: var(--rl-shadow-glow-accent), var(--rl-shadow-glow-secondary); }
         .btn-secondary { background: var(--rl-card); border: 1px solid var(--rl-border); color: var(--rl-text); }
         .btn-secondary:hover { border-color: var(--rl-primary); color: var(--rl-primary); box-shadow: var(--rl-shadow-glow); transform: translateY(-2px); }
-        .btn-sm { padding: 10px 20px; font-size: 0.85rem; min-height: 42px; }
+        .magnetic-btn { transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1); }
 
-        .section-header { text-align: center; margin-bottom: 48px; }
-        .section-header .eyebrow {
-            display: block; font-size: 0.78rem; font-weight: 600; letter-spacing: 1.6px;
-            text-transform: uppercase; color: var(--rl-secondary); margin-bottom: 12px;
-        }
-        .section-header h2 {
-            font-family: var(--font-head); font-size: clamp(1.9rem, 3.4vw, 2.6rem);
-            font-weight: 800; letter-spacing: -0.9px; margin-bottom: 14px;
-        }
-        .section-header p { color: var(--rl-muted); max-width: 560px; margin: 0 auto; font-size: 1.05rem; }
-        .gold {
-            background: var(--rl-gradient-gold);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-        }
+        /* Section Header */
+        .section-header { text-align: center; margin-bottom: 55px; }
+        .section-header .pre { display: block; font-size: 0.78rem; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; color: var(--rl-secondary); margin-bottom: 12px; font-family: var(--font-mono); }
+        .section-header h2 { font-family: var(--font-head); font-size: clamp(2rem, 4.2vw, 3.1rem); font-weight: 800; line-height: 1.1; margin-bottom: 16px; }
+        .section-header p { color: var(--rl-muted); max-width: 620px; margin: 0 auto; font-size: 1.05rem; }
 
-        /* NAV */
-        .nav {
-            position: fixed; top: 0; left: 0; right: 0; z-index: 1000; height: var(--rl-nav-height);
-            display: flex; align-items: center; background: var(--rl-glass); backdrop-filter: blur(18px);
-            border-bottom: 1px solid var(--rl-border);
-            transition: transform 0.4s var(--ease), background 0.35s, box-shadow 0.3s;
-        }
-        .nav.hidden { transform: translateY(-100%); }
-        .nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.15); }
-        .nav-inner {
-            width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 32px);
-            display: flex; align-items: center; justify-content: space-between; height: 100%;
-        }
-        .nav-brand {
-            display: flex; align-items: center; gap: 12px;
-            font-family: var(--font-head); font-weight: 800; font-size: 1.25rem;
-            letter-spacing: -0.03em; color: var(--rl-text); white-space: nowrap;
-        }
-        .logo-mark {
-            width: 36px; height: 36px; border-radius: 10px;
-            background: var(--rl-gradient-cta); color: #1C1917;
-            font-weight: 800; font-size: 1.05rem; display: grid; place-items: center;
-            box-shadow: var(--rl-shadow-glow);
-        }
+        /* ============================================================
+           NAVIGATION (Flach)
+           ============================================================ */
+        .rl-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; height: var(--rl-nav-height); display: flex; align-items: center; background: var(--rl-glass); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border-bottom: 1px solid var(--rl-border); transition: transform 0.4s var(--ease), box-shadow 0.3s ease; }
+        .rl-nav.hidden { transform: translateY(-100%); }
+        .rl-nav.scrolled { box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15); }
+        .rl-nav__inner { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 32px); display: flex; align-items: center; justify-content: space-between; height: 100%; }
+        
+        .rl-nav__brand { display: flex; align-items: center; gap: 12px; font-family: var(--font-head); font-weight: 800; font-size: 1.25rem; letter-spacing: -0.03em; color: var(--rl-text); white-space: nowrap; }
+        .logo-mark { width: 36px; height: 36px; border-radius: 10px; background: var(--rl-gradient-cta); color: #1C1917; font-weight: 800; font-size: 1.05rem; display: grid; place-items: center; box-shadow: var(--rl-shadow-glow); }
         .brand-text { display: flex; flex-direction: column; line-height: 1.15; }
         .brand-name { font-size: 1.1rem; }
-        .brand-sub {
-            font-size: 0.65rem; font-weight: 600; letter-spacing: 0.8px;
-            text-transform: uppercase; color: var(--rl-primary);
-        }
-        .nav-links { display: flex; align-items: center; gap: 4px; }
-        .nav-link {
-            padding: 8px 16px; font-size: 0.88rem; font-weight: 500; color: var(--rl-muted);
-            border-radius: 8px; transition: all 0.25s ease; white-space: nowrap;
-            display: flex; align-items: center; min-height: 44px;
-        }
-        .nav-link:hover, .nav-link.active { color: var(--rl-text); background: rgba(212,165,116,0.06); }
-        .nav-link.active { color: var(--rl-primary); }
-        .nav-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
-        .nav-phone-link {
-            display: none; align-items: center; gap: 6px; font-size: 0.85rem;
-            color: var(--rl-muted); padding: 6px 12px; border-radius: 8px; transition: color 0.25s;
-        }
-        .nav-phone-link:hover { color: var(--rl-primary); }
-        @media (min-width: 1100px) { .nav-phone-link { display: inline-flex; } }
-        .nav-cta {
-            display: inline-flex; align-items: center; gap: 6px; padding: 8px 18px;
-            border-radius: var(--rl-radius-full); background: var(--rl-gradient-cta);
-            color: #1C1917; font-weight: 700; font-size: 0.82rem;
-            transition: all 0.3s ease; box-shadow: var(--rl-shadow-glow); min-height: 44px;
-        }
-        .nav-cta:hover { transform: scale(1.04); box-shadow: var(--rl-shadow-glow-accent), var(--rl-shadow-glow-secondary); }
-        .theme-btn {
-            width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--rl-border);
-            background: var(--rl-card); display: grid; place-items: center; color: var(--rl-muted);
-            transition: all 0.3s var(--ease); flex-shrink: 0;
-        }
-        .theme-btn:hover { border-color: var(--rl-amber); color: var(--rl-amber); transform: rotate(12deg); box-shadow: var(--rl-shadow-glow-amber); }
-        .hamburger {
-            display: none; flex-direction: column; gap: 5px; padding: 6px; cursor: pointer;
-            min-width: 44px; min-height: 44px; align-items: center; justify-content: center;
-        }
-        .hamburger span { width: 22px; height: 2px; background: var(--rl-text); border-radius: 4px; transition: 0.3s ease; }
-        .hamburger:hover span { background: var(--rl-primary); }
+        .brand-sub { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.8px; text-transform: uppercase; color: var(--rl-primary); }
+        
+        .rl-nav__links { display: flex; align-items: center; gap: 4px; }
+        .rl-nav__links a { padding: 8px 16px; font-size: 0.88rem; font-weight: 500; color: var(--rl-muted); border-radius: 8px; transition: all 0.25s ease; white-space: nowrap; display: flex; align-items: center; min-height: 44px; }
+        .rl-nav__links a:hover { color: var(--rl-text); background: rgba(212,165,116,0.06); }
+        .rl-nav__links a.active { color: var(--rl-primary); }
 
-        .nav-backdrop {
-            position: fixed; inset: 0; z-index: 998; background: rgba(0,0,0,0.5);
-            backdrop-filter: blur(4px); opacity: 0; visibility: hidden;
-            transition: opacity 0.4s ease, visibility 0.4s ease;
-        }
+        .rl-nav__actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+        .nav-cta { display: inline-flex; align-items: center; gap: 6px; padding: 8px 18px; border-radius: var(--rl-radius-full); background: var(--rl-gradient-cta); color: #1C1917; font-weight: 700; font-size: 0.82rem; transition: all 0.3s ease; box-shadow: var(--rl-shadow-glow); min-height: 44px; }
+        .nav-cta:hover { transform: scale(1.04); box-shadow: var(--rl-shadow-glow-accent); }
+        
+        .theme-toggle { width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--rl-border); background: var(--rl-card); display: grid; place-items: center; color: var(--rl-muted); transition: all 0.3s var(--ease); cursor: pointer; flex-shrink: 0;}
+        .theme-toggle:hover { border-color: var(--rl-amber); color: var(--rl-amber); transform: rotate(12deg); }
+        
+        .rl-nav__hamburger { display: none; flex-direction: column; gap: 5px; padding: 6px; background: transparent; cursor: pointer; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
+        .rl-nav__hamburger span { width: 22px; height: 2px; background: var(--rl-text); border-radius: 4px; transition: 0.3s ease; }
+        
+        .nav-backdrop { position: fixed; inset: 0; z-index: 998; background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(4px); opacity: 0; visibility: hidden; transition: 0.4s ease; }
         .nav-backdrop.active { opacity: 1; visibility: visible; }
-        .mobile-menu {
-            position: fixed; top: 0; right: 0; bottom: 0; width: 85%; max-width: 380px; z-index: 999;
-            background: var(--rl-glass); backdrop-filter: blur(24px); transform: translateX(100%);
-            transition: transform 0.4s var(--ease); overflow-y: auto;
-            box-shadow: -10px 0 40px rgba(0,0,0,0.3);
-            display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 70px 0 40px;
-        }
-        .mobile-menu.open { transform: translateX(0); }
-        .mobile-close {
-            position: absolute; top: 16px; right: 16px; width: 44px; height: 44px;
-            border-radius: 50%; background: var(--rl-card); border: 1px solid var(--rl-border);
-            color: var(--rl-text); font-size: 1.2rem; display: flex; align-items: center;
-            justify-content: center; cursor: pointer; transition: all 0.3s ease;
-        }
-        .mobile-close:hover { background: rgba(212,165,116,0.08); transform: rotate(90deg); }
-        .mobile-menu a {
-            font-size: 1.1rem; font-weight: 500; color: var(--rl-muted); transition: color 0.25s, transform 0.2s;
-            padding: 12px 0; width: 100%; text-align: center; min-height: 48px;
-            display: flex; align-items: center; justify-content: center; gap: 8px;
-        }
-        .mobile-menu a:hover { color: var(--rl-primary); transform: translateX(4px); }
-        .mobile-menu .mobile-cta {
-            width: calc(100% - 48px); margin: 16px 24px 0; background: var(--rl-gradient-cta);
-            color: #1C1917; padding: 16px 28px; border-radius: var(--rl-radius-full);
-            font-weight: 700; font-size: 0.95rem; box-shadow: var(--rl-shadow-glow);
-        }
+        
+        .rl-nav__mobile { position: fixed; top: 0; right: 0; bottom: 0; width: 85%; max-width: 380px; z-index: 999; background: var(--rl-glass); backdrop-filter: blur(24px); transform: translateX(100%); transition: transform 0.4s var(--ease); overflow-y: auto; padding: 20px 0 40px; box-shadow: -10px 0 40px rgba(0, 0, 0, 0.3); display: flex; flex-direction: column; align-items: center; gap: 4px; padding-top: 70px; }
+        .rl-nav__mobile.open { transform: translateX(0); }
+        .mobile-close { position: absolute; top: 16px; right: 16px; width: 44px; height: 44px; border-radius: 50%; background: var(--rl-card); border: 1px solid var(--rl-border); color: var(--rl-text); font-size: 1.2rem; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: 0.3s ease; }
+        .mobile-close:hover { transform: rotate(90deg); background: rgba(212, 165, 116, 0.08); }
+        .mobile-menu-inner { display: flex; flex-direction: column; align-items: center; gap: 8px; width: 100%; padding: 20px 24px; }
+        .mobile-menu-inner a { font-size: 1.1rem; font-weight: 500; color: var(--rl-muted); padding: 12px 0; width: 100%; text-align: center; min-height: 48px; display: flex; align-items: center; justify-content: center; gap: 8px; transition: 0.25s; }
+        .mobile-menu-inner a:hover { color: var(--rl-primary); transform: translateX(4px); }
+        .mobile-menu-inner .mobile-cta { width: 100%; margin-top: 8px; background: var(--rl-gradient-cta); color: #1C1917; padding: 16px 28px; border-radius: var(--rl-radius-full); font-weight: 700; box-shadow: var(--rl-shadow-glow); }
 
-        @media (max-width: 900px) {
-            .nav-links { display: none; }
-            .hamburger { display: flex; }
+        @media(max-width:900px) {
+            .rl-nav__links { display: none; }
+            .rl-nav__hamburger { display: flex; }
             .nav-cta span { display: none; }
             .nav-cta { padding: 8px 12px; min-width: 44px; }
-        }
-        @media (min-width: 901px) {
-            .mobile-menu, .nav-backdrop, .mobile-close { display: none !important; }
-            .hamburger { display: none; }
+            .rl-nav__brand { font-size: 1.05rem; }
         }
 
-        /* ABOUT HERO */
+        /* ============================================================
+           FLOATING ELEMENTS
+           ============================================================ */
+        .scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--rl-gradient-multi); z-index: 100000; width: 0%; box-shadow: var(--rl-shadow-glow); transition: width 0.1s linear; }
+        .whatsapp-float { position: fixed; bottom: 28px; right: 28px; z-index: 9999; width: 60px; height: 60px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 32px rgba(37, 211, 102, 0.35); color: #fff; font-size: 2rem; transition: 0.3s; }
+        .whatsapp-float:hover { transform: scale(1.08); box-shadow: 0 12px 40px rgba(37, 211, 102, 0.5); }
+        .whatsapp-float .pulse-ring { position: absolute; inset: -6px; border-radius: 50%; border: 2px solid rgba(37, 211, 102, 0.3); animation: pulseRing 2.2s ease-out infinite; }
+        .back-to-top { position: fixed; bottom: 28px; left: 28px; z-index: 9998; width: 44px; height: 44px; border-radius: 50%; background: rgba(46, 154, 140, 0.12); border: 1px solid rgba(46, 154, 140, 0.25); color: var(--rl-secondary); font-size: 1.2rem; display: none; align-items: center; justify-content: center; backdrop-filter: blur(8px); transition: 0.3s; cursor: pointer; }
+        .back-to-top.visible { display: flex; }
+        .back-to-top:hover { background: rgba(46, 154, 140, 0.2); transform: translateY(-3px); }
+        
+        .sticky-cta { position: fixed; bottom: 100px; right: 28px; z-index: 9998; display: none; opacity: 0; transition: opacity 0.5s, transform 0.3s; transform: translateY(20px); }
+        .sticky-cta.visible { display: block; opacity: 1; transform: translateY(0); }
+
+        .mobile-call-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 950; background: var(--rl-glass); backdrop-filter: blur(16px); border-top: 1px solid var(--rl-border); padding: 10px 12px; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+        .mobile-call-bar a { display: flex; align-items: center; justify-content: center; gap: 6px; padding: 12px 8px; border-radius: 10px; font-size: 0.82rem; font-weight: 700; min-height: 46px; }
+        .mobile-call-bar .call-btn { background: var(--rl-secondary); color: #fff; }
+        .mobile-call-bar .wa-btn { background: #25D366; color: #fff; }
+        .mobile-call-bar .inq-btn { background: var(--rl-gradient-cta); color: #1C1917; }
+        @media (max-width: 768px) { .mobile-call-bar { display: grid; } .whatsapp-float { bottom: 72px; } .back-to-top { bottom: 72px; } body { padding-bottom: 70px; } }
+
+        /* Custom Cursor */
+        .cursor-dot, .cursor-ring { position: fixed; top: 0; left: 0; border-radius: 50%; pointer-events: none; z-index: 99999; transform: translate(-50%, -50%); display: none; }
+        @media(pointer: fine) { .cursor-dot, .cursor-ring { display: block; } }
+        .cursor-dot { width: 8px; height: 8px; background: var(--rl-secondary); mix-blend-mode: difference; transition: width 0.2s, height 0.2s; }
+        .cursor-ring { width: 38px; height: 38px; border: 1.5px solid rgba(46, 154, 140, 0.45); transition: 0.35s; }
+        .cursor-dot.hovering { width: 16px; height: 16px; background: var(--rl-amber); mix-blend-mode: normal; }
+        .cursor-ring.hovering { width: 56px; height: 56px; border-color: var(--rl-amber); border-width: 2px; }
+
+        /* ============================================================
+           ABOUT PAGE SPECIFIC STYLES
+           ============================================================ */
         .about-hero {
             position: relative;
             min-height: 85vh;
@@ -324,31 +274,15 @@
             transition: filter 0.5s var(--ease);
         }
         [data-theme="light"] .hero-video { filter: saturate(1.2) contrast(1.1) brightness(1.1); }
-        .aurora-glow {
-            position: absolute; border-radius: 50%; filter: blur(100px);
-            opacity: 0.3; pointer-events: none; z-index: 1; mix-blend-mode: screen;
-        }
-        .glow-gold {
-            width: 50vw; height: 50vw; background: var(--rl-primary);
-            top: -10%; right: -10%; animation: driftAurora 20s ease-in-out infinite alternate;
-        }
-        .glow-cyan {
-            width: 60vw; height: 60vw; background: var(--rl-secondary);
-            bottom: -20%; left: -10%; animation: driftAurora 25s ease-in-out infinite alternate-reverse;
-        }
-        [data-theme="light"] .aurora-glow { opacity: 0.18; mix-blend-mode: normal; }
         .video-edge-shadow {
-            position: absolute; inset: 0; box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.35);
-            pointer-events: none; z-index: 1;
+            position: absolute; inset: 0; box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.35); pointer-events: none; z-index: 1;
         }
         .video-bottom-fade {
             position: absolute; bottom: 0; left: 0; right: 0; height: 50%; z-index: 1;
-            background: linear-gradient(to top, rgba(11, 10, 9, 0.5) 10%, transparent 100%);
-            pointer-events: none;
+            background: linear-gradient(to top, rgba(11, 10, 9, 0.5) 10%, transparent 100%); pointer-events: none;
         }
-        [data-theme="light"] .video-bottom-fade {
-            background: linear-gradient(to top, rgba(249, 247, 242, 0.35) 10%, transparent 100%);
-        }
+        [data-theme="light"] .video-bottom-fade { background: linear-gradient(to top, rgba(249, 247, 242, 0.35) 10%, transparent 100%); }
+        
         .about-hero .container { position: relative; z-index: 2; width: 100%; text-align: center; }
         .hero-glass-panel {
             max-width: 900px; margin: 0 auto; padding: 55px 48px; text-align: center;
@@ -359,593 +293,261 @@
             transition: background 0.4s, border-color 0.4s;
         }
         [data-theme="light"] .hero-glass-panel {
-            background: rgba(255, 255, 255, 0.55); border: 1px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.65); border: 1px solid rgba(255, 255, 255, 0.4);
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.7);
         }
-        .trust-badge {
-            display: inline-flex; align-items: center; gap: 10px;
-            background: rgba(0, 229, 255, 0.08); border: 1px solid rgba(0, 229, 255, 0.15);
-            padding: 7px 18px; border-radius: var(--rl-radius-full); font-family: var(--font-mono);
-            font-size: .62rem; letter-spacing: 2px; color: #00e5ff; margin-bottom: 32px;
+        .hero-glass-panel .trust-badge {
+            display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px;
+            background: rgba(212, 165, 116, 0.1); border: 1px solid rgba(212, 165, 116, 0.2);
+            border-radius: var(--rl-radius-full); color: var(--rl-primary); font-size: 0.75rem; font-weight: 600;
+            text-transform: uppercase; margin-bottom: 24px;
         }
-        [data-theme="light"] .trust-badge { background: rgba(0, 229, 255, 0.04); border-color: rgba(0, 229, 255, 0.12); color: #0099cc; }
-        .trust-badge .dot { width: 7px; height: 7px; border-radius: 50%; background: #00e5ff; animation: pulseDot 2s infinite; }
-        .hero-glass-panel h1 {
-            font-family: var(--font-head); font-weight: 800; font-size: clamp(2.4rem, 5vw, 4rem);
-            line-height: 1.05; margin-bottom: 16px; color: var(--rl-text);
-        }
+        .hero-glass-panel .trust-badge .dot { width: 6px; height: 6px; background: #22c55e; border-radius: 50%; animation: pulse-dot 2s infinite; }
+        .hero-glass-panel h1 { font-family: var(--font-head); font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 800; line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 16px; color: var(--rl-text); }
         [data-theme="light"] .hero-glass-panel h1 { color: #1C1917; }
-        .hero-glass-panel h1 .gold {
-            background: var(--rl-gradient-gold); -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent; background-clip: text;
-        }
         .hero-glass-panel .subtitle { font-size: clamp(1.1rem, 1.4vw, 1.3rem); color: var(--rl-text); margin-bottom: 16px; font-weight: 500; }
         [data-theme="light"] .hero-glass-panel .subtitle { color: #2C2A28; }
-        .hero-glass-panel .value-prop {
-            font-size: 1.05rem; color: var(--rl-muted); max-width: 650px;
-            margin: 0 auto 36px; line-height: 1.7;
-        }
+        .hero-glass-panel .value-prop { color: var(--rl-muted); font-size: 1.05rem; line-height: 1.7; max-width: 600px; margin: 0 auto 32px; }
         [data-theme="light"] .hero-glass-panel .value-prop { color: #4A4744; }
-        .hero-glass-panel .value-prop strong { color: var(--rl-primary); }
-        .hero-glass-panel .btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px; }
-        .stats-bar {
-            display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;
-            padding-top: 32px; border-top: 1px solid rgba(255, 255, 255, 0.06);
-        }
-        [data-theme="light"] .stats-bar { border-top: 1px solid rgba(28, 25, 23, 0.06); }
-        .stats-bar .stat-item { text-align: center; }
-        .stats-bar .stat-item .number {
-            font-family: var(--font-head); font-size: 2rem; font-weight: 800;
-            color: var(--rl-primary); line-height: 1;
-        }
-        .stats-bar .stat-item .label {
-            font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 1.5px;
-            color: var(--rl-muted); text-transform: uppercase; display: block; margin-top: 6px;
-        }
-        @media (max-width:768px) {
-            .about-hero { min-height: auto; padding: 60px 0 40px; }
-            .hero-glass-panel { padding: 36px 20px; border-radius: 20px; }
+        .hero-glass-panel .btns { display: flex; gap: 16px; justify-content: center; margin-bottom: 40px; flex-wrap: wrap;}
+        
+        .stats-bar { display: flex; justify-content: center; gap: 40px; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 32px; flex-wrap: wrap;}
+        [data-theme="light"] .stats-bar { border-top: 1px solid rgba(28,25,23,0.06); }
+        .stat-item { display: flex; flex-direction: column; align-items: center; }
+        .stat-item .number { font-family: var(--font-head); font-size: 1.8rem; font-weight: 800; background: var(--rl-gradient-multi); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.1; }
+        .stat-item .label { font-size: 0.8rem; color: var(--rl-muted); margin-top: 4px; }
+
+        @media(max-width: 768px) {
+            .about-hero { min-height: auto; padding: 100px 0 60px; }
+            .hero-glass-panel { padding: 36px 20px; border-radius: 20px; border: none;}
             .hero-glass-panel h1 { font-size: 2.2rem; }
-            .hero-glass-panel .btns { flex-direction: column; width: 100%; }
+            .hero-glass-panel .btns { flex-direction: column; }
             .hero-glass-panel .btns .btn { width: 100%; justify-content: center; }
-            .stats-bar { gap: 24px; flex-wrap: wrap; }
-            .stats-bar .stat-item .number { font-size: 1.6rem; }
+            .stats-bar { gap: 20px; }
         }
 
-        /* FLIP SECTION */
-        .flip-section { padding: 80px 0; background: var(--rl-bg); }
-        .flip-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; align-items: center; }
-        @media (max-width:900px) { .flip-grid { grid-template-columns: 1fr; gap: 40px; } }
-        .avatar-frame {
-            perspective: 1200px; max-width: 450px; width: 100%; aspect-ratio: 16 / 9;
-            cursor: pointer; border-radius: 16px;
-            box-shadow: 0 0 60px rgba(212, 165, 116, 0.15), 0 0 120px rgba(46, 154, 140, 0.08);
-            position: relative; margin: 0 auto;
-        }
-        .avatar-frame .flipper {
-            position: relative; width: 100%; height: 100%;
-            transition: transform .9s cubic-bezier(0.19, 1, 0.22, 1);
-            transform-style: preserve-3d;
-        }
-        .avatar-frame:hover .flipper, .avatar-frame.flipped .flipper { transform: rotateY(180deg); }
-        .flip-face {
-            position: absolute; inset: 0; backface-visibility: hidden;
-            border-radius: 16px; overflow: hidden; border: 2px solid rgba(0, 229, 255, 0.3);
-            box-shadow: 0 0 30px rgba(0, 229, 255, 0.15);
-        }
-        .flip-face img { width: 100%; height: 100%; object-fit: cover; display: block; background: var(--rl-card); }
-        .flip-face.back { transform: rotateY(180deg); }
-        .fallback-text {
-            display: flex; align-items: center; justify-content: center; height: 100%;
-            background: var(--rl-card); color: var(--rl-primary);
-            font-family: var(--font-head); font-size: 4rem; font-weight: 800;
-        }
+        /* Flip Section */
+        .flip-section { padding: 80px 0; background: var(--rl-surface); border-bottom: 1px solid var(--rl-border); }
+        .flip-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; max-width: 900px; margin: 0 auto; }
+        .flip-wrapper { perspective: 1000px; width: 100%; max-width: 380px; margin: 0 auto; }
+        .avatar-frame { width: 100%; aspect-ratio: 1 / 1; position: relative; cursor: pointer; transition: transform 0.6s; transform-style: preserve-3d; }
+        .avatar-frame.flipped { transform: rotateY(180deg); }
+        .flip-face { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; border-radius: var(--rl-radius); border: 1px solid var(--rl-border); overflow: hidden; background: var(--rl-card); box-shadow: var(--rl-shadow); }
+        .flip-face img { width: 100%; height: 100%; object-fit: cover; }
+        .flip-face.back { transform: rotateY(180deg); background: var(--rl-bg); }
+        .fallback-text { display: flex; align-items: center; justify-content: center; height: 100%; background: var(--rl-card); color: var(--rl-primary); font-family: var(--font-head); font-size: 4rem; font-weight: 800; }
         .flip-face.back .fallback-text { color: var(--rl-secondary); font-size: 2.5rem; }
-        .flip-hint {
-            text-align: center; margin-top: 16px; font-family: var(--font-mono);
-            font-size: 0.6rem; color: var(--rl-muted); letter-spacing: 1px;
-        }
-        .flip-hint i { color: var(--rl-primary); margin-right: 6px; }
-        .flip-text .lead { font-size: 1.05rem; color: var(--rl-muted); line-height: 1.8; margin-bottom: 16px; }
+        .flip-text .lead { font-size: 1.1rem; color: var(--rl-muted); line-height: 1.7; margin-bottom: 24px; }
         .flip-text .lead strong { color: var(--rl-text); }
-        .signature-line { font-family: var(--font-signature); font-size: 2rem; color: var(--rl-primary); margin-top: 8px; }
+        .signature-line { font-family: var(--font-signature); font-size: 3rem; color: var(--rl-primary); margin-top: 20px; }
+        .flip-hint { display: inline-flex; align-items: center; gap: 8px; font-size: 0.8rem; color: var(--rl-secondary); margin-top: 16px; padding: 6px 14px; background: rgba(46, 154, 140, 0.1); border-radius: 20px; }
+        @media(max-width: 900px) { .flip-grid { grid-template-columns: 1fr; gap: 40px; } }
 
-        /* PROCESS GRID */
-        .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 20px; }
-        @media (max-width:768px) { .process-grid { grid-template-columns: 1fr; } }
-        .process-step {
-            text-align: center; padding: 32px 20px; position: relative;
-            background: var(--rl-card); border: 1px solid var(--rl-border);
-            border-radius: var(--rl-radius); transition: all .3s ease;
-        }
-        .process-step:hover {
-            transform: translateY(-4px); border-color: rgba(46, 154, 140, 0.25);
-            box-shadow: var(--rl-shadow-glow-secondary);
-        }
-        .process-step .step-number {
-            font-family: var(--font-head); font-size: 2rem; font-weight: 700;
-            color: var(--rl-primary); opacity: 0.2; position: absolute;
-            top: 10px; right: 15px;
-        }
+        /* Audience / Trust */
+        .audience-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+        .audience-card { background: var(--rl-card); border: 1px solid var(--rl-border); border-radius: var(--rl-radius); padding: 32px 24px; text-align: center; transition: all 0.3s; }
+        .audience-card:hover { border-color: var(--rl-primary); transform: translateY(-4px); box-shadow: var(--rl-shadow-glow); }
+        .audience-icon { font-size: 2.2rem; color: var(--rl-primary); margin-bottom: 16px; }
+        .audience-card h3 { font-family: var(--font-head); font-size: 1.2rem; margin-bottom: 12px; }
+        .audience-card p { color: var(--rl-muted); font-size: 0.95rem; line-height: 1.6; }
+        @media(max-width: 768px) { .audience-grid { grid-template-columns: 1fr; } }
 
-        /* VALUES */
-        .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-        @media (max-width:768px) { .values-grid { grid-template-columns: 1fr; } }
-        .value-card {
-            text-align: left; padding: 28px 24px; background: var(--rl-card);
-            border: 1px solid var(--rl-border); border-radius: var(--rl-radius);
-            transition: all .35s var(--ease-spring);
-        }
-        .value-card:hover {
-            transform: translateY(-6px); border-color: var(--rl-secondary);
-            box-shadow: var(--rl-shadow-glow-secondary);
-        }
-        .value-card .icon {
-            width: 52px; height: 52px; border-radius: 14px;
-            background: rgba(46,154,140,0.1); display: grid; place-items: center;
-            font-size: 1.3rem; color: var(--rl-secondary); margin-bottom: 16px;
-        }
-        .value-card h3 { font-family: var(--font-head); font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; }
-        .value-card p { color: var(--rl-muted); font-size: 0.92rem; line-height: 1.55; }
-        .value-tag {
-            display: inline-block; margin-top: 12px; padding: 4px 14px;
-            border-radius: 100px; background: rgba(46, 154, 140, .08);
-            border: 1px solid rgba(46, 154, 140, .15); color: var(--rl-secondary);
-            font-family: var(--font-mono); font-size: 0.55rem; letter-spacing: 0.5px;
-        }
+        /* Core Values */
+        .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+        .value-card { background: var(--rl-card); border: 1px solid var(--rl-border); border-radius: var(--rl-radius); padding: 36px 28px; transition: all 0.3s; }
+        .value-card:hover { border-color: var(--rl-secondary); transform: translateY(-4px); box-shadow: var(--rl-shadow-glow-secondary); }
+        .value-icon { display: inline-flex; width: 50px; height: 50px; border-radius: 12px; background: rgba(46, 154, 140, 0.1); color: var(--rl-secondary); align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 20px; }
+        .value-card h3 { font-family: var(--font-head); font-size: 1.2rem; margin-bottom: 12px; }
+        .value-card p { color: var(--rl-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; }
+        .value-tag { display: inline-block; font-size: 0.75rem; font-weight: 600; padding: 4px 12px; background: rgba(212, 165, 116, 0.1); color: var(--rl-primary); border-radius: 20px; }
+        @media(max-width: 768px) { .values-grid { grid-template-columns: 1fr; } }
 
-        /* WORK VIDEOS SECTION */
-        .work-videos { padding: clamp(60px, 8vw, 90px) 0; }
-        .videos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-        .video-card {
-            background: var(--rl-card); border: 1px solid var(--rl-border);
-            border-radius: var(--rl-radius); overflow: hidden;
-            transition: all 0.35s var(--ease); cursor: pointer;
-        }
-        .video-card:hover {
-            transform: translateY(-5px); border-color: var(--rl-secondary);
-            box-shadow: var(--rl-shadow-glow-secondary);
-        }
-        .video-card .thumb {
-            position: relative; aspect-ratio: 16/10; background: var(--rl-surface);
-            display: flex; align-items: center; justify-content: center; overflow: hidden;
-        }
-        .video-card .thumb video, .video-card .thumb img { width: 100%; height: 100%; object-fit: cover; }
-        .video-card .play-btn {
-            position: absolute; width: 56px; height: 56px; border-radius: 50%;
-            background: var(--rl-gradient-cta); color: #1C1917; display: grid; place-items: center; font-size: 1.2rem;
-            box-shadow: var(--rl-shadow-glow); transition: transform 0.3s var(--ease-spring); z-index: 2;
-        }
-        .video-card:hover .play-btn { transform: scale(1.1); }
-        .video-card .info { padding: 16px 18px; }
-        .video-card .info h4 { font-family: var(--font-head); font-weight: 700; font-size: 1rem; margin-bottom: 4px; }
-        .video-card .info p { font-size: 0.85rem; color: var(--rl-muted); }
-        @media (max-width: 900px) { .videos-grid { grid-template-columns: 1fr 1fr; } }
-        @media (max-width: 560px) { .videos-grid { grid-template-columns: 1fr; } }
+        /* Process */
+        .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+        .process-step { position: relative; background: var(--rl-surface); border: 1px solid var(--rl-border); border-radius: var(--rl-radius); padding: 32px 24px; text-align: center; }
+        .process-step .step-number { font-family: var(--font-head); font-size: 3rem; font-weight: 800; color: var(--rl-border); position: absolute; top: 10px; right: 20px; line-height: 1; }
+        .process-step .step-icon { font-size: 2rem; color: var(--rl-primary); margin-bottom: 16px; display: inline-block; position: relative; z-index: 1; }
+        .process-step h4 { font-family: var(--font-head); font-size: 1.2rem; margin-bottom: 12px; position: relative; z-index: 1; }
+        .process-step p { color: var(--rl-muted); font-size: 0.95rem; line-height: 1.6; position: relative; z-index: 1; }
+        .process-step .connector { position: absolute; right: -20px; top: 50%; transform: translateY(-50%); font-size: 1.5rem; color: var(--rl-border); z-index: 2; }
+        .process-step:last-child .connector { display: none; }
+        .process-trust { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-top: 32px; }
+        .process-trust span { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--rl-text); background: var(--rl-card); border: 1px solid var(--rl-border); padding: 8px 16px; border-radius: var(--rl-radius-full); }
+        .process-trust i { color: var(--rl-secondary); }
+        @media(max-width: 992px) { .process-grid { grid-template-columns: 1fr; gap: 20px; } .process-step .connector { display: none; } }
 
-        /* Video lightbox */
-        .video-lightbox {
-            position: fixed; inset: 0; z-index: 100000;
-            background: rgba(0,0,0,0.85); backdrop-filter: blur(8px);
-            display: flex; align-items: center; justify-content: center;
-            opacity: 0; visibility: hidden; transition: all 0.35s ease; padding: 20px;
-        }
-        .video-lightbox.active { opacity: 1; visibility: visible; }
-        .video-lightbox .lightbox-inner {
-            position: relative; width: 100%; max-width: 900px;
-            aspect-ratio: 16/9; background: #000; border-radius: 16px; overflow: hidden;
-        }
-        .video-lightbox video { width: 100%; height: 100%; object-fit: contain; }
-        .video-lightbox .close-btn {
-            position: absolute; top: -48px; right: 0; width: 40px; height: 40px;
-            border-radius: 50%; background: var(--rl-card); border: 1px solid var(--rl-border);
-            color: var(--rl-text); font-size: 1.1rem; display: grid; place-items: center;
-            cursor: pointer; transition: all 0.25s;
-        }
-        .video-lightbox .close-btn:hover { background: var(--rl-primary); color: #1C1917; }
+        /* Testimonials */
+        .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+        .testimonial-card { background: var(--rl-surface); border: 1px solid var(--rl-border); border-radius: var(--rl-radius); padding: 32px 24px; display: flex; flex-direction: column; transition: all 0.3s; }
+        .testimonial-card:hover { border-color: var(--rl-amber); transform: translateY(-4px); }
+        .testimonial-card .stars { color: var(--rl-amber); font-size: 1rem; letter-spacing: 2px; margin-bottom: 16px; }
+        .testimonial-card blockquote { font-size: 0.95rem; color: var(--rl-muted); font-style: italic; line-height: 1.6; margin-bottom: 24px; flex-grow: 1; }
+        .testimonial-card .client { display: flex; justify-content: space-between; align-items: flex-end; border-top: 1px solid var(--rl-border); padding-top: 16px; }
+        .testimonial-card .client-name { display: block; font-weight: 600; color: var(--rl-text); font-size: 0.95rem; }
+        .testimonial-card .client-location { font-size: 0.8rem; color: var(--rl-dim); }
+        .testimonial-card .client-platform { font-size: 0.75rem; background: rgba(212, 165, 116, 0.1); color: var(--rl-primary); padding: 2px 8px; border-radius: 12px; }
+        .platform-badges { display: flex; justify-content: center; gap: 16px; margin-top: 32px; flex-wrap: wrap; }
+        .platform-badge { font-size: 0.85rem; color: var(--rl-muted); display: flex; align-items: center; gap: 6px; background: var(--rl-card); border: 1px solid var(--rl-border); padding: 8px 16px; border-radius: var(--rl-radius-full); }
+        .platform-badge i { color: var(--rl-amber); }
+        @media(max-width: 992px) { .testimonials-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media(max-width: 768px) { .testimonials-grid { grid-template-columns: 1fr; } }
 
-        /* ABOUT INTRO */
-        .about-intro {
-            display: grid; grid-template-columns: 1fr 1.15fr; gap: 48px;
-            align-items: center; max-width: 1000px; margin: 0 auto;
-        }
-        .about-portrait {
-            position: relative; border-radius: var(--rl-radius); overflow: hidden;
-            background: var(--rl-card); border: 1px solid var(--rl-border);
-            aspect-ratio: 4/5; display: flex; align-items: center; justify-content: center; min-height: 360px;
-        }
-        .about-portrait .placeholder { text-align: center; padding: 32px; color: var(--rl-dim); }
-        .about-portrait .placeholder i { font-size: 3.5rem; margin-bottom: 14px; opacity: 0.35; display: block; }
-        .about-portrait .stats-bar {
-            position: absolute; bottom: 16px; left: 16px; right: 16px;
-            background: var(--rl-glass); backdrop-filter: blur(12px);
-            border: 1px solid var(--rl-border); border-radius: 12px;
-            padding: 14px 12px; display: flex; gap: 8px; justify-content: space-around;
-        }
-        .about-portrait .stats-bar .item { text-align: center; }
-        .about-portrait .stats-bar .num { font-family: var(--font-head); font-weight: 800; font-size: 1.2rem; color: var(--rl-primary); }
-        .about-portrait .stats-bar .lbl { font-size: 0.68rem; color: var(--rl-muted); }
-        .about-story p { font-size: 1rem; color: var(--rl-muted); line-height: 1.75; margin-bottom: 16px; }
-        .about-story .lead { font-size: 1.1rem; color: var(--rl-text); }
-        .about-story strong { color: var(--rl-text); }
-        .cred-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 24px 0; }
-        .cred-list .item { display: flex; align-items: flex-start; gap: 8px; font-size: 0.9rem; }
-        .cred-list .item i { color: var(--rl-secondary); margin-top: 3px; flex-shrink: 0; }
-        .about-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
-        @media (max-width: 800px) { .about-intro { grid-template-columns: 1fr; gap: 32px; } .about-portrait { min-height: 280px; } }
+        /* CTA Banner */
+        .cta-banner { background: var(--rl-card); border: 1px solid var(--rl-border); border-radius: var(--rl-radius); padding: 60px 40px; text-align: center; position: relative; overflow: hidden; box-shadow: var(--rl-shadow-sm); }
+        .cta-banner::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: var(--rl-gradient-cta); }
+        .cta-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(212, 165, 116, 0.1); color: var(--rl-primary); padding: 6px 16px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 20px; }
+        .cta-banner h2 { font-family: var(--font-head); font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 800; margin-bottom: 16px; }
+        .cta-banner p { color: var(--rl-muted); font-size: 1.05rem; line-height: 1.6; max-width: 600px; margin: 0 auto 32px; }
+        .cta-actions { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; }
+        .cta-actions a { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 16px 32px; border-radius: 12px; font-weight: 700; font-size: 1rem; transition: 0.3s; }
+        .cta-phone { background: var(--rl-secondary); color: #fff; box-shadow: 0 8px 24px rgba(46, 154, 140, 0.25); }
+        .cta-phone:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(46, 154, 140, 0.4); }
+        .cta-whatsapp { background: #25D366; color: #fff; box-shadow: 0 8px 24px rgba(37, 211, 102, 0.25); }
+        .cta-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(37, 211, 102, 0.4); }
+        .cta-form { background: var(--rl-surface); border: 1px solid var(--rl-border); color: var(--rl-text); }
+        .cta-form:hover { border-color: var(--rl-primary); color: var(--rl-primary); }
+        .cta-trust { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; border-top: 1px solid var(--rl-border); padding-top: 24px; }
+        .cta-trust span { font-size: 0.85rem; color: var(--rl-dim); display: flex; align-items: center; gap: 6px; }
+        @media(max-width: 600px) { .cta-actions { flex-direction: column; } .cta-actions a { width: 100%; } .cta-banner { padding: 40px 20px; } }
 
-        /* TIMELINE */
-        .timeline { max-width: 720px; margin: 0 auto; position: relative; padding-left: 32px; }
-        .timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: var(--rl-border); }
-        .timeline-item { position: relative; padding-left: 36px; margin-bottom: 36px; }
-        .timeline-item:last-child { margin-bottom: 0; }
-        .timeline-item .dot {
-            position: absolute; left: -32px; top: 6px; width: 18px; height: 18px;
-            border-radius: 50%; background: var(--rl-gradient-gold);
-            border: 2px solid var(--rl-bg); box-shadow: 0 0 0 4px var(--rl-border); transition: all 0.3s;
-        }
-        .timeline-item:hover .dot { transform: scale(1.15); box-shadow: 0 0 0 4px var(--rl-primary); }
-        .timeline-item .year {
-            font-family: var(--font-head); font-size: 0.85rem; font-weight: 700;
-            color: var(--rl-primary); margin-bottom: 4px; letter-spacing: 0.5px;
-        }
-        .timeline-item h3 { font-family: var(--font-head); font-size: 1.15rem; font-weight: 700; margin-bottom: 6px; }
-        .timeline-item p { font-size: 0.95rem; color: var(--rl-muted); line-height: 1.55; }
+        /* ============================================================
+           FOOTER (Flach, wie Startseite)
+           ============================================================ */
+        .rl-footer { background: var(--rl-surface); border-top: 1px solid var(--rl-border); padding: 64px 0 0; margin-top: 40px; position: relative; overflow: hidden; }
+        .rl-footer::before { content: ''; position: absolute; top: 0; left: -50%; width: 200%; height: 2px; background: linear-gradient(90deg, transparent, var(--rl-primary), var(--rl-secondary), var(--rl-accent), var(--rl-amber), var(--rl-primary), transparent); background-size: 300% 100%; animation: borderFlow 8s linear infinite; opacity: 0.6; }
+        .rl-footer__top { display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; padding-bottom: 48px; border-bottom: 1px solid var(--rl-border); margin-bottom: 40px; }
+        .rl-footer__logo { font-family: var(--font-head); font-weight: 800; font-size: 1.5rem; margin-bottom: 14px; display: flex; align-items: center; gap: 14px; }
+        .rl-footer__logo span { background: var(--rl-gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .rl-footer__badge { display: inline-flex; align-items: center; gap: 6px; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; color: #22c55e; background: rgba(34, 197, 94, 0.12); padding: 4px 12px; border-radius: 30px; border: 1px solid rgba(34, 197, 94, 0.2); }
+        .live-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #22c55e; animation: pulse-dot 1.8s infinite; margin-right: 4px;}
+        .rl-footer__description { font-size: 0.98rem; color: var(--rl-muted); line-height: 1.7; max-width: 420px; margin-bottom: 20px; }
+        .rl-footer__trust { display: flex; flex-wrap: wrap; gap: 10px; }
+        .rl-footer__trust span { font-size: 0.78rem; color: var(--rl-muted); background: var(--rl-card); border: 1px solid var(--rl-border); padding: 6px 14px; border-radius: var(--rl-radius-full); }
+        .rl-footer__trust i { color: var(--rl-primary); }
+        
+        .rl-footer__newsletter h4 { font-family: var(--font-head); font-size: 1.15rem; margin-bottom: 6px; display: flex; align-items: center; gap: 10px;}
+        .rl-footer__newsletter h4 i { color: var(--rl-primary); }
+        .rl-footer__form { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; max-width: 350px;}
+        .rl-footer__form .form-group { position: relative; margin-bottom: 0; }
+        .rl-footer__form input { width: 100%; padding: 14px 16px; border: 1.5px solid var(--rl-border); border-radius: 12px; background: var(--rl-card); color: var(--rl-text); outline: none; font-family: var(--font-body); }
+        .rl-footer__form input:focus { border-color: var(--rl-primary); box-shadow: var(--rl-shadow-glow); }
+        .rl-footer__form label { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--rl-dim); font-size: 0.92rem; transition: all 0.25s ease; pointer-events: none; background: var(--rl-card); padding: 0 4px; }
+        .rl-footer__form input:focus+label, .rl-footer__form input:not(:placeholder-shown)+label { top: 0; transform: translateY(-50%) scale(0.82); color: var(--rl-primary); }
+        .rl-footer__form button { padding: 14px; background: var(--rl-gradient-cta); color: #1C1917; font-weight: 700; border-radius: 12px; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: 0.3s; }
+        .rl-footer__form button:hover { transform: scale(1.03); box-shadow: var(--rl-shadow-glow-accent); }
+        
+        .rl-footer__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px; margin-bottom: 44px; }
+        .rl-footer__col h5 { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--rl-dim); margin-bottom: 16px; letter-spacing: 0.5px; }
+        .rl-footer__col a { display: block; font-size: 0.9rem; color: var(--rl-muted); padding: 4px 0; transition: 0.25s; }
+        .rl-footer__col a:hover { color: var(--rl-primary); transform: translateX(4px); }
+        .rl-footer__contact li { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-size: 0.9rem; color: var(--rl-muted); }
+        .rl-footer__contact i { color: var(--rl-primary); width: 18px; text-align: center; }
+        
+        .rl-footer__trustbar { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; padding: 24px 0; border-top: 1px solid var(--rl-border); border-bottom: 1px solid var(--rl-border); margin-bottom: 28px; }
+        .trust-item-f { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: var(--rl-card); border: 1px solid var(--rl-border); border-radius: 12px; }
+        .trust-item-f i { font-size: 1.2rem; background: var(--rl-gradient-multi); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .trust-item-f .label { display: block; font-size: 0.65rem; color: var(--rl-dim); text-transform: uppercase; }
+        .trust-item-f .value { display: block; font-size: 0.9rem; font-weight: 700; color: var(--rl-text); }
+        
+        .rl-footer__bottom { display: flex; justify-content: space-between; align-items: center; padding-bottom: 20px; font-size: 0.82rem; color: var(--rl-dim); }
+        .rl-footer__legal { display: flex; gap: 8px; }
+        .rl-footer__legal a { color: var(--rl-muted); }
+        .rl-footer__legal a:hover { color: var(--rl-primary); }
 
-        /* EXPERTISE */
-        .expertise-grid {
-            display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 900px; margin: 0 auto;
+        @media(max-width: 900px) {
+            .rl-footer__top { grid-template-columns: 1fr; }
+            .rl-footer__grid { grid-template-columns: 1fr 1fr; }
+            .rl-footer__trustbar { grid-template-columns: repeat(3, 1fr); }
+            .rl-footer__bottom { flex-direction: column; gap: 16px; text-align: center; }
         }
-        .expertise-card {
-            background: var(--rl-card); border: 1px solid var(--rl-border); border-radius: var(--rl-radius);
-            padding: 24px 22px; display: flex; gap: 16px; transition: all 0.3s ease;
-        }
-        .expertise-card:hover { border-color: var(--rl-primary); transform: translateY(-3px); box-shadow: var(--rl-shadow-sm); }
-        .expertise-card .icon {
-            width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0;
-            background: var(--rl-gradient-multi); -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent; background-clip: text;
-            font-size: 1.5rem; display: flex; align-items: center; justify-content: center;
-        }
-        .expertise-card h4 { font-family: var(--font-head); font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; }
-        .expertise-card p { font-size: 0.88rem; color: var(--rl-muted); line-height: 1.5; }
-        @media (max-width: 640px) { .expertise-grid { grid-template-columns: 1fr; } }
-
-        /* TOOLS / STANDARDS */
-        .standards-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-        .standard-item {
-            background: var(--rl-card); border: 1px solid var(--rl-border);
-            border-radius: var(--rl-radius); padding: 22px 16px; text-align: center; transition: all 0.3s ease;
-        }
-        .standard-item:hover {
-            border-color: var(--rl-accent); transform: translateY(-4px); box-shadow: var(--rl-shadow-glow-accent);
-        }
-        .standard-item i {
-            font-size: 1.8rem; background: var(--rl-gradient-multi); -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 10px; display: block;
-        }
-        .standard-item h4 { font-family: var(--font-head); font-size: 0.95rem; font-weight: 700; margin-bottom: 4px; }
-        .standard-item p { font-size: 0.8rem; color: var(--rl-muted); line-height: 1.4; }
-        @media (max-width: 900px) { .standards-grid { grid-template-columns: 1fr 1fr; } }
-        @media (max-width: 500px) { .standards-grid { grid-template-columns: 1fr; } }
-
-        /* QUOTE */
-        .quote-block {
-            max-width: 700px; margin: 0 auto; text-align: center;
-            background: var(--rl-card); border: 1px solid var(--rl-border);
-            border-radius: var(--rl-radius); padding: 40px 36px; position: relative;
-        }
-        .quote-block::before {
-            content: '"'; position: absolute; top: 12px; left: 24px;
-            font-family: var(--font-head); font-size: 4rem; line-height: 1; color: var(--rl-primary); opacity: 0.25;
-        }
-        .quote-block p { font-size: 1.2rem; font-style: italic; color: var(--rl-muted); line-height: 1.7; margin-bottom: 20px; }
-        .quote-block .author { font-family: var(--font-head); font-weight: 700; font-size: 1rem; color: var(--rl-text); }
-        .quote-block .author span { display: block; font-size: 0.85rem; color: var(--rl-dim); font-weight: 500; margin-top: 2px; }
-
-        /* CTA */
-        .cta-banner {
-            background: var(--rl-gradient-cta); border-radius: var(--rl-radius);
-            padding: 48px 32px; text-align: center;
-            box-shadow: var(--rl-shadow-glow); animation: glow-pulse 4s ease-in-out infinite;
-        }
-        .cta-banner h2 { font-family: var(--font-head); font-size: clamp(1.6rem, 2.8vw, 2.2rem); font-weight: 800; color: #1C1917; margin-bottom: 12px; }
-        .cta-banner p { color: rgba(28,25,23,0.8); font-size: 1.05rem; max-width: 480px; margin: 0 auto 24px; }
-        .cta-banner .btn { background: #1C1917; color: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
-        .cta-banner .btn:hover { background: #2A2825; transform: scale(1.04); }
-
-        /* FLOATING BADGES & BUTTONS */
-        .floating-badge {
-            position: fixed; bottom: 100px; right: 20px; z-index: 99;
-            background: var(--rl-card); border: 1px solid var(--rl-border);
-            border-radius: var(--rl-radius); padding: 14px 18px; box-shadow: var(--rl-shadow);
-            max-width: 220px; text-align: center; backdrop-filter: blur(12px);
-            animation: float 3s ease-in-out infinite; transition: all 0.3s ease;
-        }
-        .floating-badge:hover {
-            transform: scale(1.05); border-color: var(--rl-amber);
-            box-shadow: var(--rl-shadow-glow-amber); animation-play-state: paused;
-        }
-        .floating-badge .stars { color: var(--rl-amber); font-size: 0.9rem; letter-spacing: 1px; }
-        .floating-badge .text { font-size: 0.8rem; color: var(--rl-muted); margin-top: 4px; }
-        .floating-badge .highlight {
-            background: var(--rl-gradient-gold); -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent; background-clip: text; font-weight: 700;
-        }
-        @media (max-width: 600px) { .floating-badge { display: none; } }
-
-        .whatsapp-float {
-            position: fixed; bottom: 28px; right: 28px; z-index: 9999;
-            width: 60px; height: 60px; border-radius: 50%; background: #25D366;
-            display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 8px 32px rgba(37,211,102,0.35);
-            transition: transform 0.3s var(--ease-spring), box-shadow 0.3s;
-            color: #fff; font-size: 2rem; text-decoration: none;
-        }
-        .whatsapp-float:hover { transform: scale(1.08); box-shadow: 0 12px 40px rgba(37,211,102,0.5); }
-        .whatsapp-float .pulse-ring {
-            position: absolute; inset: -6px; border-radius: 50%;
-            border: 2px solid rgba(37,211,102,0.3); animation: pulseRing 2.2s ease-out infinite;
-        }
-
-        .back-to-top {
-            position: fixed; bottom: 28px; left: 28px; z-index: 9998;
-            width: 44px; height: 44px; border-radius: 50%;
-            background: rgba(46,154,140,0.12); border: 1px solid rgba(46,154,140,0.25);
-            color: var(--rl-secondary); font-size: 1.2rem;
-            display: none; align-items: center; justify-content: center;
-            backdrop-filter: blur(8px); transition: 0.3s;
-        }
-        .back-to-top.visible { display: flex; }
-        .back-to-top:hover {
-            background: rgba(46,154,140,0.2); transform: translateY(-3px); box-shadow: var(--rl-shadow-glow-secondary);
-        }
-
-        .scroll-progress {
-            position: fixed; top: 0; left: 0; height: 3px; background: var(--rl-gradient-multi); z-index: 100000;
-            width: 0%; box-shadow: var(--rl-shadow-glow); transition: width 0.1s linear;
-        }
-
-        .mobile-call-bar {
-            display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 950;
-            background: var(--rl-glass); backdrop-filter: blur(16px);
-            border-top: 1px solid var(--rl-border); padding: 10px 12px;
-            grid-template-columns: 1fr 1fr 1fr; gap: 8px;
-        }
-        .mobile-call-bar a {
-            display: flex; align-items: center; justify-content: center; gap: 6px;
-            padding: 12px 8px; border-radius: 10px; font-size: 0.82rem; font-weight: 700; min-height: 46px;
-        }
-        .mobile-call-bar .call-btn { background: var(--rl-secondary); color: #fff; }
-        .mobile-call-bar .wa-btn { background: #25D366; color: #fff; }
-        .mobile-call-bar .inq-btn { background: var(--rl-gradient-cta); color: #1C1917; }
-        @media (max-width: 768px) {
-            .mobile-call-bar { display: grid; }
-            .whatsapp-float { bottom: 72px; }
-            .back-to-top { bottom: 72px; }
-            body { padding-bottom: 70px; }
-        }
-
-        /* FOOTER */
-        .footer {
-            background: var(--rl-surface); border-top: 1px solid var(--rl-border);
-            padding: 64px 0 0; margin-top: 40px; position: relative; overflow: hidden;
-        }
-        .footer::before {
-            content: ''; position: absolute; top: 0; left: -50%; width: 200%; height: 2px;
-            background: linear-gradient(90deg, transparent, var(--rl-primary), var(--rl-secondary), var(--rl-accent), var(--rl-amber), var(--rl-primary), transparent);
-            background-size: 300% 100%; animation: borderFlow 8s linear infinite; opacity: 0.6;
-        }
-        .footer-top {
-            display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px;
-            padding-bottom: 48px; border-bottom: 1px solid var(--rl-border); margin-bottom: 40px;
-        }
-        .footer-logo {
-            font-family: var(--font-head); font-weight: 800; font-size: 1.5rem;
-            letter-spacing: -0.03em; margin-bottom: 14px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
-        }
-        .footer-desc { font-size: 0.98rem; color: var(--rl-muted); line-height: 1.7; max-width: 420px; margin-bottom: 20px; }
-        .footer-trust { display: flex; flex-wrap: wrap; gap: 10px; }
-        .footer-trust span {
-            display: inline-flex; align-items: center; gap: 7px; font-size: 0.78rem;
-            color: var(--rl-muted); background: var(--rl-card); border: 1px solid var(--rl-border);
-            padding: 6px 14px; border-radius: var(--rl-radius-full); transition: all 0.3s ease;
-        }
-        .footer-trust span:hover { border-color: var(--rl-primary); color: var(--rl-text); transform: translateY(-2px); }
-        .footer-trust i {
-            background: var(--rl-gradient-multi); -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent; background-clip: text;
-        }
-        .footer-newsletter h4 { font-family: var(--font-head); font-size: 1.15rem; font-weight: 700; margin-bottom: 6px; }
-        .footer-newsletter > p { font-size: 0.92rem; color: var(--rl-muted); margin-bottom: 18px; }
-        .footer-form { display: flex; flex-direction: column; gap: 12px; }
-        .footer-form input {
-            width: 100%; padding: 14px 16px; border: 1.5px solid var(--rl-border);
-            border-radius: 12px; background: var(--rl-card); color: var(--rl-text);
-            font-size: 0.95rem; transition: all 0.3s ease; outline: none; font-family: var(--font-body);
-        }
-        .footer-form input:focus { border-color: var(--rl-primary); box-shadow: var(--rl-shadow-glow); }
-        .footer-form button {
-            display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-            padding: 14px 28px; background: var(--rl-gradient-cta); color: #1C1917;
-            font-weight: 700; font-size: 0.95rem; border: none; border-radius: 12px;
-            cursor: pointer; transition: all 0.3s ease; box-shadow: var(--rl-shadow-glow);
-        }
-        .footer-form button:hover { transform: scale(1.03); }
-        .footer-consent { display: flex; gap: 10px; margin-top: 12px; font-size: 0.78rem; color: var(--rl-muted); line-height: 1.4; }
-        .footer-consent input { accent-color: var(--rl-primary); margin-top: 2px; flex-shrink: 0; }
-        .footer-consent a { color: var(--rl-primary); text-decoration: underline; }
-        .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px; margin-bottom: 44px; }
-        .footer-col h5 {
-            font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
-            letter-spacing: 0.8px; color: var(--rl-dim); margin-bottom: 16px;
-        }
-        .footer-col a {
-            display: block; font-size: 0.9rem; color: var(--rl-muted); transition: all 0.25s ease; padding: 4px 0;
-        }
-        .footer-col a:hover { color: var(--rl-primary); transform: translateX(4px); }
-        .footer-contact li { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
-        .footer-contact i { color: var(--rl-primary); font-size: 0.85rem; width: 18px; text-align: center; }
-        .footer-contact a { font-size: 0.9rem; color: var(--rl-muted); }
-        .footer-contact a:hover { color: var(--rl-primary); transform: none; }
-        .footer-social { display: flex; gap: 8px; margin-top: 16px; }
-        .footer-social a {
-            width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--rl-border);
-            display: grid; place-items: center; color: var(--rl-muted); font-size: 1rem;
-            transition: all 0.3s ease; background: var(--rl-card);
-        }
-        .footer-social a:hover {
-            border-color: var(--rl-amber); color: var(--rl-amber);
-            transform: translateY(-4px) scale(1.05); box-shadow: var(--rl-shadow-glow-amber);
-        }
-        .footer-trustbar {
-            display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px;
-            padding: 24px 0; border-top: 1px solid var(--rl-border); border-bottom: 1px solid var(--rl-border); margin-bottom: 28px;
-        }
-        .trust-item {
-            display: flex; align-items: center; gap: 12px; padding: 12px 16px;
-            background: var(--rl-card); border: 1px solid var(--rl-border); border-radius: 12px; transition: all 0.3s ease;
-        }
-        .trust-item:hover {
-            border-color: var(--rl-secondary); transform: translateY(-4px) scale(1.02); box-shadow: var(--rl-shadow-glow-secondary);
-        }
-        .trust-item i {
-            font-size: 1.2rem; background: var(--rl-gradient-multi); -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent; background-clip: text; flex-shrink: 0;
-        }
-        .trust-item .label { display: block; font-size: 0.65rem; color: var(--rl-dim); text-transform: uppercase; letter-spacing: 0.4px; }
-        .trust-item .value { display: block; font-size: 0.9rem; font-weight: 700; color: var(--rl-text); }
-        .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; padding-bottom: 20px; }
-        .footer-copy { font-size: 0.82rem; color: var(--rl-dim); }
-        .footer-legal { display: flex; gap: 8px; font-size: 0.78rem; margin-top: 4px; }
-        .footer-legal a { color: var(--rl-muted); transition: color 0.25s; }
-        .footer-legal a:hover { color: var(--rl-primary); }
-        .footer-legal .sep { color: var(--rl-border); }
-        .footer-note { text-align: center; padding: 18px 0 24px; font-size: 0.88rem; color: var(--rl-dim); border-top: 1px solid var(--rl-border); margin-top: 8px; }
-
-        @media (max-width: 900px) {
-            .footer-top { grid-template-columns: 1fr; gap: 40px; }
-            .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
-            .footer-trustbar { grid-template-columns: repeat(3, 1fr); }
-            .footer-bottom { flex-direction: column; text-align: center; }
-            .footer-legal { justify-content: center; }
-        }
-        @media (max-width: 600px) {
-            .footer-grid { grid-template-columns: 1fr; gap: 24px; }
-            .footer-trustbar { grid-template-columns: 1fr 1fr; }
-            .footer-trust { justify-content: center; }
-            .footer-desc { margin: 0 auto 20px; text-align: center; }
-            .footer-col { text-align: center; }
-            .footer-contact li { justify-content: center; }
-            .footer-social { justify-content: center; }
-        }
-        @media (max-width: 400px) { .footer-trustbar { grid-template-columns: 1fr; } }
-
-        @media (prefers-reduced-motion: reduce) {
-            * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
-            .reveal { opacity: 1 !important; transform: none !important; }
+        @media(max-width: 600px) {
+            .rl-footer__grid { grid-template-columns: 1fr; text-align: center;}
+            .rl-footer__trustbar { grid-template-columns: 1fr 1fr; }
+            .rl-footer__contact li { justify-content: center; }
         }
     </style>
 </head>
 <body>
-    <!-- Galaxy particle background -->
-    <canvas id="particleCanvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:-1;" aria-hidden="true"></canvas>
 
-    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-
-    <div class="floating-badge" aria-hidden="true">
-        <div class="stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            <i class="fas fa-star"></i><i class="fas fa-star"></i>
-        </div>
-        <div class="text"><span class="highlight">110+</span> Menschen vertrauen mir</div>
-    </div>
-
-    <a href="https://wa.me/491608194018" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="WhatsApp Kontakt">
-        <span class="pulse-ring" aria-hidden="true"></span>
+    <!-- ===== FLOATING ELEMENTS ===== -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    
+    <a href="https://wa.me/491608194018" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="WhatsApp schreiben">
         <i class="fab fa-whatsapp"></i>
     </a>
+    
+    <button class="back-to-top" id="backToTop" aria-label="Nach oben"><i class="fas fa-chevron-up"></i></button>
 
-    <button class="back-to-top" id="backToTop" aria-label="Nach oben">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-
-    <div class="mobile-call-bar" aria-label="Schnellkontakt">
+    <!-- Mobile Call Bar -->
+    <div class="mobile-call-bar" id="mobileCallBar">
         <a href="tel:+491608194018" class="call-btn"><i class="fas fa-phone-alt"></i> Anrufen</a>
-        <a href="https://wa.me/491608194018" target="_blank" rel="noopener noreferrer" class="wa-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-        <a href="/anfrage/" class="inq-btn"><i class="fas fa-calendar-check"></i> Anfrage</a>
+        <a href="anfrage/index.html" class="inq-btn"><i class="fas fa-calendar-check"></i> Anfrage</a>
     </div>
 
-    <!-- NAV -->
-    <nav class="nav" id="mainNav" role="navigation" aria-label="Hauptnavigation">
-        <div class="nav-inner">
-            <a href="/" class="nav-brand" aria-label="Lezius Möbelmontage – Startseite">
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="rl-nav" id="mainNav" role="navigation" aria-label="Hauptnavigation">
+        <div class="rl-nav__inner">
+            <a href="index.html" class="rl-nav__brand" aria-label="Startseite">
                 <span class="logo-mark">L</span>
                 <span class="brand-text">
                     <span class="brand-name">Lezius</span>
                     <span class="brand-sub">Möbelmontage</span>
                 </span>
             </a>
-            <ul class="nav-links" role="menubar">
-                <li role="none"><a href="/#services" class="nav-link" role="menuitem">Leistungen</a></li>
-                <li role="none"><a href="/#process" class="nav-link" role="menuitem">Ablauf</a></li>
-                <li role="none"><a href="/#projects" class="nav-link" role="menuitem">Projekte</a></li>
-                <li role="none"><a href="/about.html" class="nav-link active" role="menuitem">Über mich</a></li>
-                <li role="none"><a href="/#faq" class="nav-link" role="menuitem">FAQ</a></li>
-                <li role="none"><a href="/contact.html" class="nav-link" role="menuitem">Kontakt</a></li>
+            
+            <ul class="rl-nav__links" role="menubar">
+                <li role="none"><a href="services.html" role="menuitem">Services</a></li>
+                <li role="none"><a href="bundles/index.html" role="menuitem">Bundles</a></li>
+                <li role="none"><a href="about.html" class="active" role="menuitem">Über mich</a></li>
+                <li role="none"><a href="faq.html" role="menuitem">FAQ</a></li>
+                <li role="none"><a href="contact.html" role="menuitem">Kontakt</a></li>
             </ul>
-            <div class="nav-actions">
-                <a href="tel:+491608194018" class="nav-phone-link" aria-label="Anrufen">
-                    <i class="fas fa-phone-alt"></i> +49 160 8194018
-                </a>
-                <a href="/anfrage/" class="nav-cta">
-                    <i class="fas fa-calendar-check"></i> <span>Anfrage</span>
-                </a>
-                <button class="theme-btn" id="themeToggle" aria-label="Design umschalten">
-                    <i class="fas fa-moon" id="themeIcon"></i>
-                </button>
-                <button class="hamburger" id="navToggle" aria-controls="mobileMenu" aria-expanded="false" aria-label="Menü öffnen">
+
+            <div class="rl-nav__actions">
+                <a href="anfrage/index.html" class="nav-cta magnetic-btn"><i class="fas fa-calendar-check"></i> <span>Anfrage</span></a>
+                <button class="theme-toggle" data-theme-toggle aria-label="Design umschalten"><i class="fas fa-moon" data-theme-icon></i></button>
+                <button class="rl-nav__hamburger" id="navToggle" aria-expanded="false" aria-label="Menü öffnen">
                     <span></span><span></span><span></span>
                 </button>
             </div>
         </div>
     </nav>
 
-<!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobiles Menü">
+    <!-- Mobile Menu -->
+    <div class="rl-nav__mobile" id="mobileMenu" role="dialog" aria-hidden="true">
         <button class="mobile-close" id="mobileClose" aria-label="Schließen"><i class="fas fa-times"></i></button>
-        <a href="index.html">Start</a>
-        <a href="#about">Über mich</a>
-        <a href="#services">Leistungen</a>
-        <a href="#process">Ablauf</a>
-        <a href="#projects">Projekte</a>
-        <a href="#bundles">Pakete</a>
-        <a href="#reviews">Referenzen</a>
-        <a href="#faq">FAQ</a>
-        <a href="about.html">Profil</a>
-        <a href="contact.html">Kontakt</a>
-        <a href="anfrage/index.html" class="mobile-cta"><i class="fas fa-calendar-check"></i> Unverbindliche Anfrage</a>
+        <div class="mobile-menu-inner">
+            <a href="index.html" class="mobile-link">Start</a>
+            <a href="services.html" class="mobile-link">Services</a>
+            <a href="bundles/index.html" class="mobile-link">Bundles</a>
+            <a href="about.html" class="mobile-link" style="color:var(--rl-primary);">Über mich</a>
+            <a href="faq.html" class="mobile-link">FAQ</a>
+            <a href="contact.html" class="mobile-link">Kontakt</a>
+            <a href="anfrage/index.html" class="mobile-cta magnetic-btn"><i class="fas fa-calendar-check"></i> Unverbindliche Anfrage</a>
+        </div>
     </div>
     <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
 
+    <!-- ===== MAIN CONTENT ===== -->
     <main>
-        <!-- HERO (video + glass panel) -->
+
+        <!-- HERO -->
         <section class="about-hero" id="top">
             <div class="video-bg-container">
-                <video class="hero-video" autoplay muted loop playsinline poster="/assets/images/Bedroom_grey_main.webp">
-                    <source src="/assets/video/project-landscape.mp4" type="video/mp4" />
+                <!-- Fallback or Video -->
+                <video class="hero-video" autoplay muted loop playsinline poster="assets/images/Bedroom_grey_main.webp">
+                    <source src="assets/video/project-landscape.mp4" type="video/mp4" />
                 </video>
                 <div class="video-edge-shadow"></div>
-                <div class="aurora-glow glow-gold"></div>
-                <div class="aurora-glow glow-cyan"></div>
-                <div class="video-bottom-fade"></div>
             </div>
 
             <div class="container">
                 <div class="hero-glass-panel reveal">
                     <div class="trust-badge">
                         <span class="dot"></span>
-                        5.0 ★ · 110+ Kunden · Augsburg &amp; München
+                        <span>5.0 ★ · 110+ Kunden · Augsburg & München</span>
                     </div>
 
                     <h1>
@@ -960,21 +562,21 @@
                     </p>
 
                     <div class="btns">
-                        <a href="#process" class="btn btn-primary">
-                            <i class="fas fa-arrow-right"></i> So arbeite ich
+                        <a href="#process" class="btn btn-primary magnetic-btn">
+                            <i class="fas fa-arrow-down"></i> So arbeite ich
                         </a>
-                        <a href="/anfrage/" class="btn btn-secondary">
-                            <i class="fas fa-comment-dots"></i> Jetzt Anfragen
+                        <a href="contact.html" class="btn btn-secondary magnetic-btn">
+                            <i class="fas fa-comment-dots"></i> Kontakt aufnehmen
                         </a>
                     </div>
 
                     <div class="stats-bar">
                         <div class="stat-item">
-                            <div class="number live-counter" data-target="1200">0</div>
+                            <div class="number live-counter" data-target="1200">1200+</div>
                             <span class="label">Projekte</span>
                         </div>
                         <div class="stat-item">
-                            <div class="number live-counter" data-target="110">0</div>
+                            <div class="number live-counter" data-target="110">110+</div>
                             <span class="label">Kunden</span>
                         </div>
                         <div class="stat-item">
@@ -982,24 +584,20 @@
                             <span class="label">Bewertung</span>
                         </div>
                         <div class="stat-item">
-                            <div class="number live-counter" data-target="98">0</div>
-                            <span class="label">Weiterempfehlung %</span>
+                            <div class="number live-counter" data-target="98">98%</div>
+                            <span class="label">Weiterempfehlung</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- FLIP SECTION -->
+        <!-- 3D FLIP CARD -->
         <section class="flip-section" id="flip">
             <div class="container">
                 <div class="section-header reveal">
-                    <span class="pre" data-lang="de">Mein Versprechen</span>
-                    <span class="pre" data-lang="en" style="display:none;">My Promise</span>
-                    <h2>
-                        <span data-lang="de">Handwerk bedeutet <span class="gold">Verantwortung</span></span>
-                        <span data-lang="en" style="display:none;">Craftsmanship means <span class="gold">responsibility</span></span>
-                    </h2>
+                    <span class="pre">Mein Versprechen</span>
+                    <h2>Handwerk bedeutet <span class="gold">Verantwortung</span></h2>
                 </div>
 
                 <div class="flip-grid reveal">
@@ -1007,14 +605,15 @@
                         <div class="avatar-frame" id="flipCard">
                             <div class="flipper">
                                 <div class="flip-face front">
-                                    <img src="/assets/images/raphael-lezius-logo-front.jpg" alt="Raphael Lezius Logo Front" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'fallback-text\'><span>RL</span></div>'">
+                                    <img src="assets/images/raphael-lezius-logo-front.webp" alt="Raphael Lezius" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'fallback-text\'><span>RL</span></div>'">
                                 </div>
                                 <div class="flip-face back">
-                                    <img src="/assets/images/raphael-lezius-logo-back.jpg" alt="Raphael Lezius Logo Back" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'fallback-text\'><span>PRÄZISION</span></div>'">
+                                    <img src="assets/images/raphael-lezius-logo-back.webp" alt="Präzision" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'fallback-text\'><span>PRÄZISION</span></div>'">
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="flip-text">
                         <p class="lead">
                             Ich stehe mit meinem Namen für jede einzelne Schraube, die ich setze. <strong>Präzision, Sauberkeit und Zuverlässigkeit</strong> sind keine leeren Versprechen – sie sind die Grundlage meiner Arbeit.
@@ -1024,731 +623,456 @@
                         </p>
                         <div class="signature-line">Raphael Lezius</div>
                         <div class="flip-hint">
-                            <i class="fas fa-hand-pointer"></i> Klicken Sie auf das Logo – es dreht sich
+                            <i class="fas fa-hand-pointer"></i> Klicken Sie auf das Bild – es dreht sich
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- WORK VIDEOS -->
-        <section class="work-videos section-alt" id="videos">
+        <!-- TRUST / AUDIENCE -->
+        <section class="section-padding" id="trust">
             <div class="container">
                 <div class="section-header reveal">
-                    <span class="eyebrow">Einblicke</span>
-                    <h2>Bei der Arbeit – <span class="gold">echte Aufnahmen</span></h2>
-                    <p>Kurze Einblicke in laufende Montagen. Präzision, die man sieht.</p>
+                    <span class="pre">Vertrauen durch Erfahrung</span>
+                    <h2>Für wen ich <span class="gold">arbeite</span></h2>
+                    <p>Ich helfe Menschen, die Wert auf Qualität legen – und keine Überraschungen mögen.</p>
                 </div>
-                <div class="videos-grid reveal">
-                    <article class="video-card js-lightbox-trigger" data-video="/assets/video/project-portrait-timelapse.mp4">
-                        <div class="thumb">
-                            <video muted playsinline preload="metadata" poster="/assets/images/video-thumb-usm.webp">
-                                <source src="/assets/video/project-portrait-timelapse.mp4" type="video/mp4" />
-                            </video>
-                            <div class="play-btn"><i class="fas fa-play"></i></div>
-                        </div>
-                        <div class="info">
-                            <h4>USM Haller Timelapse</h4>
-                            <p>Systemaufbau mit Spezialwerkzeug – millimetergenau</p>
-                        </div>
-                    </article>
-                    <article class="video-card js-lightbox-trigger" data-video="/assets/video/raphael-assembly-action.mp4">
-                        <div class="thumb">
-                            <video muted playsinline preload="metadata" poster="/assets/images/video-thumb-action.webp">
-                                <source src="/assets/video/raphael-assembly-action.mp4" type="video/mp4" />
-                            </video>
-                            <div class="play-btn"><i class="fas fa-play"></i></div>
-                        </div>
-                        <div class="info">
-                            <h4>Präzisionsarbeit</h4>
-                            <p>Live-Montage – Sauberkeit und Detailgenauigkeit</p>
-                        </div>
-                    </article>
-                    <article class="video-card js-lightbox-trigger" data-video="/assets/video/project-landscape.mp4">
-                        <div class="thumb">
-                            <video muted playsinline preload="metadata" poster="/assets/images/Bedroom_grey_main.webp">
-                                <source src="/assets/video/project-landscape.mp4" type="video/mp4" />
-                            </video>
-                            <div class="play-btn"><i class="fas fa-play"></i></div>
-                        </div>
-                        <div class="info">
-                            <h4>Projekt-Überblick</h4>
-                            <p>Fertige Montagen – das Ergebnis zählt</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
 
-        <!-- Video Lightbox -->
-        <div class="video-lightbox" id="videoLightbox" role="dialog" aria-modal="true" aria-label="Video abspielen">
-            <div class="lightbox-inner">
-                <button class="close-btn" id="closeLightbox" aria-label="Schließen"><i class="fas fa-times"></i></button>
-                <video id="lightboxPlayer" controls playsinline></video>
-            </div>
-        </div>
-
-        <!-- INTRO + PORTRAIT -->
-        <section class="section">
-            <div class="container">
-                <div class="about-intro reveal">
-                    <div class="about-portrait">
-                        <div class="placeholder">
-                            <i class="fas fa-user-tie"></i>
-                            <p>Portrait Raphael Lezius<br /><span style="font-size:0.8rem;">(Bildplatzhalter)</span></p>
-                        </div>
-                        <div class="stats-bar">
-                            <div class="item">
-                                <div class="num">8+</div>
-                                <div class="lbl">Jahre</div>
-                            </div>
-                            <div class="item">
-                                <div class="num">1.200+</div>
-                                <div class="lbl">Projekte</div>
-                            </div>
-                            <div class="item">
-                                <div class="num">5,0</div>
-                                <div class="lbl">Sterne</div>
-                            </div>
-                        </div>
+                <div class="audience-grid reveal">
+                    <div class="audience-card">
+                        <div class="audience-icon"><i class="fas fa-home"></i></div>
+                        <h3>Privatkunden</h3>
+                        <p>Küchen, PAX-Schränke, USM Haller – alles, was Ihr Zuhause schöner macht.</p>
                     </div>
-                    <div class="about-story">
-                        <p class="lead">
-                            Seit über acht Jahren montiere ich System- und Designmöbel in München, Augsburg und der Region – mit dem Anspruch, dass jedes Ergebnis so wirkt, als wäre es schon immer dort gestanden.
-                        </p>
-                        <p>
-                            Mein Fokus liegt auf hochwertigen Systemen wie <strong>USM Haller</strong>, auf kompletten Küchenzeilen und auf Möbeln, bei denen Passgenauigkeit und Materialschutz entscheidend sind. Ich arbeite mit dem richtigen Spezialwerkzeug für alle Generationen und mit demselben Standard: klare Abstimmung, saubere Ausführung, dokumentierte Übergabe.
-                        </p>
-                        <p>
-                            Was mich antreibt: dass Auftraggeber nach der Montage nicht nacharbeiten müssen. Dass Türen und Schubladen laufen, dass Ebenen gerade sitzen und dass der Arbeitsbereich so verlassen wird, wie er vorgefunden wurde – oder besser.
-                        </p>
-                        <div class="cred-list">
-                            <div class="item"><i class="fas fa-check-circle"></i> USM Haller & Systemmöbel</div>
-                            <div class="item"><i class="fas fa-check-circle"></i> Spezialwerkzeug aller Generationen</div>
-                            <div class="item"><i class="fas fa-check-circle"></i> Staubarme Arbeitsweise</div>
-                            <div class="item"><i class="fas fa-check-circle"></i> Feste Preise ohne Nachforderungen</div>
-                        </div>
-                        <div class="about-actions">
-                            <a href="/anfrage/" class="btn btn-primary btn-sm">
-                                <i class="fas fa-comments"></i> Gespräch vereinbaren
-                            </a>
-                            <a href="/#services" class="btn btn-secondary btn-sm">
-                                <i class="fas fa-th-list"></i> Leistungen ansehen
-                            </a>
-                        </div>
+                    <div class="audience-card">
+                        <div class="audience-icon"><i class="fas fa-building"></i></div>
+                        <h3>Gewerbekunden</h3>
+                        <p>Büroausstattung, Objektmöbel, Systemlösungen – diskret und termintreu.</p>
+                    </div>
+                    <div class="audience-card">
+                        <div class="audience-icon"><i class="fas fa-truck"></i></div>
+                        <h3>Umzugskunden</h3>
+                        <p>Demontage, Transportvorbereitung, Wiederaufbau – alles aus einer Hand.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- VALUES -->
-        <section class="section section-alt">
+        <!-- THE 3 TRUST PILLARS -->
+        <section class="section-padding" style="background: var(--rl-surface); border-top: 1px solid var(--rl-border); border-bottom: 1px solid var(--rl-border);" id="values">
             <div class="container">
                 <div class="section-header reveal">
-                    <span class="eyebrow">Arbeitsweise</span>
-                    <h2>Drei Grundsätze, die <span class="gold">jede Montage</span> prägen</h2>
-                    <p>Keine Marketing-Floskeln – konkrete Regeln, an die ich mich halte.</p>
+                    <span class="pre">Meine Prinzipien</span>
+                    <h2>Darum vertrauen <span class="gold">Kunden</span> mir</h2>
+                    <p>Drei Prinzipien, die jede Montage zu einem Erlebnis machen – nicht zu einem Ärgernis.</p>
                 </div>
+
                 <div class="values-grid reveal">
                     <div class="value-card">
-                        <div class="icon"><i class="fas fa-ruler-combined"></i></div>
-                        <h3>Millimetergenau</h3>
-                        <p>Ausrichtung nach Herstellerangaben, sichtbare Lot- und Wasserwaagenkontrolle. Was schief steht, wird nachjustiert – nicht „so gelassen“.</p>
+                        <span class="value-icon"><i class="fas fa-ruler-combined"></i></span>
+                        <h3>Millimetergenaue Präzision</h3>
+                        <p>Keine Schätzungen. Kein „passt schon“. Ich arbeite mit <strong>360°‑Lasern</strong> und <strong>Bosch Professional</strong> – jedes Bauteil sitzt perfekt. Spaltmasse unter 1 mm sind bei mir Standard.</p>
+                        <div class="value-tag">Laser-Nivellierung</div>
                     </div>
+
                     <div class="value-card">
-                        <div class="icon"><i class="fas fa-broom"></i></div>
-                        <h3>Staubarm & respektvoll</h3>
-                        <p>Böden und Wände werden geschützt. Der Arbeitsbereich wird am Ende so verlassen, wie er vorgefunden wurde – oder sauberer.</p>
+                        <span class="value-icon"><i class="fas fa-file-invoice-dollar"></i></span>
+                        <h3>Feste Preise</h3>
+                        <p>Was wir besprechen, ist, was Sie zahlen. <strong>Keine versteckten Kosten</strong>, kein „das ist jetzt aber mehr Aufwand“. Ich kalkuliere sorgfältig – und stehe zu meinem Wort.</p>
+                        <div class="value-tag">100% Transparenz</div>
                     </div>
+
                     <div class="value-card">
-                        <div class="icon"><i class="fas fa-handshake"></i></div>
-                        <h3>Klar & verbindlich</h3>
-                        <p>Festes Angebot vor dem Termin. Keine Nachforderungen bei korrekter Projektbeschreibung. Änderungen nur nach Ihrer Zustimmung.</p>
+                        <span class="value-icon"><i class="fas fa-shield-alt"></i></span>
+                        <h3>Versichert & Garantiert</h3>
+                        <p>Ihr Zuhause ist sicher. Mit <strong>5 Mio. € Haftpflicht</strong>, <strong>HEPA‑Staubabsaugung</strong> und <strong>1 Jahr persönlicher Garantie</strong>. Falls etwas nicht stimmt – ich komme kostenlos nach.</p>
+                        <div class="value-tag">5 Mio. € versichert</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- TIMELINE -->
-        <section class="section">
+        <!-- PROCESS -->
+        <section class="section-padding" id="process">
             <div class="container">
                 <div class="section-header reveal">
-                    <span class="eyebrow">Werdegang</span>
-                    <h2>Von der ersten Montage bis <span class="gold">heute</span></h2>
-                    <p>Erfahrung entsteht nicht über Nacht – sie entsteht Projekt für Projekt.</p>
+                    <span class="pre">Ihr Weg zur perfekten Montage</span>
+                    <h2>So arbeiten <span class="gold">wir</span> – Schritt für Schritt</h2>
+                    <p>Transparent, verbindlich, ergebnisorientiert – so vermeiden wir Missverständnisse.</p>
                 </div>
-                <div class="timeline reveal">
-                    <div class="timeline-item">
-                        <div class="dot"></div>
-                        <div class="year">2016 – 2018</div>
-                        <h3>Einstieg & Grundlagen</h3>
-                        <p>Erste professionelle Montagen von Systemmöbeln und Küchen. Fokus auf handwerkliche Sorgfalt und Lernen der Herstellerstandards – besonders bei modularen Systemen.</p>
+
+                <div class="process-grid reveal">
+                    <div class="process-step">
+                        <div class="step-number">01</div>
+                        <span class="step-icon"><i class="fas fa-comment-dots"></i></span>
+                        <h4>Kostenlose Analyse</h4>
+                        <p>Wir besprechen Ihr Projekt – per Telefon, Video oder vor Ort. Ich höre zu, frage nach und erstelle Ihnen ein <strong>verbindliches, festes Angebot</strong>.</p>
+                        <span class="connector"><i class="fas fa-chevron-right"></i></span>
                     </div>
-                    <div class="timeline-item">
-                        <div class="dot"></div>
-                        <div class="year">2019 – 2021</div>
-                        <h3>Spezialisierung auf Premium-Systeme</h3>
-                        <p>Vertiefung in USM Haller (alle Generationen), komplexe Küchenaufbauten und Designmöbel. Aufbau eines eigenen, spezialisierten Werkzeugparks.</p>
+
+                    <div class="process-step">
+                        <div class="step-number">02</div>
+                        <span class="step-icon"><i class="fas fa-tools"></i></span>
+                        <h4>Professionelle Umsetzung</h4>
+                        <p>Ich montiere Ihre Möbel mit <strong>Präzision und Sorgfalt</strong>. Staubfrei, kratzfrei und mit hochwertigem Werkzeug. Sie können sich entspannen.</p>
+                        <span class="connector"><i class="fas fa-chevron-right"></i></span>
                     </div>
-                    <div class="timeline-item">
-                        <div class="dot"></div>
-                        <div class="year">2022 – 2024</div>
-                        <h3>Lezius Möbelmontage als Marke</h3>
-                        <p>Formale Gründung und klare Positionierung: Präzision, Dokumentation, 12-Monats-Garantie. Wachstum auf über 1.000 dokumentierte Projekte in München und Augsburg.</p>
+
+                    <div class="process-step">
+                        <div class="step-number">03</div>
+                        <span class="step-icon"><i class="fas fa-check-circle"></i></span>
+                        <h4>Abnahme & Garantie</h4>
+                        <p>Gemeinsame Kontrolle – wenn Sie zufrieden sind, bin ich es auch. Und danach: <strong>1 Jahr persönliche Garantie</strong>. Bei Fragen bin ich erreichbar.</p>
                     </div>
-                    <div class="timeline-item">
-                        <div class="dot"></div>
-                        <div class="year">Heute</div>
-                        <h3>Kontinuierliche Weiterentwicklung</h3>
-                        <p>Über 1.200 Montagen, 5,0 ★ Bewertung und ein fester Standard: feste Preise, staubarme Arbeit, persönliche Garantie und transparente Übergabe.</p>
-                    </div>
+                </div>
+
+                <div class="process-trust reveal">
+                    <span><i class="fas fa-clock"></i> Pünktlich – oder 10 % Rabatt</span>
+                    <span><i class="fas fa-euro-sign"></i> Fester Preis – garantiert</span>
+                    <span><i class="fas fa-star"></i> 5.0 ★ – 110+ Bewertungen</span>
                 </div>
             </div>
         </section>
 
-        <!-- EXPERTISE -->
-        <section class="section section-alt">
+        <!-- TESTIMONIALS -->
+        <section class="section-padding" style="background: var(--rl-surface); border-top: 1px solid var(--rl-border);" id="reviews">
             <div class="container">
                 <div class="section-header reveal">
-                    <span class="eyebrow">Fachgebiete</span>
-                    <h2>Worauf ich mich <span class="gold">besonders verstehe</span></h2>
-                    <p>Nicht alles, was montiert wird, ist gleich. Manche Systeme verlangen Spezialwissen.</p>
+                    <span class="pre">Echte Stimmen</span>
+                    <h2>Was meine <span class="gold">Kunden</span> sagen</h2>
+                    <p>110+ Bewertungen – alle mit 5.0 ★. Das ist mein schönstes Feedback.</p>
                 </div>
-                <div class="expertise-grid reveal">
-                    <div class="expertise-card">
-                        <div class="icon"><i class="fas fa-gem"></i></div>
-                        <div>
-                            <h4>USM Haller</h4>
-                            <p>Alle Generationen – von klassischen Kugelverbindungen bis zu aktuellen Varianten. Richtiges Spezialwerkzeug und herstellerkonforme Montage.</p>
+
+                <div class="testimonials-grid reveal">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <blockquote>„Absolut professionell und pünktlich. Die USM Montage war millimetergenau. Ich fühle mich sehr gut aufgehoben.“</blockquote>
+                        <div class="client">
+                            <div>
+                                <span class="client-name">Thomas M.</span>
+                                <span class="client-location">München</span>
+                            </div>
+                            <span class="client-platform">MyHammer</span>
                         </div>
                     </div>
-                    <div class="expertise-card">
-                        <div class="icon"><i class="fas fa-utensils"></i></div>
-                        <div>
-                            <h4>Küchen-Komplettmontage</h4>
-                            <p>Demontage der Altküche, Aufbau der Neuküche, Geräteanschluss nach Vorgabe, Endjustierung und Funktionsprüfung.</p>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <blockquote>„Sehr saubere Arbeit und freundliche Kommunikation. Die Küche sieht aus wie aus dem Katalog – nur noch schöner.“</blockquote>
+                        <div class="client">
+                            <div>
+                                <span class="client-name">Sandra K.</span>
+                                <span class="client-location">Augsburg</span>
+                            </div>
+                            <span class="client-platform">MyHammer</span>
                         </div>
                     </div>
-                    <div class="expertise-card">
-                        <div class="icon"><i class="fas fa-cube"></i></div>
-                        <div>
-                            <h4>System- & Designmöbel</h4>
-                            <p>IKEA PAX, Boxspringbetten, modulare Regalsysteme und hochwertige Designmöbel mit hohen Passgenauigkeitsanforderungen.</p>
+
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <blockquote>„Endlich jemand, der sich wirklich Zeit nimmt und Wert auf Details legt. Man merkt die Leidenschaft.“</blockquote>
+                        <div class="client">
+                            <div>
+                                <span class="client-name">Michael R.</span>
+                                <span class="client-location">München</span>
+                            </div>
+                            <span class="client-platform">CHECK24</span>
                         </div>
                     </div>
-                    <div class="expertise-card">
-                        <div class="icon"><i class="fas fa-truck"></i></div>
-                        <div>
-                            <h4>Demontage & Umzug</h4>
-                            <p>Schonende Demontage, Kennzeichnung, Schutzverpackung und fachgerechter Wiederaufbau am neuen Standort.</p>
-                        </div>
-                    </div>
+                </div>
+
+                <div class="platform-badges reveal">
+                    <div class="platform-badge"><i class="fas fa-star"></i> 5.0 ★ · MyHammer</div>
+                    <div class="platform-badge"><i class="fas fa-star"></i> 5.0 ★ · CHECK24</div>
+                    <div class="platform-badge"><i class="fas fa-star"></i> 5.0 ★ · Google</div>
                 </div>
             </div>
         </section>
 
-        <!-- STANDARDS -->
-        <section class="section">
-            <div class="container">
-                <div class="section-header reveal">
-                    <span class="eyebrow">Standards</span>
-                    <h2>Was Sie bei jeder Montage <span class="gold">erwarten können</span></h2>
-                    <p>Messbare Zusagen statt vager Versprechen.</p>
-                </div>
-                <div class="standards-grid reveal">
-                    <div class="standard-item">
-                        <i class="fas fa-shield-alt"></i>
-                        <h4>5 Mio. € versichert</h4>
-                        <p>Betriebshaftpflicht für Sach- und Vermögensschäden</p>
-                    </div>
-                    <div class="standard-item">
-                        <i class="fas fa-hand-holding-heart"></i>
-                        <h4>12 Monate Garantie</h4>
-                        <p>Persönliche Nacharbeit bei berechtigter Beanstandung</p>
-                    </div>
-                    <div class="standard-item">
-                        <i class="fas fa-file-invoice-dollar"></i>
-                        <h4>Feste Preise</h4>
-                        <p>Angebot = Endpreis bei korrekter Beschreibung</p>
-                    </div>
-                    <div class="standard-item">
-                        <i class="fas fa-clock"></i>
-                        <h4>Pünktlichkeitszusage</h4>
-                        <p>15 Min. Verzug → 10 % Rabatt</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- QUOTE -->
-        <section class="section section-alt">
-            <div class="container">
-                <div class="quote-block reveal">
-                    <p>
-                        Ich montiere nicht nur Möbel – ich sorge dafür, dass sie so funktionieren und aussehen, als wären sie schon immer Teil des Raums gewesen.
-                    </p>
-                    <div class="author">
-                        Raphael Lezius
-                        <span>Gründer, Lezius Möbelmontage</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA -->
-        <section class="section" style="padding-top:20px; padding-bottom:50px;">
+        <!-- CTA BANNER -->
+        <section class="section-padding" id="cta">
             <div class="container">
                 <div class="cta-banner reveal">
-                    <h2>Bereit für eine präzise Montage?</h2>
-                    <p>Schildern Sie kurz Ihr Projekt – Sie erhalten ein klares, verbindliches Angebot.</p>
-                    <a href="/anfrage/" class="btn">
-                        <i class="fas fa-calendar-check"></i> Unverbindliche Anfrage senden
-                    </a>
+                    <div class="cta-badge">
+                        <i class="fas fa-bolt"></i> Jetzt unverbindlich anfragen
+                    </div>
+                    <h2>Bereit für Ihre <span class="gold-text">perfekte Montage</span>?</h2>
+                    <p>Ob Küche, USM Haller, Gartenhaus oder Einzelmöbel – ich freue mich auf Ihr Projekt.<br /><strong>Rufen Sie an, schreiben Sie mir oder nutzen Sie das Formular.</strong></p>
+                    
+                    <div class="cta-actions">
+                        <a href="tel:+491608194018" class="cta-phone magnetic-btn">
+                            <i class="fas fa-phone"></i> 0160 8194018
+                        </a>
+                        <a href="https://wa.me/491608194018" target="_blank" rel="noopener" class="cta-whatsapp magnetic-btn">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="contact.html" class="cta-form magnetic-btn">
+                            <i class="fas fa-envelope"></i> Kontaktformular
+                        </a>
+                    </div>
+                    
+                    <div class="cta-trust">
+                        <span><i class="fas fa-shield-alt"></i> 5 Mio. € versichert</span>
+                        <span><i class="fas fa-check-circle"></i> 1 Jahr Garantie</span>
+                        <span><i class="fas fa-clock"></i> 24h Antwort</span>
+                        <span><i class="fas fa-star"></i> 5.0 ★ (110+)</span>
+                    </div>
                 </div>
             </div>
         </section>
+
     </main>
 
-    <!-- FOOTER -->
-    <footer class="footer" role="contentinfo">
+    <!-- ===== FOOTER ===== -->
+    <footer class="rl-footer" role="contentinfo">
         <div class="container">
-            <div class="footer-top">
+            <div class="rl-footer__top">
                 <div>
-                    <div class="footer-logo">
-                        <span class="logo-mark">L</span>
-                        <span>
-                            <span style="font-weight:800;">Lezius</span><br>
-                            <span style="font-size:0.7rem;color:var(--rl-primary);letter-spacing:0.8px;text-transform:uppercase;">Möbelmontage</span>
-                        </span>
+                    <div class="rl-footer__logo">
+                        Raphael <span>Lezius</span>
                     </div>
-                    <p class="footer-desc">
-                        Professionelle Möbel- und Systemmontage in München und Augsburg.
-                        Präzise, staubarm und mit dokumentierter Übergabe.
-                    </p>
-                    <div class="footer-trust">
+                    <p class="rl-footer__description">Premium Montage mit echter Leidenschaft – millimetergenau, staubfrei und immer mit Herz in München & Augsburg.</p>
+                    <div class="rl-footer__trust">
                         <span><i class="fas fa-shield-alt"></i> 5 Mio. € versichert</span>
-                        <span><i class="fas fa-star"></i> 5,0 ★ (110+)</span>
+                        <span><i class="fas fa-star"></i> 5.0 ★ (110+)</span>
                         <span><i class="fas fa-clock"></i> Antwort &lt; 24 h</span>
-                        <span><i class="fas fa-hand-holding-heart"></i> 12 Monate Garantie</span>
                     </div>
                 </div>
-                <div class="footer-newsletter">
-                    <h4>Projekt-Updates</h4>
-                    <p>Gelegentliche Hinweise zu Terminen und Leistungen – nur bei Interesse.</p>
-                    <form class="footer-form" id="newsletterForm">
-                        <input type="email" id="newsletterEmail" placeholder="Ihre E-Mail-Adresse" required aria-label="E-Mail-Adresse" />
-                        <button type="submit"><i class="fas fa-paper-plane"></i> Anmelden</button>
+                <div>
+                    <h4 style="font-family:var(--font-head); font-size:1.15rem; font-weight:700; margin-bottom:10px;"><i class="fas fa-envelope-open-text" style="color:var(--rl-primary); margin-right:8px;"></i> Bleiben Sie verbunden</h4>
+                    <p style="font-size:0.92rem; color:var(--rl-muted); margin-bottom:16px;">Monatliche Tipps und Einblicke – nur wenn Sie möchten.</p>
+                    <form id="newsletterForm" style="display:flex; flex-direction:column; gap:12px; max-width:350px;">
+                        <input type="email" placeholder="Ihre E-Mail-Adresse" required style="padding:14px; border-radius:12px; border:1px solid var(--rl-border); background:var(--rl-card); color:var(--rl-text); outline:none;">
+                        <button type="submit" class="magnetic-btn" style="padding:14px; border-radius:12px; border:none; background:var(--rl-gradient-cta); color:#1C1917; font-weight:700; cursor:pointer;"><i class="fas fa-paper-plane"></i> Anmelden</button>
                     </form>
-                    <div class="footer-consent">
-                        <input type="checkbox" id="consentFooter" required />
-                        <label for="consentFooter">Ich stimme der <a href="/legal/datenschutz.html">Datenschutzerklärung</a> zu.</label>
-                    </div>
                 </div>
             </div>
 
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h5>Leistungen</h5>
-                    <a href="/services.html">Alle Leistungen</a>
-                    <a href="/services/moebel-kuechen.html">Möbel &amp; Küchen</a>
-                    <a href="/services/usm-haller.html">USM Haller</a>
-                    <a href="/services/garten-outdoor.html">Garten &amp; Outdoor</a>
-                    <a href="/services/demontage-umzug.html">Demontage &amp; Umzug</a>
-                    <a href="/services/premium-pro.html">Premium Pro</a>
+            <div class="rl-footer__grid">
+                <div class="rl-footer__col">
+                    <h5>Services</h5>
+                    <a href="services.html">Alle Services</a>
+                    <a href="services/moebel-kuechen.html">Möbel &amp; Küchen</a>
+                    <a href="services/usm-haller.html">USM Haller</a>
+                    <a href="services/demontage-umzug.html">Demontage &amp; Umzug</a>
+                    <a href="services/premium-pro.html">Premium Pro</a>
                 </div>
-                <div class="footer-col">
-                    <h5>Pakete</h5>
-                    <a href="/bundles/">Alle Pakete</a>
-                    <a href="/bundles/kuechen-komplett.html">Küchen-Komplett</a>
-                    <a href="/bundles/usm-all-in.html">USM All-In</a>
-                    <a href="/bundles/umzug-premium.html">Umzug Premium</a>
-                    <h5 style="margin-top:18px;">Hilfe</h5>
-                    <a href="/faq.html">FAQ</a>
-                    <a href="/contact.html">Kontakt</a>
+                <div class="rl-footer__col">
+                    <h5>Bundles</h5>
+                    <a href="bundles/index.html">Übersicht</a>
+                    <a href="bundles/kuechen-komplett.html">Küchen-Komplett</a>
+                    <a href="bundles/usm-all-in.html">USM All-In</a>
+                    <a href="bundles/umzug-montage.html">Umzugs-Montage</a>
                 </div>
-                <div class="footer-col">
+                <div class="rl-footer__col">
                     <h5>Über</h5>
-                    <a href="/about.html">Über mich</a>
-                    <a href="/reviews.html">Referenzen</a>
-                    <a href="/anfrage/">Anfrage stellen</a>
-                    <div class="footer-social">
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                    <a href="about.html" style="color:var(--rl-primary);">Profil</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="reviews.html">Kundenstimmen</a>
                 </div>
-                <div class="footer-col">
-                    <h5>Kontakt</h5>
-                    <ul class="footer-contact">
+                <div class="rl-footer__col">
+                    <h5>Kontakt & Rechtliches</h5>
+                    <ul class="rl-footer__contact">
                         <li><i class="fas fa-phone-alt"></i> <a href="tel:+491608194018">+49 160 8194018</a></li>
-                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/491608194018" target="_blank" rel="noopener">WhatsApp</a></li>
                         <li><i class="fas fa-envelope"></i> <a href="mailto:info@raphael-lezius.de">info@raphael-lezius.de</a></li>
                     </ul>
-                    <h5 style="margin-top:18px;">Rechtliches</h5>
-                    <a href="/legal/impressum.html">Impressum</a>
-                    <a href="/legal/datenschutz.html">Datenschutz</a>
-                    <a href="/legal/agb.html">AGB</a>
-                    <a href="/legal/widerruf.html">Widerruf</a>
-                    <a href="/legal/cookie.html">Cookie-Richtlinie</a>
-                </div>
-            </div>
-
-            <div class="footer-trustbar">
-                <div class="trust-item">
-                    <i class="fas fa-users"></i>
-                    <div>
-                        <span class="label">Kunden</span>
-                        <span class="value">110+</span>
-                    </div>
-                </div>
-                <div class="trust-item">
-                    <i class="fas fa-star"></i>
-                    <div>
-                        <span class="label">Bewertung</span>
-                        <span class="value">5,0 ★</span>
-                    </div>
-                </div>
-                <div class="trust-item">
-                    <i class="fas fa-bolt"></i>
-                    <div>
-                        <span class="label">Reaktion</span>
-                        <span class="value">&lt; 24 h</span>
-                    </div>
-                </div>
-                <div class="trust-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <div>
-                        <span class="label">Versicherung</span>
-                        <span class="value">5 Mio. €</span>
-                    </div>
-                </div>
-                <div class="trust-item">
-                    <i class="fas fa-hand-holding-heart"></i>
-                    <div>
-                        <span class="label">Garantie</span>
-                        <span class="value">12 Monate</span>
-                    </div>
-                </div>
-                <div class="trust-item">
-                    <i class="fas fa-award"></i>
-                    <div>
-                        <span class="label">Erfahrung</span>
-                        <span class="value">8+ Jahre</span>
+                    <div style="margin-top:16px;">
+                        <a href="legal/impressum.html">Impressum</a>
+                        <a href="legal/datenschutz.html">Datenschutz</a>
                     </div>
                 </div>
             </div>
 
-            <div class="footer-bottom">
-                <div>
-                    <p class="footer-copy">© <span id="year">2026</span> Lezius Möbelmontage · Augsburg &amp; München</p>
-                    <div class="footer-legal">
-                        <a href="/legal/impressum.html">Impressum</a>
-                        <span class="sep">·</span>
-                        <a href="/legal/datenschutz.html">Datenschutz</a>
-                        <span class="sep">·</span>
-                        <a href="/legal/agb.html">AGB</a>
-                    </div>
+            <div class="rl-footer__bottom">
+                <p>© 2026 Raphael Lezius · Mit Sorgfalt gemacht in Augsburg</p>
+                <div class="rl-footer__legal">
+                    <a href="legal/impressum.html">Impressum</a> <span class="sep">·</span>
+                    <a href="legal/datenschutz.html">Datenschutz</a> <span class="sep">·</span>
+                    <a href="legal/agb.html">AGB</a>
                 </div>
-            </div>
-            <div class="footer-note">
-                Danke für Ihr Interesse. Eine präzise Montage beginnt mit einer klaren Abstimmung.
             </div>
         </div>
     </footer>
 
+    <!-- SCRIPTS -->
     <script>
-    (function () {
-        'use strict';
+        (function() {
+            'use strict';
 
-        // Theme
-        const themeKey = 'rl-theme';
-        function getTheme() {
-            const stored = localStorage.getItem(themeKey);
-            if (stored) return stored;
-            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        }
-        function applyTheme(theme) {
-            document.documentElement.setAttribute('data-theme', theme);
-            localStorage.setItem(themeKey, theme);
-            const icon = document.getElementById('themeIcon');
-            if (icon) icon.className = theme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
-            const meta = document.getElementById('themeColorMeta');
-            if (meta) meta.content = theme === 'dark' ? '#0B0A09' : '#F9F7F2';
-        }
-        applyTheme(getTheme());
-        document.getElementById('themeToggle')?.addEventListener('click', () => {
-            const current = document.documentElement.getAttribute('data-theme') || 'dark';
-            applyTheme(current === 'dark' ? 'light' : 'dark');
-        });
-
-        // Mobile menu
-        const menu = document.getElementById('mobileMenu');
-        const backdrop = document.getElementById('navBackdrop');
-        const toggle = document.getElementById('navToggle');
-        const closeBtn = document.getElementById('mobileClose');
-
-        function openMenu() {
-            menu?.classList.add('open');
-            backdrop?.classList.add('active');
-            toggle?.setAttribute('aria-expanded', 'true');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeMenu() {
-            menu?.classList.remove('open');
-            backdrop?.classList.remove('active');
-            toggle?.setAttribute('aria-expanded', 'false');
-            document.body.style.overflow = '';
-        }
-        toggle?.addEventListener('click', () => menu?.classList.contains('open') ? closeMenu() : openMenu());
-        backdrop?.addEventListener('click', closeMenu);
-        closeBtn?.addEventListener('click', closeMenu);
-        menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
-
-        // Scroll progress + nav + back-to-top
-        const progress = document.getElementById('scrollProgress');
-        const nav = document.getElementById('mainNav');
-        const backTop = document.getElementById('backToTop');
-        let lastScroll = 0;
-
-        function onScroll() {
-            const scrollY = window.scrollY;
-            const docH = document.documentElement.scrollHeight - window.innerHeight;
-            if (progress) progress.style.width = (docH > 0 ? (scrollY / docH) * 100 : 0) + '%';
-
-            if (nav) {
-                if (scrollY > 80) {
-                    nav.classList.add('scrolled');
-                    if (scrollY > lastScroll && scrollY > 200) nav.classList.add('hidden');
-                    else nav.classList.remove('hidden');
-                } else {
-                    nav.classList.remove('scrolled', 'hidden');
-                }
-            }
-            lastScroll = scrollY;
-            if (backTop) backTop.classList.toggle('visible', scrollY > 400);
-        }
-        window.addEventListener('scroll', onScroll, { passive: true });
-        onScroll();
-        backTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-        // Newsletter
-        document.getElementById('newsletterForm')?.addEventListener('submit', function (e) {
-            e.preventDefault();
-            const btn = this.querySelector('button[type="submit"]');
-            const orig = btn.innerHTML;
-            btn.innerHTML = '<i class="fas fa-check"></i> Angemeldet';
-            setTimeout(() => {
-                btn.innerHTML = orig;
-                this.reset();
-            }, 2200);
-        });
-
-        // Year
-        const yearEl = document.getElementById('year');
-        if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-        // Reveal on scroll
-        const reveals = document.querySelectorAll('.reveal');
-        function showReveal(el) {
-            el.classList.add('visible');
-        }
-        
-        reveals.forEach(el => {
-            const rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight + 80) showReveal(el);
-        });
-        
-        if ('IntersectionObserver' in window) {
-            const io = new IntersectionObserver((entries) => {
-                entries.forEach(e => {
-                    if (e.isIntersecting) {
-                        showReveal(e.target);
-                        io.unobserve(e.target);
-                    }
+            // Theme Toggle
+            function applyTheme(theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+                localStorage.setItem('rl-theme', theme);
+                document.querySelectorAll('[data-theme-icon]').forEach(icon => {
+                    icon.className = theme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
                 });
-            }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
-            reveals.forEach(el => {
-                if (!el.classList.contains('visible')) io.observe(el);
-            });
-        }
-        setTimeout(() => {
-            document.querySelectorAll('.reveal:not(.visible)').forEach(showReveal);
-        }, 2500);
-
-        // Smooth anchor (for same-page links)
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-            a.addEventListener('click', function (e) {
-                const id = this.getAttribute('href');
-                if (id === '#') return;
-                const target = document.querySelector(id);
-                if (target) {
-                    e.preventDefault();
-                    const top = target.getBoundingClientRect().top + window.scrollY - 80;
-                    window.scrollTo({ top, behavior: 'smooth' });
-                }
-            });
-        });
-
-        // Flip card
-        const flipCard = document.getElementById('flipCard');
-        if (flipCard) {
-            const toggleFlip = () => flipCard.classList.toggle('flipped');
-            flipCard.addEventListener('click', toggleFlip);
-            flipCard.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    toggleFlip();
-                }
-            });
-        }
-
-        // Video lightbox
-        const lightbox = document.getElementById('videoLightbox');
-        const player = document.getElementById('lightboxPlayer');
-        const lightboxCloseBtn = document.getElementById('closeLightbox');
-        document.querySelectorAll('.js-lightbox-trigger').forEach(card => {
-            card.addEventListener('click', () => {
-                const src = card.getAttribute('data-video');
-                if (src && player && lightbox) {
-                    player.src = src;
-                    lightbox.classList.add('active');
-                    player.play().catch(() => {});
-                }
-            });
-        });
-        function closeLightbox() {
-            if (lightbox) lightbox.classList.remove('active');
-            if (player) { player.pause(); player.src = ''; }
-        }
-        lightboxCloseBtn?.addEventListener('click', closeLightbox);
-        lightbox?.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
-        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
-
-        // Live counters
-        function animateCounter(el) {
-            const target = parseInt(el.getAttribute('data-target'), 10);
-            if (isNaN(target) || target <= 0) return;
-            const duration = 1800;
-            const startTime = performance.now();
-            function update(currentTime) {
-                const elapsed = currentTime - startTime;
-                const progress = Math.min(elapsed / duration, 1);
-                const eased = 1 - Math.pow(1 - progress, 3);
-                const current = Math.floor(eased * target);
-                el.textContent = current.toLocaleString('de-DE') + (target >= 100 ? '+' : '');
-                if (progress < 1) requestAnimationFrame(update);
-                else el.textContent = target.toLocaleString('de-DE') + (target >= 100 ? '+' : '');
             }
-            requestAnimationFrame(update);
-        }
+            applyTheme(localStorage.getItem('rl-theme') || 'dark');
+            
+            document.querySelectorAll('[data-theme-toggle]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const current = document.documentElement.getAttribute('data-theme');
+                    const next = current === 'dark' ? 'light' : 'dark';
+                    localStorage.setItem('rl-theme', next);
+                    applyTheme(next);
+                });
+            });
 
-        const counterObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.querySelectorAll('.live-counter').forEach(counter => {
-                        if (!counter.classList.contains('counted')) {
-                            counter.classList.add('counted');
-                            animateCounter(counter);
+            // Mobile Menu
+            const nav = document.getElementById('mainNav');
+            const menu = document.getElementById('mobileMenu');
+            const backdrop = document.getElementById('navBackdrop');
+            const toggleBtn = document.getElementById('navToggle');
+            const closeBtn = document.getElementById('mobileClose');
+
+            function toggleMenu(show) {
+                if (menu) menu.classList.toggle('open', show);
+                if (backdrop) backdrop.classList.toggle('active', show);
+                document.body.style.overflow = show ? 'hidden' : '';
+            }
+            toggleBtn?.addEventListener('click', () => toggleMenu(true));
+            closeBtn?.addEventListener('click', () => toggleMenu(false));
+            backdrop?.addEventListener('click', () => toggleMenu(false));
+            menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
+
+            // Sticky Nav & Scroll Progress
+            const progress = document.getElementById('scrollProgress');
+            const backTop = document.getElementById('backToTop');
+            let lastScroll = 0;
+
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.scrollY;
+                const docH = document.documentElement.scrollHeight - window.innerHeight;
+                if (progress) progress.style.width = (docH > 0 ? (currentScroll / docH) * 100 : 0) + '%';
+
+                if (nav) {
+                    if (currentScroll > 80) {
+                        nav.classList.add('scrolled');
+                        if (currentScroll > lastScroll && currentScroll > 200) {
+                            nav.classList.add('hidden');
+                        } else {
+                            nav.classList.remove('hidden');
+                        }
+                    } else {
+                        nav.classList.remove('scrolled', 'hidden');
+                    }
+                }
+                
+                if (backTop) backTop.classList.toggle('visible', currentScroll > 400);
+                lastScroll = currentScroll;
+            }, { passive: true });
+
+            backTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+            // Reveal on Scroll
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
                         }
                     });
-                    if (entry.target.classList.contains('live-counter') && !entry.target.classList.contains('counted')) {
-                        entry.target.classList.add('counted');
-                        animateCounter(entry.target);
-                    }
-                }
-            });
-        }, { threshold: 0.3 });
-
-        document.querySelectorAll('.live-counter, .hero-glass-panel').forEach(el => {
-            counterObserver.observe(el);
-        });
-
-        // Galaxy particle system
-        (function initParticles() {
-            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-            const canvas = document.getElementById('particleCanvas');
-            if (!canvas) return;
-            const ctx = canvas.getContext('2d');
-            let particles = [];
-            let mouseX = -999, mouseY = -999;
-            const COUNT = 40;
-
-            function resize() {
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
-            }
-            resize();
-            window.addEventListener('resize', resize, { passive: true });
-
-            function Particle() {
-                this.reset = function () {
-                    this.x = Math.random() * canvas.width;
-                    this.y = Math.random() * canvas.height;
-                    this.size = Math.random() * 3 + 0.5;
-                    this.speedX = (Math.random() - 0.5) * 0.4;
-                    this.speedY = (Math.random() - 0.5) * 0.4;
-                    this.opacity = Math.random() * 0.5 + 0.15;
-                    this.pulseOffset = Math.random() * Math.PI * 2;
-                };
-                this.reset();
-                this.update = function (t) {
-                    this.x += this.speedX;
-                    this.y += this.speedY;
-                    const dx = mouseX - this.x, dy = mouseY - this.y;
-                    const dist = Math.sqrt(dx * dx + dy * dy);
-                    if (dist < 150) {
-                        const force = (150 - dist) / 150 * 0.02;
-                        this.x += dx * force;
-                        this.y += dy * force;
-                    }
-                    if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-                    if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
-                    this.currentOpacity = this.opacity * (0.7 + 0.3 * Math.sin(t * 0.002 + this.pulseOffset));
-                };
-                this.draw = function () {
-                    ctx.beginPath();
-                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                    ctx.fillStyle = 'rgba(212,165,116,' + this.currentOpacity + ')';
-                    if (this.size > 2) {
-                        ctx.shadowBlur = 8;
-                        ctx.shadowColor = 'rgba(212,165,116,0.4)';
-                    } else {
-                        ctx.shadowBlur = 0;
-                    }
-                    ctx.fill();
-                };
+                }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+                document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+            } else {
+                document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
             }
 
-            for (let i = 0; i < COUNT; i++) particles.push(new Particle());
+            // Magnetic Buttons & Custom Cursor
+            if (window.matchMedia('(pointer: fine)').matches && !('ontouchstart' in window)) {
+                // Buttons
+                document.querySelectorAll('.magnetic-btn').forEach(btn => {
+                    btn.addEventListener('mousemove', (e) => {
+                        const rect = btn.getBoundingClientRect();
+                        const x = e.clientX - rect.left - rect.width / 2;
+                        const y = e.clientY - rect.top - rect.height / 2;
+                        btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px) scale(1.02)`;
+                    });
+                    btn.addEventListener('mouseleave', () => {
+                        btn.style.transform = 'translate(0,0) scale(1)';
+                    });
+                });
 
-            function animate(t) {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                particles.forEach(p => { p.update(t); p.draw(); });
-                for (let i = 0; i < particles.length; i++) {
-                    for (let j = i + 1; j < particles.length; j++) {
-                        const dx = particles[i].x - particles[j].x;
-                        const dy = particles[i].y - particles[j].y;
-                        const dist = Math.sqrt(dx * dx + dy * dy);
-                        if (dist < 120) {
-                            ctx.beginPath();
-                            ctx.moveTo(particles[i].x, particles[i].y);
-                            ctx.lineTo(particles[j].x, particles[j].y);
-                            ctx.strokeStyle = 'rgba(212,165,116,' + (0.08 * (1 - dist / 120)) + ')';
-                            ctx.lineWidth = 0.5;
-                            ctx.shadowBlur = 0;
-                            ctx.stroke();
+                // Cursor
+                const dot = document.getElementById('cursorDot');
+                const ring = document.getElementById('cursorRing');
+                if (dot && ring) {
+                    let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+                    document.addEventListener('mousemove', e => {
+                        mouseX = e.clientX; mouseY = e.clientY;
+                        dot.style.left = mouseX + 'px'; dot.style.top = mouseY + 'px';
+                    });
+                    function animateRing() {
+                        ringX += (mouseX - ringX) * 0.18;
+                        ringY += (mouseY - ringY) * 0.18;
+                        ring.style.left = ringX + 'px'; ring.style.top = ringY + 'px';
+                        requestAnimationFrame(animateRing);
+                    }
+                    animateRing();
+                    document.addEventListener('mouseover', e => {
+                        if (e.target.closest('a, button, .btn, .magnetic-btn, .flip-wrapper, .process-step, .value-card')) {
+                            dot.classList.add('hovering'); ring.classList.add('hovering');
                         }
-                    }
+                    });
+                    document.addEventListener('mouseout', e => {
+                        if (e.target.closest('a, button, .btn, .magnetic-btn, .flip-wrapper, .process-step, .value-card')) {
+                            dot.classList.remove('hovering'); ring.classList.remove('hovering');
+                        }
+                    });
                 }
-                requestAnimationFrame(animate);
             }
-            requestAnimationFrame(animate);
 
-            document.addEventListener('mousemove', e => {
-                mouseX = e.clientX;
-                mouseY = e.clientY;
-            }, { passive: true });
+            // 3D Flip Card
+            const flipCard = document.getElementById('flipCard');
+            if (flipCard) {
+                flipCard.addEventListener('click', function() {
+                    this.classList.toggle('flipped');
+                });
+            }
+
+            // Live Counters
+            const counters = document.querySelectorAll('.live-counter');
+            if (counters.length > 0 && 'IntersectionObserver' in window) {
+                const counterObserver = new IntersectionObserver((entries, obs) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const el = entry.target;
+                            const target = parseInt(el.getAttribute('data-target'), 10);
+                            if (isNaN(target)) return;
+                            let current = 0;
+                            const inc = target / 50; // speed
+                            const updateCounter = () => {
+                                current += inc;
+                                if (current < target) {
+                                    el.innerText = Math.ceil(current) + (target >= 100 ? '+' : '');
+                                    requestAnimationFrame(updateCounter);
+                                } else {
+                                    el.innerText = target + (target >= 100 ? '+' : '%');
+                                }
+                            };
+                            updateCounter();
+                            obs.unobserve(el);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                counters.forEach(counter => counterObserver.observe(counter));
+            }
+
+            // Newsletter Fake Submit
+            const nlForm = document.getElementById('newsletterForm');
+            if(nlForm) {
+                nlForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const btn = this.querySelector('button');
+                    const orig = btn.innerHTML;
+                    btn.innerHTML = '<i class="fas fa-check"></i> Angemeldet!';
+                    setTimeout(() => { btn.innerHTML = orig; this.reset(); }, 2500);
+                });
+            }
+
         })();
-    })();
     </script>
 </body>
 </html>
