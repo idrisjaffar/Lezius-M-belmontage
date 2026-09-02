@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Küchen-Komplett Montage · Raphael Lezius – Premium Montage</title>
+    <meta name="theme-color" content="#0B0A09" id="themeColorMeta">
+    <meta name="description" content="Das Küchen-Komplett Bundle: Alte Küche raus, neue Küche rein – inklusive Demontage, millimetergenauer Montage, Vorbereitung der Anschlüsse und Endreinigung.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* ============================================================
+           1. CSS VARIABLES & RESET (Dark & Light Mode)
+           ============================================================ */
+        :root {
+            --rl-primary: #D4A574;
+            --rl-primary-hover: #E4B98A;
+            --rl-secondary: #2E9A8C;
+            --rl-secondary-hover: #3DB09F;
+            --rl-accent: #E88D6A;
+            --rl-amber: #F5B942;
+            --rl-bg: #0B0A09;
+            --rl-surface: #141210;
+            --rl-card: #1A1815;
+            --rl-border: rgba(212, 165, 116, 0.14);
+            --rl-text: #F5F1EB;
+            --rl-muted: #A9A299;
+            --rl-dim: #6B6560;
+            --rl-glass: rgba(11, 10, 9, 0.88);
+            --rl-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+            --rl-shadow-sm: 0 8px 24px rgba(0, 0, 0, 0.35);
+            --rl-shadow-glow: 0 8px 32px rgba(212, 165, 116, 0.25);
+            --rl-shadow-glow-secondary: 0 8px 32px rgba(46, 154, 140, 0.25);
+            --rl-shadow-glow-accent: 0 8px 32px rgba(232, 141, 106, 0.25);
+            --rl-shadow-glow-amber: 0 8px 32px rgba(245, 185, 66, 0.25);
+            --rl-gradient-cta: linear-gradient(135deg, #E88D6A 0%, #D4A574 50%, #2E9A8C 100%);
+            --rl-gradient-gold: linear-gradient(135deg, #F5B942, #D4A574);
+            --rl-gradient-multi: linear-gradient(135deg, #E88D6A, #D4A574, #2E9A8C, #F5B942);
+            --rl-gradient-subtle: linear-gradient(160deg, rgba(212, 165, 116, 0.08), transparent 70%);
+            --rl-nav-height: 68px;
+            --rl-radius: 16px;
+            --rl-radius-full: 999px;
+            --font-head: 'Space Grotesk', system-ui, sans-serif;
+            --font-body: 'Inter', system-ui, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            --ease: cubic-bezier(0.22, 1, 0.36, 1);
+            --transition: 0.3s var(--ease);
+        }
+
+        [data-theme="light"] {
+            --rl-primary: #A67C4A;
+            --rl-primary-hover: #C08F5A;
+            --rl-secondary: #2A7A6E;
+            --rl-accent: #D97A54;
+            --rl-amber: #D9A335;
+            --rl-bg: #F9F7F2;
+            --rl-surface: #FFFFFF;
+            --rl-card: #FFFFFF;
+            --rl-border: rgba(28, 25, 23, 0.08);
+            --rl-text: #1C1917;
+            --rl-muted: #5C564E;
+            --rl-dim: #8A837A;
+            --rl-glass: rgba(255, 255, 255, 0.92);
+            --rl-shadow: 0 16px 40px rgba(28, 25, 23, 0.08);
+            --rl-shadow-sm: 0 6px 18px rgba(28, 25, 23, 0.05);
+            --rl-shadow-glow: 0 8px 32px rgba(166, 124, 74, 0.20);
+            --rl-shadow-glow-secondary: 0 8px 32px rgba(42, 122, 110, 0.20);
+            --rl-shadow-glow-accent: 0 8px 32px rgba(217, 122, 84, 0.20);
+            --rl-shadow-glow-amber: 0 8px 32px rgba(217, 163, 53, 0.20);
+            --rl-gradient-cta: linear-gradient(135deg, #D97A54 0%, #A67C4A 50%, #2A7A6E 100%);
+            --rl-gradient-gold: linear-gradient(135deg, #D9A335, #A67C4A);
+            --rl-gradient-multi: linear-gradient(135deg, #D97A54, #A67C4A, #2A7A6E, #D9A335);
+            --rl-gradient-subtle: linear-gradient(160deg, rgba(166, 124, 74, 0.06), transparent 70%);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
+        body { background: var(--rl-bg); color: var(--rl-text); font-family: var(--font-body); line-height: 1.65; transition: background var(--transition), color var(--transition); overflow-x: hidden; }
+        a { color: inherit; text-decoration: none; }
+        button { font-family: inherit; border: none; background: none; cursor: pointer; color: inherit; }
+        ul { list-style: none; }
+
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: var(--rl-bg); }
+        ::-webkit-scrollbar-thumb { background: var(--rl-gradient-multi); border-radius: 10px; border: 2px solid var(--rl-bg); }
+
+        .container { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 clamp(18px, 4vw, 28px); }
+        .gold-text { background: var(--rl-gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+        /* ============================================================
+           2. ANIMATIONS & REVEAL
+           ============================================================ */
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+        @keyframes pulse-dot { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.6); opacity: 0.4; } }
+        @keyframes borderFlow { 0% { background-position: 0% 0%; } 100% { background-position: 300% 0%; } }
+        @keyframes soft-pulse { 0%, 100% { transform: scale(1); opacity: 0.6; } 50% { transform: scale(1.15); opacity: 1; } }
+
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.7s var(--ease); }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* ============================================================
+           3. BUTTONS
+           ============================================================ */
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 28px; border-radius: 12px; font-weight: 600; font-size: 0.95rem; transition: all 0.3s var(--ease); cursor: pointer; min-height: 52px; position: relative; z-index: 1; }
+        .btn-primary { background: var(--rl-gradient-cta); color: #1C1917; box-shadow: var(--rl-shadow-glow); }
+        .btn-primary:hover { transform: translateY(-3px) scale(1.02); box-shadow: var(--rl-shadow-glow-accent), var(--rl-shadow-glow-secondary); }
+        .btn-secondary { background: var(--rl-card); border: 1px solid var(--rl-border); color: var(--rl-text); }
+        .btn-secondary:hover { border-color: var(--rl-primary); color: var(--rl-primary); box-shadow: var(--rl-shadow-glow); transform: translateY(-2px); }
+        .magnetic-btn { transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1); }
+
+        /* ============================================================
+           4. NAVIGATION (Flache Struktur, keine Dropdowns)
+           ============================================================ */
+        .rl-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; height: var(--rl-nav-height); display: flex; align-items: center; background: var(--rl-glass); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border-bottom: 1px solid var(--rl-border); transition: transform 0.4s var(--ease), box-shadow 0.3s ease; }
+        .rl-nav.hidden { transform: translateY(-100%); }
+        .rl-nav.scrolled { box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15); }
+        .rl-nav__inner { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 32px); display: flex; align-items: center; justify-content: space-between; height: 100%; }
+        
+        .rl-nav__brand { display: flex; align-items: center; gap: 12px; font-family: var(--font-head); font-weight: 800; font-size: 1.25rem; letter-spacing: -0.03em; color: var(--rl-text); white-space: nowrap; }
+        .logo-mark { width: 36px; height: 36px; border-radius: 10px; background: var(--rl-gradient-cta); color: #1C1917; font-weight: 800; font-size: 1.05rem; display: grid; place-items: center; box-shadow: var(--rl-shadow-glow); }
+        .brand-text { display: flex; flex-direction: column; line-height: 1.15; }
+        .brand-name { font-size: 1.1rem; }
+        .brand-sub { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.8px; text-transform: uppercase; color: var(--rl-primary); }
+        
+        .rl-nav__links { display: flex; align-items: center; gap: 4px; }
+        .rl-nav__links a { padding: 8px 16px; font-size: 0.88rem; font-weight: 500; color: var(--rl-muted); border-radius: 8px; transition: all 0.25s ease; white-space: nowrap; display: flex; align-items: center; min-height: 44px; }
+        .rl-nav__links a:hover { color: var(--rl-text); background: rgba(212,165,116,0.06); }
+        .rl-nav__links a.active { color: var(--rl-primary); }
+
+        .rl-nav__actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+        .nav-cta { display: inline-flex; align-items: center; gap: 6px; padding: 8px 18px; border-radius: var(--rl-radius-full); background: var(--rl-gradient-cta); color: #1C1917; font-weight: 700; font-size: 0.82rem; transition: all 0.3s ease; box-shadow: var(--rl-shadow-glow); min-height: 44px; }
+        .nav-cta:hover { transform: scale(1.04); box-shadow: var(--rl-shadow-glow-accent), var(--rl-shadow-glow-secondary); }
+        
+        .theme-toggle { width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--rl-border); background: var(--rl-card); display: grid; place-items: center; color: var(--rl-muted); transition: all 0.3s var(--ease); cursor: pointer; }
+        .theme-toggle:hover { border-color: var(--rl-amber); color: var(--rl-amber); transform: rotate(12deg); }
+        
+        .rl-nav__hamburger { display: none; flex-direction: column; gap: 5px; padding: 6px; background: transparent; cursor: pointer; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
+        .rl-nav__hamburger span { width: 22px; height: 2px; background: var(--rl-text); border-radius: 4px; transition: 0.3s ease; }
+        
+        .nav-backdrop { position: fixed; inset: 0; z-index: 998; background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(4px); opacity: 0; visibility: hidden; transition: 0.4s ease; }
+        .nav-backdrop.active { opacity: 1; visibility: visible; }
+        
+        .rl-nav__mobile { position: fixed; top: 0; right: 0; bottom: 0; width: 85%; max-width: 380px; z-index: 999; background: var(--rl-glass); backdrop-filter: blur(24px); transform: translateX(100%); transition: transform 0.4s var(--ease); overflow-y: auto; padding: 20px 0 40px; box-shadow: -10px 0 40px rgba(0, 0, 0, 0.3); display: flex; flex-direction: column; align-items: center; gap: 4px; padding-top: 70px; }
+        .rl-nav__mobile.open { transform: translateX(0); }
+        .mobile-close { position: absolute; top: 16px; right: 16px; width: 44px; height: 44px; border-radius: 50%; background: var(--rl-card); border: 1px solid var(--rl-border); color: var(--rl-text); font-size: 1.2rem; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: 0.3s ease; }
+        .mobile-close:hover { transform: rotate(90deg); background: rgba(212, 165, 116, 0.08); }
+        .rl-nav__mobile a { font-size: 1.1rem; font-weight: 500; color: var(--rl-muted); padding: 12px 0; width: 100%; text-align: center; min-height: 48px; display: flex; align-items: center; justify-content: center; gap: 8px; transition: 0.25s; }
+        .rl-nav__mobile a:hover { color: var(--rl-primary); transform: translateX(4px); }
+        .rl-nav__mobile .mobile-cta { width: calc(100% - 48px); margin: 16px 24px 0; background: var(--rl-gradient-cta); color: #1C1917; padding: 16px 28px; border-radius: var(--rl-radius-full); font-weight: 700; box-shadow: var(--rl-shadow-glow); }
+
+        @media(max-width:900px) {
+            .rl-nav__links { display: none; }
+            .rl-nav__hamburger { display: flex; }
+            .nav-cta span { display: none; }
+            .nav-cta { padding: 8px 12px; min-width: 44px; }
+            .rl-nav__brand { font-size: 1.05rem; }
+        }
+
+        /* ============================================================
+           5. FLOATING ELEMENTS & MOBILE BAR
+           ============================================================ */
+        .scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--rl-gradient-multi); z-index: 100000; width: 0%; box-shadow: var(--rl-shadow-glow); transition: width 0.1s linear; }
+        
+        .whatsapp-float { position: fixed; bottom: 28px; right: 28px; z-index: 9999; width: 60px; height: 60px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 32px rgba(37, 211, 102, 0.35); color: #fff; font-size: 2rem; transition: 0.3s; }
+        .whatsapp-float:hover { transform: scale(1.08); box-shadow: 0 12px 40px rgba(37, 211, 102, 0.5); }
+        
+        .back-to-top { position: fixed; bottom: 28px; left: 28px; z-index: 9998; width: 44px; height: 44px; border-radius: 50%; background: rgba(46, 154, 140, 0.12); border: 1px solid rgba(46, 154, 140, 0.25); color: var(--rl-secondary); font-size: 1.2rem; display: none; align-items: center; justify-content: center; backdrop-filter: blur(8px); transition: 0.3s; cursor: pointer; }
+        .back-to-top.visible { display: flex; }
+        .back-to-top:hover { background: rgba(46, 154, 140, 0.2); transform: translateY(-3px); }
+
+        .mobile-call-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 950; background: var(--rl-glass); backdrop-filter: blur(16px); border-top: 1px solid var(--rl-border); padding: 10px 12px; grid-template-columns: 1fr 1fr; gap: 8px; }
+        .mobile-call-bar a { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 8px; border-radius: 10px; font-size: 0.88rem; font-weight: 700; min-height: 48px; }
+        .mobile-call-bar .call-btn { background: var(--rl-secondary); color: #fff; }
+        .mobile-call-bar .inq-btn { background: var(--rl-gradient-cta); color: #1C1917; }
+        @media(max-width:768px) {
+            .mobile-call-bar { display: grid; }
+            .whatsapp-float { bottom: 84px; right: 16px; width: 50px; height: 50px; font-size: 1.6rem; }
+            .back-to-top { bottom: 84px; left: 16px; }
+            body { padding-bottom: 76px; }
+        }
+
+        /* ============================================================
+           6. KÜCHEN-KOMPLETT SPECIFIC STYLES
+           ============================================================ */
+        
+        /* ── Hero ── */
+        .bundle-hero { padding: calc(var(--rl-nav-height) + 80px) 0 60px; background: radial-gradient(ellipse 60% 50% at 30% 20%, rgba(212, 165, 116, 0.08), transparent 55%), var(--rl-bg); position: relative; overflow: hidden; text-align: center; }
+        .bundle-hero .hero-glow { position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(245, 185, 66, 0.05) 0%, transparent 70%); top: -250px; right: -150px; pointer-events: none; animation: soft-pulse 10s ease-in-out infinite; }
+        .bundle-hero .breadcrumb { display: flex; justify-content: center; gap: 8px; font-size: 0.85rem; color: var(--rl-dim); font-family: var(--font-mono); margin-bottom: 24px; }
+        .bundle-hero .breadcrumb a { color: var(--rl-primary); transition: color 0.3s; }
+        .bundle-hero .breadcrumb a:hover { color: var(--rl-primary-hover); }
+        .bundle-hero .bundle-tag { display: inline-block; background: rgba(46, 154, 140, 0.12); color: var(--rl-secondary); padding: 4px 18px; border-radius: var(--rl-radius-full); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; border: 1px solid rgba(46, 154, 140, 0.2); margin-bottom: 16px; }
+        .bundle-hero h1 { font-family: var(--font-head); font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -1.2px; line-height: 1.1; margin-bottom: 16px; }
+        .bundle-hero .subhead { font-size: 1.1rem; color: var(--rl-muted); max-width: 600px; margin: 0 auto 32px; line-height: 1.6; }
+        .bundle-hero .hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+        /* ── Overview & Pricing ── */
+        .bundle-overview { padding: 40px 0 80px; border-bottom: 1px solid var(--rl-border); }
+        .overview-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px; align-items: start; }
+        
+        .price-box { background: var(--rl-card); border: 1px solid var(--rl-border); border-radius: var(--rl-radius); padding: 36px 28px; text-align: center; margin-bottom: 24px; transition: 0.3s; }
+        .price-box:hover { border-color: var(--rl-primary); box-shadow: var(--rl-shadow-glow); transform: translateY(-4px); }
+        .price-box .price-label { font-size: 0.9rem; color: var(--rl-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        .price-box .price { font-family: var(--font-head); font-size: 3.2rem; font-weight: 800; background: var(--rl-gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.1; margin: 8px 0; }
+        .price-box .price-note { display: block; font-size: 0.8rem; color: var(--rl-dim); }
+        .price-box .badge-row { display: flex; gap: 8px; justify-content: center; margin-top: 20px; flex-wrap: wrap; }
+        .price-box .badge-row span { font-size: 0.75rem; background: rgba(212, 165, 116, 0.08); padding: 6px 14px; border-radius: var(--rl-radius-full); border: 1px solid var(--rl-border); color: var(--rl-text); }
+
+        .cta-box { background: var(--rl-gradient-subtle); border: 1px solid var(--rl-border); border-radius: var(--rl-radius); padding: 28px 24px; text-align: center; }
+        .cta-box h4 { font-family: var(--font-head); font-weight: 700; font-size: 1.1rem; margin-bottom: 8px; color: var(--rl-text); }
+        .cta-box p { font-size: 0.9rem; color: var(--rl-muted); margin-bottom: 16px; }
+        .cta-box .btn { width: 100%; }
+
+        .overview-right h3 { font-family: var(--font-head); font-weight: 700; font-size: 1.5rem; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
+        .overview-right h3 i { color: var(--rl-secondary); }
+        .overview-right .desc { color: var(--rl-muted); font-size: 1.05rem; line-height: 1.6; margin-bottom: 28px; }
+        .feature-list { display: flex; flex-direction: column; gap: 12px; }
+        .feature-list li { display: flex; align-items: flex-start; gap: 14px; font-size: 0.95rem; color: var(--rl-muted); padding: 14px 18px; background: var(--rl-surface); border-radius: var(--rl-radius); border: 1px solid var(--rl-border); transition: 0.3s; }
+        .feature-list li:hover { border-color: var(--rl-primary); transform: translateX(6px); background: var(--rl-card); }
+        .feature-list li i { color: var(--rl-primary); font-size: 1.2rem; margin-top: 2px; flex-shrink: 0; }
+        .feature-list li strong { color: var(--rl-text); font-weight: 600; display: block; margin-bottom: 2px; }
+
+        /* ── NEW: Quality Promise (Präzision) ── */
+        .quality-details { padding: 80px 0; background: var(--rl-surface); border-bottom: 1px solid var(--rl-border); }
+        .qd-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+        .qd-card { background: var(--rl-card); border: 1px solid var(--rl-border); border-radius: var(--rl-radius); padding: 32px 24px; text-align: center; transition: 0.3s; }
+        .qd-card:hover { border-color: var(--rl-amber); transform: translateY(-6px); box-shadow: var(--rl-shadow-glow-amber); }
+        .qd-card .icon { font-size: 2.2rem; margin-bottom: 16px; background: var(--rl-gradient-multi); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .qd-card h4 { font-family: var(--font-head); font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; color: var(--rl-text); }
+        .qd-card p { font-size: 0.9rem; color: var(--rl-muted); line-height: 1.5; }
+
+        /* ── Process ── */
+        .process-section { padding: 80px 0; }
+        .process-timeline { display: flex; flex-direction: column; gap: 32px; position: relative; padding-left: 32px; max-width: 700px; margin: 40px auto 0; }
+        .process-timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: var(--rl-border); }
+        .process-step { position: relative; padding-left: 40px; }
+        .process-step .step-marker { position: absolute; left: -32px; top: 4px; width: 20px; height: 20px; border-radius: 50%; background: var(--rl-gradient-gold); border: 3px solid var(--rl-bg); box-shadow: 0 0 0 4px var(--rl-border); transition: 0.3s; }
+        .process-step:hover .step-marker { transform: scale(1.2); box-shadow: 0 0 0 4px var(--rl-primary); }
+        .process-step .step-num { font-family: var(--font-head); font-size: 1.8rem; font-weight: 800; color: var(--rl-border); line-height: 1; margin-bottom: 8px; transition: 0.3s; }
+        .process-step:hover .step-num { color: var(--rl-primary); }
+        .process-step h3 { font-family: var(--font-head); font-weight: 700; font-size: 1.25rem; margin-bottom: 8px; }
+        .process-step p { color: var(--rl-muted); font-size: 0.95rem; line-height: 1.6; }
+
+        /* ── NEW: Prerequisites / Safety (Re-Framing) ── */
+        .prerequisites { padding: 60px 0; background: linear-gradient(180deg, var(--rl-surface), var(--rl-bg)); border-top: 1px solid var(--rl-border); border-bottom: 1px solid var(--rl-border); }
+        .pre-box { max-width: 800px; margin: 0 auto; background: var(--rl-card); border-left: 4px solid var(--rl-secondary); padding: 32px; border-radius: 0 var(--rl-radius) var(--rl-radius) 0; box-shadow: var(--rl-shadow-sm); }
+        .pre-box h3 { font-family: var(--font-head); font-size: 1.3rem; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+        .pre-box h3 i { color: var(--rl-secondary); }
+        .pre-box p { color: var(--rl-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px; }
+        .pre-box ul { list-style: none; }
+        .pre-box ul li { position: relative; padding-left: 20px; font-size: 0.9rem; color: var(--rl-text); margin-bottom: 8px; }
+        .pre-box ul li::before { content: "✓"; position: absolute; left: 0; color: var(--rl-secondary); font-weight: 800; }
+
+        /* ── FAQ ── */
+        .faq-section { padding: 80px 0; }
+        .faq-grid { max-width: 800px; margin: 40px auto 0; display: flex; flex-direction: column; gap: 12px; }
+        .faq-item { background: var(--rl-card); border: 1px solid var(--rl-border); border-radius: var(--rl-radius); overflow: hidden; transition: 0.3s; }
+        .faq-item:hover { border-color: var(--rl-primary); }
+        .faq-question { display: flex; justify-content: space-between; align-items: center; padding: 20px 24px; cursor: pointer; font-weight: 600; font-size: 1rem; background: transparent; border: none; width: 100%; text-align: left; color: var(--rl-text); font-family: var(--font-body); }
+        .faq-question i { color: var(--rl-primary); transition: transform 0.3s; }
+        .faq-item.open .faq-question i { transform: rotate(180deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; padding: 0 24px; color: var(--rl-muted); font-size: 0.95rem; line-height: 1.6; }
+        .faq-item.open .faq-answer { max-height: 300px; padding: 0 24px 20px; }
+
+        /* ── Responsive Details ── */
+        @media(max-width: 992px) {
+            .overview-grid { grid-template-columns: 1fr; gap: 40px; }
+            .qd-grid { grid-template-columns: 1fr; max-width: 500px; margin-left: auto; margin-right: auto; }
+        }
+        @media(max-width: 768px) {
+            .bundle-hero h1 { font-size: 2.2rem; }
+            .price-box .price { font-size: 2.6rem; }
+            .bundle-hero .hero-actions { flex-direction: column; align-items: center; }
+            .bundle-hero .hero-actions .btn { width: 100%; max-width: 320px; }
+            .process-timeline { padding-left: 20px; }
+            .process-step { padding-left: 30px; }
+            .process-step .step-marker { left: -24px; width: 16px; height: 16px; }
+            .pre-box { padding: 24px; border-radius: var(--rl-radius); border-left: none; border-top: 4px solid var(--rl-secondary); }
+        }
+
+        /* ============================================================
+           7. FOOTER (Flach, ohne Dropdowns)
+           ============================================================ */
+        .rl-footer { background: var(--rl-surface); border-top: 1px solid var(--rl-border); padding: 64px 0 0; margin-top: 40px; position: relative; overflow: hidden; }
+        .rl-footer::before { content: ''; position: absolute; top: 0; left: -50%; width: 200%; height: 2px; background: linear-gradient(90deg, transparent, var(--rl-primary), var(--rl-secondary), var(--rl-accent), var(--rl-amber), var(--rl-primary), transparent); background-size: 300% 100%; animation: borderFlow 8s linear infinite; opacity: 0.6; }
+        .rl-footer__top { display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; padding-bottom: 48px; border-bottom: 1px solid var(--rl-border); margin-bottom: 40px; }
+        .rl-footer__logo { font-family: var(--font-head); font-weight: 800; font-size: 1.5rem; margin-bottom: 14px; display: flex; align-items: center; gap: 14px; }
+        .rl-footer__logo span { background: var(--rl-gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .rl-footer__badge { display: inline-flex; align-items: center; gap: 6px; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; color: #22c55e; background: rgba(34, 197, 94, 0.12); padding: 4px 12px; border-radius: 30px; border: 1px solid rgba(34, 197, 94, 0.2); }
+        .live-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #22c55e; animation: pulse-dot 1.8s infinite; }
+        .rl-footer__description { font-size: 0.98rem; color: var(--rl-muted); line-height: 1.7; max-width: 420px; margin-bottom: 20px; }
+        .rl-footer__trust { display: flex; flex-wrap: wrap; gap: 10px; }
+        .rl-footer__trust span { font-size: 0.78rem; color: var(--rl-muted); background: var(--rl-card); border: 1px solid var(--rl-border); padding: 6px 14px; border-radius: var(--rl-radius-full); }
+        .rl-footer__trust i { color: var(--rl-primary); }
+        
+        .rl-footer__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px; margin-bottom: 44px; }
+        .rl-footer__col h5 { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--rl-dim); margin-bottom: 16px; letter-spacing: 0.5px; }
+        .rl-footer__col a { display: block; font-size: 0.9rem; color: var(--rl-muted); padding: 4px 0; transition: 0.25s; }
+        .rl-footer__col a:hover { color: var(--rl-primary); transform: translateX(4px); }
+        .rl-footer__contact li { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-size: 0.9rem; color: var(--rl-muted); }
+        .rl-footer__contact i { color: var(--rl-primary); width: 18px; text-align: center; }
+        .rl-footer__contact a:hover { color: var(--rl-primary); transform: none; }
+        
+        .rl-footer__trustbar { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; padding: 24px 0; border-top: 1px solid var(--rl-border); border-bottom: 1px solid var(--rl-border); margin-bottom: 28px; }
+        .trust-item-f { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: var(--rl-card); border: 1px solid var(--rl-border); border-radius: 12px; }
+        .trust-item-f i { font-size: 1.2rem; background: var(--rl-gradient-multi); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .trust-item-f .label { display: block; font-size: 0.65rem; color: var(--rl-dim); text-transform: uppercase; }
+        .trust-item-f .value { display: block; font-size: 0.9rem; font-weight: 700; color: var(--rl-text); }
+        
+        .rl-footer__bottom { display: flex; justify-content: space-between; align-items: center; padding-bottom: 20px; font-size: 0.82rem; color: var(--rl-dim); }
+        .rl-footer__legal { display: flex; gap: 8px; }
+        .rl-footer__legal a { color: var(--rl-muted); }
+        .rl-footer__legal a:hover { color: var(--rl-primary); }
+
+        @media(max-width: 900px) {
+            .rl-footer__top { grid-template-columns: 1fr; }
+            .rl-footer__grid { grid-template-columns: 1fr 1fr; }
+            .rl-footer__trustbar { grid-template-columns: repeat(3, 1fr); }
+            .rl-footer__bottom { flex-direction: column; gap: 16px; text-align: center; }
+        }
+        @media(max-width: 600px) {
+            .rl-footer__grid { grid-template-columns: 1fr; text-align: center;}
+            .rl-footer__trustbar { grid-template-columns: 1fr 1fr; }
+            .rl-footer__contact li { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== FLOATING ELEMENTS ===== -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <div class="floating-badge" id="floatingBadge">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <div class="text"><span class="highlight">110+</span> Menschen vertrauen mir</div>
+    </div>
+    
+    <a href="https://wa.me/491608194018" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="WhatsApp schreiben">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <button class="back-to-top" id="backToTop" aria-label="Nach oben"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- Mobile Call Bar -->
+    <div class="mobile-call-bar" id="mobileCallBar">
+        <a href="tel:+491608194018" class="call-btn"><i class="fas fa-phone-alt"></i> Anrufen</a>
+        <a href="/anfrage/" class="inq-btn"><i class="fas fa-calendar-check"></i> Anfrage</a>
+    </div>
+
+    <!-- ===== NAVIGATION (Flach, wie Startseite) ===== -->
+    <nav class="rl-nav" id="mainNav" role="navigation" aria-label="Hauptnavigation">
+        <div class="rl-nav__inner">
+            <a href="/" class="rl-nav__brand" aria-label="Startseite">
+                <span class="logo-mark">L</span>
+                <span class="brand-text">
+                    <span class="brand-name">Lezius</span>
+                    <span class="brand-sub">Möbelmontage</span>
+                </span>
+            </a>
+            
+            <ul class="rl-nav__links" role="menubar">
+                <li role="none"><a href="/services.html" role="menuitem">Services</a></li>
+                <li role="none"><a href="/bundles/" class="active" role="menuitem">Bundles</a></li>
+                <li role="none"><a href="/about.html" role="menuitem">Über mich</a></li>
+                <li role="none"><a href="/faq.html" role="menuitem">FAQ</a></li>
+                <li role="none"><a href="/contact.html" role="menuitem">Kontakt</a></li>
+            </ul>
+
+            <div class="rl-nav__actions">
+                <a href="/anfrage/" class="nav-cta magnetic-btn"><i class="fas fa-calendar-check"></i> <span>Anfrage</span></a>
+                <button class="theme-toggle" data-theme-toggle aria-label="Design umschalten"><i class="fas fa-moon" data-theme-icon></i></button>
+                <button class="rl-nav__hamburger" id="navToggle" aria-expanded="false" aria-label="Menü öffnen">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="rl-nav__mobile" id="mobileMenu" role="dialog" aria-hidden="true">
+        <button class="mobile-close" id="mobileClose" aria-label="Schließen"><i class="fas fa-times"></i></button>
+        <a href="/">Start</a>
+        <a href="/services.html">Services</a>
+        <a href="/bundles/" style="color:var(--rl-primary);">Bundles</a>
+        <a href="/about.html">Über mich</a>
+        <a href="/faq.html">FAQ</a>
+        <a href="/contact.html">Kontakt</a>
+        <a href="/anfrage/" class="mobile-cta magnetic-btn"><i class="fas fa-calendar-check"></i> Unverbindliche Anfrage</a>
+    </div>
+    <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+
+        <!-- ── HERO ── -->
+        <section class="bundle-hero" id="top">
+            <div class="hero-glow"></div>
+            <div class="container">
+                <div class="breadcrumb reveal">
+                    <a href="/">Start</a> <span>/</span> <a href="/bundles/">Bundles</a> <span>/</span> <span style="color:var(--rl-text);">Küchen-Komplett</span>
+                </div>
+                <div class="bundle-tag reveal">⭐ Premium Paket</div>
+                <h1 class="reveal">Küchen-Komplett – <span class="gold-text">Alte raus, neue rein</span></h1>
+                <p class="subhead reveal">Alles aus einer Hand: Demontage der alten Küche, millimetergenauer Aufbau der neuen Möbel, Vorbereitung der Anschlüsse und Endreinigung. Komplette Entlastung für Sie.</p>
+                <div class="hero-actions reveal">
+                    <a href="#angebot" class="btn btn-primary magnetic-btn"><i class="fas fa-calendar-check"></i> Preis & Angebot ansehen</a>
+                    <a href="#details" class="btn btn-secondary magnetic-btn"><i class="fas fa-list-check"></i> Qualitäts-Details</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── OVERVIEW & PRICING ── -->
+        <section class="bundle-overview" id="angebot">
+            <div class="container">
+                <div class="overview-grid">
+                    <!-- Left -->
+                    <div class="overview-left reveal">
+                        <div class="price-box">
+                            <span class="price-label">Basispreis ab</span>
+                            <div class="price">590 €</div>
+                            <span class="price-note">Nettopreis zzgl. Anfahrt & Material nach Aufwand</span>
+                            <div class="badge-row">
+                                <span><i class="fas fa-clock"></i> 1–2 Tage</span>
+                                <span><i class="fas fa-shield-alt"></i> Festpreis-Angebot</span>
+                            </div>
+                        </div>
+                        <div class="cta-box">
+                            <h4>Ihre Küche ist einzigartig.</h4>
+                            <p>Deshalb erhalten Sie nach einem kurzen Gespräch oder per Foto-Einsendung immer ein 100% verbindliches Festpreisangebot. Keine versteckten Kosten.</p>
+                            <a href="/anfrage/" class="btn btn-primary magnetic-btn"><i class="fas fa-paper-plane"></i> Kostenloses Angebot anfordern</a>
+                        </div>
+                    </div>
+                    <!-- Right -->
+                    <div class="overview-right reveal">
+                        <h3><i class="fas fa-utensils"></i> Voller Leistungsumfang inklusive</h3>
+                        <p class="desc">Vom ersten Handgriff bis zur besenreinen Übergabe – dieses Bundle nimmt Ihnen den gesamten Stress des Küchenwechsels ab.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-hammer"></i> <div><strong>Schonende Demontage</strong>Abbau Ihrer bestehenden Küche inkl. Abklemmen der Geräte.</div></li>
+                            <li><i class="fas fa-tools"></i> <div><strong>Präziser Aufbau</strong>Millimetergenaues Ausrichten der Schränke und Arbeitsplatten.</div></li>
+                            <li><i class="fas fa-cut"></i> <div><strong>Maßgenaue Ausschnitte</strong>Sägen und Versiegeln der Arbeitsplatte für Spüle und Kochfeld.</div></li>
+                            <li><i class="fas fa-plug"></i> <div><strong>Geräte-Integration</strong>Einbau von Backofen, Spülmaschine, Kühlschrank und Abzugshaube.</div></li>
+                            <li><i class="fas fa-broom"></i> <div><strong>Besenreine Übergabe</strong>Staubfreie Endreinigung und Mitnahme des Verpackungsmaterials.</div></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── NEW: QUALITY PROMISE (Präzision) ── -->
+        <section class="quality-details" id="details">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="gold-text" style="font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; font-family:var(--font-mono);">Der Unterschied</span>
+                    <h2 style="font-family:var(--font-head); font-size:2.2rem; margin-top:8px;">Präzision, die Sie <span class="gold-text">jeden Tag spüren</span></h2>
+                    <p>Eine gute Küche wird erst durch eine makellose Montage zur Traumküche. Auf diese Details achte ich kompromisslos.</p>
+                </div>
+                <div class="qd-grid">
+                    <div class="qd-card reveal">
+                        <div class="icon"><i class="fas fa-ruler-combined"></i></div>
+                        <h4>Perfekte Spaltmaße</h4>
+                        <p>Nichts stört das Auge mehr als schiefe Fronten. Jedes Scharnier und jede Schublade wird exakt nivelliert, bis die Linienführung 100% parallel verläuft.</p>
+                    </div>
+                    <div class="qd-card reveal" style="transition-delay: 0.1s;">
+                        <div class="icon"><i class="fas fa-water"></i></div>
+                        <h4>Versiegelte Ausschnitte</h4>
+                        <p>Ausschnitte für Spüle und Kochfeld werden nicht nur gesägt, sondern die Schnittkanten wasserfest versiegelt. So hat aufquellendes Holz keine Chance.</p>
+                    </div>
+                    <div class="qd-card reveal" style="transition-delay: 0.2s;">
+                        <div class="icon"><i class="fas fa-magic"></i></div>
+                        <h4>Saubere Silikonfugen</h4>
+                        <p>Abschlussleisten und Übergänge werden mit höchster Präzision und langlebigem Sanitärsilikon abgedichtet. Keine unsauberen Ränder, keine Schimmelbildung.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── PROCESS ── -->
+        <section class="process-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 style="font-family:var(--font-head); font-size:2.2rem;">So läuft das Projekt ab</h2>
+                </div>
+                <div class="process-timeline reveal">
+                    <div class="process-step">
+                        <div class="step-marker"></div>
+                        <div class="step-num">01</div>
+                        <h3>Maße & Angebot</h3>
+                        <p>Sie senden mir Pläne oder Fotos Ihrer alten und neuen Küche. Ich prüfe die Machbarkeit und sende Ihnen ein verbindliches Festpreis-Angebot.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-marker"></div>
+                        <div class="step-num">02</div>
+                        <h3>Abbau & Vorbereitung</h3>
+                        <p>Am vereinbarten Termin wird die alte Küche staubarm demontiert und der Raum für die Neuinstallation vorbereitet.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-marker"></div>
+                        <div class="step-num">03</div>
+                        <h3>Aufbau & Anpassung</h3>
+                        <p>Korpusse werden gestellt, die Arbeitsplatte maßgeschneidert angepasst und alle Einbaugeräte millimetergenau integriert.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-marker"></div>
+                        <div class="step-num">04</div>
+                        <h3>Abnahme & Garantie</h3>
+                        <p>Wir prüfen gemeinsam alle Funktionen (Türen, Schubladen, Geräte). Sie erhalten 1 Jahr volle Garantie auf die Montageleistung.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── NEW: PREREQUISITES & SAFETY (Re-Framing) ── -->
+        <section class="prerequisites">
+            <div class="container reveal">
+                <div class="pre-box">
+                    <h3><i class="fas fa-shield-alt"></i> Zu Ihrer rechtlichen Sicherheit</h3>
+                    <p>Um Ihnen höchste Qualität und 100% Versicherungsschutz im Schadensfall (z.B. Leitungswasser oder Überspannung) zu garantieren, arbeite ich nach strengen Handwerksrichtlinien:</p>
+                    <ul>
+                        <li>Ich baue alle Geräte und Spülen perfekt ein und bereite die Anschlüsse vor.</li>
+                        <li>Der <strong>finale Anschluss</strong> von Starkstrom (Herd) und festen Wasserinstallationen muss in Deutschland durch einen zertifizierten Meisterbetrieb (Elektriker/Sanitär) erfolgen.</li>
+                        <li><strong>Ihr Vorteil:</strong> Ihre Hausrat- und Gebäudeversicherung greift im Ernstfall uneingeschränkt, da keine Normen verletzt wurden.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── FAQ ── -->
+        <section class="faq-section" id="faq">
+            <div class="container reveal">
+                <h2 style="font-family:var(--font-head); font-size:2.2rem; text-align:center; margin-bottom:10px;">Häufige Fragen</h2>
+                <p style="text-align:center; color:var(--rl-muted); margin-bottom:30px;">Die wichtigsten Antworten zum Küchen-Komplett Paket.</p>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <button class="faq-question"><span>Bauen Sie auch Küchen von IKEA, Nolte oder Nobilia auf?</span> <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-answer">Ja, absolut. Ich montiere Küchen aller Hersteller. Ob Systemküchen wie IKEA METOD, hochwertige Markenküchen oder individuelle Lösungen vom Schreiner – das Know-how und Spezialwerkzeug ist für alle Systeme vorhanden.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question"><span>Entsorgen Sie die alte Küche auch komplett?</span> <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-answer">Die Demontage der Altküche ist im Bundle enthalten. Wenn Sie eine komplette Entsorgung der Möbelteile über den Wertstoffhof wünschen, biete ich dies nach vorheriger Absprache als fairen Zusatz-Service an. Das Verpackungsmaterial der Neuküche nehme ich immer kostenfrei mit.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question"><span>Was ist, wenn bei der neuen Küche ein Teil fehlt?</span> <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-answer">Ich prüfe vor der Montage alle Pakete auf grobe Vollständigkeit. Sollte beim Aufbau ein Teil des Herstellers fehlen, montiere ich die Küche so weit wie möglich funktionsfähig. Für den Zweittermin (Einbau des fehlenden Teils) finden wir eine kulante Lösung.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── CTA ── -->
+        <section style="padding: 20px 0 80px;">
+            <div class="container reveal">
+                <div class="cta-box" style="background:var(--rl-card); box-shadow:var(--rl-shadow-sm); padding:48px 24px;">
+                    <h2 style="font-family:var(--font-head); font-size:2rem; margin-bottom:12px;">Starten wir Ihr Küchen-Projekt?</h2>
+                    <p style="color:var(--rl-muted); margin-bottom:24px;">Senden Sie mir einfach Ihre Küchenplanung (PDF) oder ein paar Fotos – ich melde mich umgehend.</p>
+                    <a href="/anfrage/" class="btn btn-primary magnetic-btn" style="padding:16px 36px; font-size:1.05rem;"><i class="fas fa-calendar-check"></i> Kostenlose Anfrage stellen</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER (Flach, wie Startseite) ===== -->
+    <footer class="rl-footer" role="contentinfo">
+        <div class="container">
+            <div class="rl-footer__top">
+                <div>
+                    <div class="rl-footer__logo">
+                        Raphael <span>Lezius</span>
+                        <span class="rl-footer__badge"><span class="live-dot"></span> Live</span>
+                    </div>
+                    <p class="rl-footer__description">Premium Montage mit echter Leidenschaft – millimetergenau, staubfrei und immer mit Herz in München & Augsburg.</p>
+                    <div class="rl-footer__trust">
+                        <span><i class="fas fa-shield-alt"></i> 5 Mio. € versichert</span>
+                        <span><i class="fas fa-star"></i> 5.0 ★ (110+)</span>
+                        <span><i class="fas fa-clock"></i> Antwort &lt; 24 h</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="font-family:var(--font-head); font-size:1.15rem; font-weight:700; margin-bottom:10px;"><i class="fas fa-envelope-open-text" style="color:var(--rl-primary); margin-right:8px;"></i> Bleiben Sie verbunden</h4>
+                    <p style="font-size:0.92rem; color:var(--rl-muted); margin-bottom:16px;">Monatliche Tipps und Einblicke – nur wenn Sie möchten.</p>
+                    <form id="newsletterForm" style="display:flex; flex-direction:column; gap:12px; max-width:350px;">
+                        <input type="email" placeholder="Ihre E-Mail-Adresse" required style="padding:14px; border-radius:12px; border:1px solid var(--rl-border); background:var(--rl-card); color:var(--rl-text); outline:none;">
+                        <button type="submit" class="magnetic-btn" style="padding:14px; border-radius:12px; border:none; background:var(--rl-gradient-cta); color:#1C1917; font-weight:700; cursor:pointer;"><i class="fas fa-paper-plane"></i> Anmelden</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="rl-footer__grid">
+                <div class="rl-footer__col">
+                    <h5>Services</h5>
+                    <a href="/services.html">Alle Services</a>
+                    <a href="/services/moebel-kuechen.html">Möbel &amp; Küchen</a>
+                    <a href="/services/usm-haller.html">USM Haller</a>
+                    <a href="/services/demontage-umzug.html">Demontage &amp; Umzug</a>
+                </div>
+                <div class="rl-footer__col">
+                    <h5>Bundles</h5>
+                    <a href="/bundles/">Übersicht</a>
+                    <a href="/bundles/kuechen-komplett.html" style="color:var(--rl-primary);">Küchen-Komplett</a>
+                    <a href="/bundles/usm-all-in.html">USM All-In</a>
+                    <a href="/bundles/umzug-montage.html">Umzugs-Montage</a>
+                </div>
+                <div class="rl-footer__col">
+                    <h5>Über</h5>
+                    <a href="/about.html">Profil</a>
+                    <a href="/faq.html">FAQ</a>
+                    <a href="/reviews.html">Kundenstimmen</a>
+                </div>
+                <div class="rl-footer__col">
+                    <h5>Kontakt & Rechtliches</h5>
+                    <ul class="rl-footer__contact">
+                        <li><i class="fas fa-phone-alt"></i> <a href="tel:+491608194018">+49 160 8194018</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@raphael-lezius.de">info@raphael-lezius.de</a></li>
+                    </ul>
+                    <div style="margin-top:16px;">
+                        <a href="/legal/impressum.html">Impressum</a>
+                        <a href="/legal/datenschutz.html">Datenschutz</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rl-footer__trustbar">
+                <div class="trust-item-f"><i class="fas fa-users"></i><div><span class="label">Kunden</span><span class="value">110+</span></div></div>
+                <div class="trust-item-f"><i class="fas fa-star"></i><div><span class="label">Bewertung</span><span class="value">5,0 ★</span></div></div>
+                <div class="trust-item-f"><i class="fas fa-bolt"></i><div><span class="label">Reaktion</span><span class="value">&lt; 24 h</span></div></div>
+                <div class="trust-item-f"><i class="fas fa-shield-alt"></i><div><span class="label">Versicherung</span><span class="value">5 Mio. €</span></div></div>
+                <div class="trust-item-f"><i class="fas fa-heart"></i><div><span class="label">Garantie</span><span class="value">1 Jahr</span></div></div>
+                <div class="trust-item-f"><i class="fas fa-award"></i><div><span class="label">Erfahrung</span><span class="value">8+ Jahre</span></div></div>
+            </div>
+
+            <div class="rl-footer__bottom">
+                <p>© 2026 Raphael Lezius · Mit Sorgfalt gemacht in Augsburg</p>
+                <div class="rl-footer__legal">
+                    <a href="/legal/impressum.html">Impressum</a>
+                    <a href="/legal/datenschutz.html">Datenschutz</a>
+                    <a href="/legal/agb.html">AGB</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        (function() {
+            'use strict';
+
+            /* ── Theme ── */
+            function applyTheme(theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+                localStorage.setItem('rl-theme', theme);
+                document.querySelectorAll('[data-theme-icon]').forEach(icon => {
+                    icon.className = theme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+                });
+                const meta = document.getElementById('themeColorMeta');
+                if (meta) meta.content = theme === 'dark' ? '#0B0A09' : '#F9F7F2';
+            }
+            applyTheme(localStorage.getItem('rl-theme') || 'dark');
+            
+            document.querySelectorAll('[data-theme-toggle]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const current = document.documentElement.getAttribute('data-theme') || 'dark';
+                    applyTheme(current === 'dark' ? 'light' : 'dark');
+                });
+            });
+
+            /* ── Mobile Menu ── */
+            const nav = document.getElementById('mainNav');
+            const menu = document.getElementById('mobileMenu');
+            const backdrop = document.getElementById('navBackdrop');
+            const toggleBtn = document.getElementById('navToggle');
+            const closeBtn = document.getElementById('mobileClose');
+
+            function toggleMenu(show) {
+                if(menu) menu.classList.toggle('open', show);
+                if(backdrop) backdrop.classList.toggle('active', show);
+                document.body.style.overflow = show ? 'hidden' : '';
+            }
+            toggleBtn?.addEventListener('click', () => toggleMenu(true));
+            closeBtn?.addEventListener('click', () => toggleMenu(false));
+            backdrop?.addEventListener('click', () => toggleMenu(false));
+            menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
+
+            /* ── Scroll Progress & Sticky Nav ── */
+            const progress = document.getElementById('scrollProgress');
+            const backTop = document.getElementById('backToTop');
+            let lastScroll = 0;
+
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.scrollY;
+                const docH = document.documentElement.scrollHeight - window.innerHeight;
+                if (progress) progress.style.width = (docH > 0 ? (currentScroll / docH) * 100 : 0) + '%';
+
+                if (nav) {
+                    if (currentScroll > 80) {
+                        nav.classList.add('scrolled');
+                        nav.classList.toggle('hidden', currentScroll > lastScroll && currentScroll > 200);
+                    } else {
+                        nav.classList.remove('scrolled', 'hidden');
+                    }
+                }
+                if (backTop) backTop.classList.toggle('visible', currentScroll > 400);
+                lastScroll = currentScroll;
+            }, { passive: true });
+
+            backTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+            /* ── Reveal on Scroll ── */
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            /* ── FAQ Accordion ── */
+            document.querySelectorAll('.faq-item').forEach(item => {
+                const btn = item.querySelector('.faq-question');
+                btn?.addEventListener('click', () => {
+                    const isOpen = item.classList.contains('open');
+                    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                    if (!isOpen) item.classList.add('open');
+                });
+            });
+
+            /* ── Magnetic Buttons (Desktop only) ── */
+            if (window.matchMedia('(pointer: fine)').matches && !('ontouchstart' in window)) {
+                document.querySelectorAll('.magnetic-btn').forEach(btn => {
+                    btn.addEventListener('mousemove', (e) => {
+                        const rect = btn.getBoundingClientRect();
+                        const x = e.clientX - rect.left - rect.width / 2;
+                        const y = e.clientY - rect.top - rect.height / 2;
+                        btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px) scale(1.02)`;
+                    });
+                    btn.addEventListener('mouseleave', () => {
+                        btn.style.transform = 'translate(0,0) scale(1)';
+                    });
+                });
+            }
+
+            /* ── Newsletter Fake Submit ── */
+            const nlForm = document.getElementById('newsletterForm');
+            if(nlForm) {
+                nlForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const btn = nlForm.querySelector('button');
+                    const orig = btn.innerHTML;
+                    btn.innerHTML = '<i class="fas fa-check"></i> Angemeldet!';
+                    setTimeout(() => { btn.innerHTML = orig; nlForm.reset(); }, 2500);
+                });
+            }
+        })();
+    </script>
+</body>
+</html>

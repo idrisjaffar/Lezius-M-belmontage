@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anfrage starten · Raphael Lezius – Premium Montage</title>
+    <meta name="theme-color" content="#0B0A09" id="themeColorMeta" />
+    <meta name="description" content="Starten Sie jetzt Ihre unverbindliche Anfrage für Premium Montagen in München & Augsburg. Schnell, einfach und kostenlos." />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <style>
+        /* =============================================================
+           1.  CSS VARIABLES & RESET (Unified with Home)
+           ============================================================= */
+        :root {
+            --rl-primary: #D4A574;
+            --rl-primary-hover: #E4B98A;
+            --rl-primary-dark: #B88A55;
+            --rl-secondary: #2E9A8C;
+            --rl-secondary-hover: #3DB09F;
+            --rl-secondary-dark: #1F7A6E;
+            --rl-accent: #E88D6A;
+            --rl-accent-hover: #F09B78;
+            --rl-amber: #F5B942;
+            --rl-amber-hover: #FFCF5C;
+            --rl-bg: #0B0A09;
+            --rl-surface: #141210;
+            --rl-card: #1A1815;
+            --rl-border: rgba(212, 165, 116, 0.14);
+            --rl-text: #F5F1EB;
+            --rl-muted: #A9A299;
+            --rl-dim: #6B6560;
+            --rl-glass: rgba(11, 10, 9, 0.88);
+            --rl-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+            --rl-shadow-sm: 0 8px 24px rgba(0, 0, 0, 0.35);
+            --rl-shadow-glow: 0 8px 32px rgba(212, 165, 116, 0.25);
+            --rl-shadow-glow-secondary: 0 8px 32px rgba(46, 154, 140, 0.25);
+            --rl-shadow-glow-accent: 0 8px 32px rgba(232, 141, 106, 0.25);
+            --rl-shadow-glow-amber: 0 8px 32px rgba(245, 185, 66, 0.25);
+            --rl-gradient-cta: linear-gradient(135deg, #E88D6A 0%, #D4A574 50%, #2E9A8C 100%);
+            --rl-gradient-cta-hover: linear-gradient(135deg, #F09B78 0%, #E4B98A 50%, #3DB09F 100%);
+            --rl-gradient-gold: linear-gradient(135deg, #F5B942, #D4A574);
+            --rl-gradient-multi: linear-gradient(135deg, #E88D6A, #D4A574, #2E9A8C, #F5B942);
+            --rl-gradient-subtle: linear-gradient(160deg, rgba(212, 165, 116, 0.08), transparent 70%);
+            --rl-nav-height: 68px;
+            --rl-radius: 16px;
+            --rl-radius-full: 999px;
+            
+            /* Fonts */
+            --font-head: 'Space Grotesk', system-ui, sans-serif;
+            --font-body: 'Inter', system-ui, sans-serif;
+            --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+            --ease: cubic-bezier(0.22, 1, 0.36, 1);
+            --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+            --transition: 0.35s var(--ease);
+        }
+
+        [data-theme="light"] {
+            --rl-primary: #A67C4A;
+            --rl-primary-hover: #C08F5A;
+            --rl-primary-dark: #8A6538;
+            --rl-secondary: #2A7A6E;
+            --rl-secondary-hover: #3E9587;
+            --rl-secondary-dark: #1A5E54;
+            --rl-accent: #D97A54;
+            --rl-accent-hover: #E88D6A;
+            --rl-amber: #D9A335;
+            --rl-amber-hover: #F5B942;
+            --rl-bg: #F9F7F2;
+            --rl-surface: #FFFFFF;
+            --rl-card: #FFFFFF;
+            --rl-border: rgba(28, 25, 23, 0.08);
+            --rl-text: #1C1917;
+            --rl-muted: #5C564E;
+            --rl-dim: #8A837A;
+            --rl-glass: rgba(255, 255, 255, 0.92);
+            --rl-shadow: 0 16px 40px rgba(28, 25, 23, 0.08);
+            --rl-shadow-sm: 0 6px 18px rgba(28, 25, 23, 0.05);
+            --rl-shadow-glow: 0 8px 32px rgba(166, 124, 74, 0.20);
+            --rl-shadow-glow-secondary: 0 8px 32px rgba(42, 122, 110, 0.20);
+            --rl-shadow-glow-accent: 0 8px 32px rgba(217, 122, 84, 0.20);
+            --rl-shadow-glow-amber: 0 8px 32px rgba(217, 163, 53, 0.20);
+            --rl-gradient-cta: linear-gradient(135deg, #D97A54 0%, #A67C4A 50%, #2A7A6E 100%);
+            --rl-gradient-cta-hover: linear-gradient(135deg, #E88D6A 0%, #C08F5A 50%, #3E9587 100%);
+            --rl-gradient-gold: linear-gradient(135deg, #D9A335, #A67C4A);
+            --rl-gradient-multi: linear-gradient(135deg, #D97A54, #A67C4A, #2A7A6E, #D9A335);
+            --rl-gradient-subtle: linear-gradient(160deg, rgba(166, 124, 74, 0.06), transparent 70%);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
+        body {
+            background: var(--rl-bg);
+            color: var(--rl-text);
+            font-family: var(--font-body);
+            line-height: 1.65;
+            transition: background var(--transition), color var(--transition);
+            overflow-x: hidden;
+        }
+        a { color: inherit; text-decoration: none; }
+        button { font-family: inherit; border: none; background: none; cursor: pointer; color: inherit; }
+        ul { list-style: none; }
+
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: var(--rl-bg); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb { background: var(--rl-gradient-multi); border-radius: 10px; border: 2px solid var(--rl-bg); }
+
+        .container { max-width: 1180px; margin: 0 auto; padding: 0 clamp(18px, 4vw, 28px); }
+
+        @keyframes pulse-dot { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.6); opacity: 0.4; } }
+        @keyframes pulseRing { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(1.5); opacity: 0; } }
+        @keyframes borderFlow { 0% { background-position: 0% 0%; } 100% { background-position: 300% 0%; } }
+        @keyframes slideUp { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
+        @keyframes checkmark { 0% { transform: scale(0) rotate(-45deg); opacity: 0; } 50% { transform: scale(1.1) rotate(0deg); opacity: 1; } 100% { transform: scale(1) rotate(0deg); opacity: 1; } }
+        @keyframes shimmer-text { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.7s var(--ease); }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* =============================================================
+           2.  BUTTONS
+           ============================================================= */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+            padding: 14px 28px; border-radius: 12px; font-weight: 600; font-size: 0.95rem;
+            transition: all 0.3s var(--ease); border: none; cursor: pointer; position: relative; overflow: hidden; min-height: 52px;
+        }
+        .btn-primary { background: var(--rl-gradient-cta); color: #1C1917; box-shadow: var(--rl-shadow-glow); }
+        .btn-primary:hover:not(:disabled) { transform: translateY(-3px) scale(1.02); box-shadow: var(--rl-shadow-glow-accent), var(--rl-shadow-glow-secondary); }
+        .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; box-shadow: none; transform: none; }
+        .btn-secondary { background: var(--rl-card); border: 1px solid var(--rl-border); color: var(--rl-text); }
+        .btn-secondary:hover { border-color: var(--rl-primary); color: var(--rl-primary); box-shadow: var(--rl-shadow-glow); transform: translateY(-2px); }
+
+        .gold { background: var(--rl-gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+        /* =============================================================
+           3.  NAV & FLOATING
+           ============================================================= */
+        .nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000; height: var(--rl-nav-height);
+            display: flex; align-items: center; background: var(--rl-glass); backdrop-filter: blur(18px);
+            border-bottom: 1px solid var(--rl-border);
+            transition: transform 0.4s var(--ease), background 0.35s, border-color 0.35s, box-shadow 0.3s;
+        }
+        .nav.hidden { transform: translateY(-100%); }
+        .nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.15); }
+        .nav-inner {
+            width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 32px);
+            display: flex; align-items: center; justify-content: space-between; height: 100%;
+        }
+        .nav-brand {
+            display: flex; align-items: center; gap: 12px;
+            font-family: var(--font-head); font-weight: 800; font-size: 1.25rem;
+            letter-spacing: -0.03em; color: var(--rl-text); white-space: nowrap;
+        }
+        .logo-mark {
+            width: 36px; height: 36px; border-radius: 10px;
+            background: var(--rl-gradient-cta); color: #1C1917;
+            font-weight: 800; font-size: 1.05rem; display: grid; place-items: center;
+            box-shadow: var(--rl-shadow-glow);
+        }
+        .brand-text { display: flex; flex-direction: column; line-height: 1.15; }
+        .brand-name { font-size: 1.1rem; }
+        .brand-sub { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.8px; text-transform: uppercase; color: var(--rl-primary); }
+        .nav-links { display: flex; align-items: center; gap: 4px; }
+        .nav-link {
+            padding: 8px 16px; font-size: 0.88rem; font-weight: 500; color: var(--rl-muted);
+            border-radius: 8px; transition: all 0.25s ease; white-space: nowrap;
+            display: flex; align-items: center; min-height: 44px;
+        }
+        .nav-link:hover, .nav-link.active { color: var(--rl-text); background: rgba(212,165,116,0.06); }
+        .nav-link.active { color: var(--rl-primary); }
+        .nav-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+        .nav-phone-link {
+            display: none; align-items: center; gap: 6px; font-size: 0.85rem;
+            color: var(--rl-muted); padding: 6px 12px; border-radius: 8px; transition: color 0.25s;
+        }
+        .nav-phone-link:hover { color: var(--rl-primary); }
+        @media (min-width: 1100px) { .nav-phone-link { display: inline-flex; } }
+        .nav-cta {
+            display: inline-flex; align-items: center; gap: 6px; padding: 8px 18px;
+            border-radius: var(--rl-radius-full); background: var(--rl-gradient-cta);
+            color: #1C1917; font-weight: 700; font-size: 0.82rem;
+            transition: all 0.3s ease; box-shadow: var(--rl-shadow-glow); min-height: 44px;
+        }
+        .nav-cta:hover { transform: scale(1.04); box-shadow: var(--rl-shadow-glow-accent), var(--rl-shadow-glow-secondary); }
+        .theme-btn {
+            width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--rl-border);
+            background: var(--rl-card); display: grid; place-items: center; color: var(--rl-muted);
+            transition: all 0.3s var(--ease); flex-shrink: 0;
+        }
+        .theme-btn:hover { border-color: var(--rl-amber); color: var(--rl-amber); transform: rotate(12deg); box-shadow: var(--rl-shadow-glow-amber); }
+        .hamburger {
+            display: none; flex-direction: column; gap: 5px; padding: 6px; cursor: pointer;
+            min-width: 44px; min-height: 44px; align-items: center; justify-content: center;
+        }
+        .hamburger span { width: 22px; height: 2px; background: var(--rl-text); border-radius: 4px; transition: 0.3s ease; }
+        .hamburger:hover span { background: var(--rl-primary); }
+
+        .nav-backdrop { position: fixed; inset: 0; z-index: 998; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); opacity: 0; visibility: hidden; transition: opacity 0.4s ease, visibility 0.4s ease; }
+        .nav-backdrop.active { opacity: 1; visibility: visible; }
+        .mobile-menu {
+            position: fixed; top: 0; right: 0; bottom: 0; width: 85%; max-width: 380px; z-index: 999;
+            background: var(--rl-glass); backdrop-filter: blur(24px); transform: translateX(100%);
+            transition: transform 0.4s var(--ease); overflow-y: auto; padding: 20px 0 40px; box-shadow: -10px 0 40px rgba(0,0,0,0.3);
+            display: flex; flex-direction: column; align-items: center; gap: 4px; padding-top: 70px;
+        }
+        .mobile-menu.open { transform: translateX(0); }
+        .mobile-close {
+            position: absolute; top: 16px; right: 16px; width: 44px; height: 44px; border-radius: 50%;
+            background: var(--rl-card); border: 1px solid var(--rl-border); color: var(--rl-text); font-size: 1.2rem;
+            display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease;
+        }
+        .mobile-close:hover { background: rgba(212,165,116,0.08); transform: rotate(90deg); }
+        .mobile-menu a {
+            font-size: 1.1rem; font-weight: 500; color: var(--rl-muted); transition: color 0.25s, transform 0.2s;
+            padding: 12px 0; width: 100%; text-align: center; min-height: 48px; display: flex; align-items: center; justify-content: center; gap: 8px;
+        }
+        .mobile-menu a:hover { color: var(--rl-primary); transform: translateX(4px); }
+        .mobile-menu .mobile-cta {
+            width: calc(100% - 48px); margin: 16px 24px 0; background: var(--rl-gradient-cta); color: #1C1917;
+            padding: 16px 28px; border-radius: var(--rl-radius-full); font-weight: 700; font-size: 0.95rem; box-shadow: var(--rl-shadow-glow);
+        }
+
+        @media (max-width: 900px) {
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .nav-cta span { display: none; }
+            .nav-cta { padding: 8px 12px; min-width: 44px; }
+        }
+        @media (min-width: 901px) {
+            .mobile-menu, .nav-backdrop, .mobile-close { display: none !important; }
+            .hamburger { display: none; }
+        }
+
+        .scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--rl-gradient-multi); z-index: 100000; width: 0%; box-shadow: var(--rl-shadow-glow); transition: width 0.1s linear; }
+        .floating-badge {
+            position: fixed; bottom: 100px; right: 20px; z-index: 99; background: var(--rl-card); border: 1px solid var(--rl-border);
+            border-radius: var(--rl-radius); padding: 14px 18px; box-shadow: var(--rl-shadow); max-width: 220px; text-align: center;
+            backdrop-filter: blur(12px); animation: float 3s ease-in-out infinite; transition: all 0.3s ease;
+        }
+        .floating-badge:hover { transform: scale(1.05); border-color: var(--rl-amber); box-shadow: var(--rl-shadow-glow-amber); animation-play-state: paused; }
+        .floating-badge .stars { color: var(--rl-amber); font-size: 0.9rem; letter-spacing: 1px; }
+        .floating-badge .text { font-size: 0.8rem; color: var(--rl-muted); margin-top: 4px; }
+        .floating-badge .highlight { background: var(--rl-gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 700; }
+        @media (max-width: 600px) { .floating-badge { display: none; } }
+        .whatsapp-float {
+            position: fixed; bottom: 28px; right: 28px; z-index: 9999; width: 60px; height: 60px; border-radius: 50%;
+            background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 32px rgba(37,211,102,0.35);
+            transition: transform 0.3s var(--ease-spring), box-shadow 0.3s; color: #fff; font-size: 2rem; text-decoration: none;
+        }
+        .whatsapp-float:hover { transform: scale(1.08); box-shadow: 0 12px 40px rgba(37,211,102,0.5); }
+        .whatsapp-float .pulse-ring { position: absolute; inset: -6px; border-radius: 50%; border: 2px solid rgba(37,211,102,0.3); animation: pulseRing 2.2s ease-out infinite; }
+        .back-to-top {
+            position: fixed; bottom: 28px; left: 28px; z-index: 9998; width: 44px; height: 44px; border-radius: 50%;
+            background: rgba(46,154,140,0.12); border: 1px solid rgba(46,154,140,0.25); color: var(--rl-secondary); font-size: 1.2rem;
+            display: none; align-items: center; justify-content: center; backdrop-filter: blur(8px); transition: 0.3s; cursor: pointer;
+        }
+        .back-to-top.visible { display: flex; }
+        .back-to-top:hover { background: rgba(46,154,140,0.2); transform: translateY(-3px); box-shadow: var(--rl-shadow-glow-secondary); }
+
+        /* =============================================================
+           4.  ANFRAGE PAGE - SPECIFIC STYLES
+           ============================================================= */
+
+        /* ── Hero ── */
+        .hero {
+            padding: calc(var(--rl-nav-height) + 60px) 0 30px;
+            background: radial-gradient(circle at 20% 30%, rgba(212,165,116,0.06), transparent 50%),
+                        radial-gradient(circle at 80% 70%, rgba(46,154,140,0.06), transparent 50%),
+                        var(--rl-bg);
+            position: relative; overflow: hidden; text-align: center;
+        }
+        .hero-content { position: relative; z-index: 1; max-width: 780px; margin: 0 auto; }
+        .breadcrumb {
+            display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 0.85rem;
+            color: var(--rl-dim); font-family: var(--font-mono); margin-bottom: 20px;
+        }
+        .breadcrumb a { color: var(--rl-primary); transition: color 0.3s; }
+        .breadcrumb a:hover { color: var(--rl-primary-hover); }
+        .breadcrumb .sep { opacity: 0.3; }
+        .hero h1 {
+            font-family: var(--font-head); font-size: clamp(2rem, 4.5vw, 3.2rem); font-weight: 800;
+            letter-spacing: -1.2px; line-height: 1.12; margin-bottom: 12px; color: var(--rl-text);
+        }
+        .hero-lead {
+            font-size: 1.1rem; color: var(--rl-muted); max-width: 580px; margin: 0 auto 34px; line-height: 1.6;
+        }
+
+        /* ── Form Container ── */
+        .form-container { padding: 30px 0 80px; }
+        .form-wrapper {
+            max-width: 700px; margin: 0 auto; background: var(--rl-card); border: 1px solid var(--rl-border);
+            border-radius: var(--rl-radius); padding: 40px 36px; box-shadow: var(--rl-shadow); transition: all 0.3s ease; position: relative;
+        }
+        .form-wrapper:hover { border-color: rgba(212, 165, 116, 0.2); box-shadow: var(--rl-shadow-glow); }
+
+        /* ── Progress Steps ── */
+        .progress-steps { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; position: relative; }
+        .progress-steps::before { content: ''; position: absolute; top: 50%; left: 30px; right: 30px; height: 2px; background: var(--rl-border); transform: translateY(-50%); z-index: 0; }
+        .step-dot { display: flex; flex-direction: column; align-items: center; gap: 6px; position: relative; z-index: 1; cursor: default; }
+        .step-dot .circle { width: 38px; height: 38px; border-radius: 50%; border: 2px solid var(--rl-border); background: var(--rl-card); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; color: var(--rl-muted); transition: all 0.4s var(--ease); }
+        .step-dot .circle.active { border-color: var(--rl-primary); background: var(--rl-gradient-gold); color: #1C1917; box-shadow: var(--rl-shadow-glow); }
+        .step-dot .circle.done { border-color: var(--rl-secondary); background: var(--rl-secondary); color: #fff; }
+        .step-dot .label { font-size: 0.6rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--rl-dim); font-family: var(--font-mono); transition: color 0.3s; }
+        .step-dot .label.active { color: var(--rl-text); }
+        .progress-line-wrap { width: 100%; height: 4px; background: var(--rl-border); border-radius: 4px; margin-bottom: 28px; overflow: hidden; display: block; }
+        .progress-line { height: 100%; background: var(--rl-gradient-gold); border-radius: 4px; width: 0%; transition: width 0.5s var(--ease); }
+
+        /* ── Steps Content ── */
+        .step-content { display: none; animation: slideUp 0.5s var(--ease) forwards; }
+        .step-content.active { display: block; }
+        .step-title { font-family: var(--font-head); font-weight: 700; font-size: 1.3rem; margin-bottom: 6px; }
+        .step-desc { color: var(--rl-muted); font-size: 0.95rem; margin-bottom: 24px; }
+        .step-desc .highlight { color: var(--rl-primary); }
+
+        /* Form Elements */
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; color: var(--rl-text); }
+        .form-group label .required { color: var(--rl-accent); margin-left: 2px; }
+        .form-group .hint { font-size: 0.78rem; color: var(--rl-dim); margin-top: 4px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        
+        .form-control { width: 100%; padding: 12px 16px; border: 1.5px solid var(--rl-border); border-radius: 12px; background: var(--rl-bg); color: var(--rl-text); font-size: 0.95rem; font-family: var(--font-body); transition: all 0.3s ease; outline: none; }
+        .form-control:focus { border-color: var(--rl-primary); box-shadow: var(--rl-shadow-glow); }
+        .form-control::placeholder { color: var(--rl-dim); }
+        .form-control.error { border-color: var(--rl-accent); }
+        .form-control.error:focus { box-shadow: 0 0 0 3px rgba(232, 141, 106, 0.2); }
+        textarea.form-control { resize: vertical; min-height: 100px; }
+        select.form-control { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236B6560' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; cursor: pointer; }
+
+        /* Step 1: Service Cards */
+        .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 8px; }
+        .service-option { padding: 16px 14px; border: 2px solid var(--rl-border); border-radius: var(--rl-radius); text-align: center; cursor: pointer; transition: all 0.3s var(--ease); background: var(--rl-bg); user-select: none; }
+        .service-option:hover { border-color: var(--rl-primary); transform: translateY(-2px); }
+        .service-option.selected { border-color: var(--rl-primary); background: rgba(212, 165, 116, 0.08); box-shadow: var(--rl-shadow-glow); }
+        .service-option i { font-size: 1.6rem; background: var(--rl-gradient-multi); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: block; margin-bottom: 6px; }
+        .service-option .name { font-weight: 600; font-size: 0.85rem; color: var(--rl-text); display: block; }
+        .service-option .desc { font-size: 0.7rem; color: var(--rl-dim); margin-top: 2px; display: block; }
+        .service-option .check-mark { display: none; margin-top: 6px; color: var(--rl-secondary); font-size: 0.8rem; }
+        .service-option.selected .check-mark { display: block; }
+
+        /* Step Navigation */
+        .step-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--rl-border); gap: 12px; flex-wrap: wrap; }
+        .step-nav .btn { min-width: 120px; }
+        .step-nav .btn-back { color: var(--rl-muted); font-weight: 500; padding: 10px 20px; border-radius: var(--rl-radius); transition: all 0.3s; min-height: 44px; display: inline-flex; align-items: center; gap: 6px; }
+        .step-nav .btn-back:hover { color: var(--rl-text); background: rgba(212, 165, 116, 0.06); }
+        .step-nav .step-indicator { font-size: 0.78rem; color: var(--rl-dim); font-family: var(--font-mono); }
+
+        /* Step 4: Summary */
+        .summary-grid { background: var(--rl-bg); border-radius: var(--rl-radius); padding: 20px 24px; margin-bottom: 24px; display: grid; grid-template-columns: 1fr 2fr; gap: 4px 16px; font-size: 0.9rem; }
+        .summary-grid .summary-label { color: var(--rl-dim); font-weight: 600; padding: 6px 0; border-bottom: 1px solid var(--rl-border); }
+        .summary-grid .summary-value { color: var(--rl-text); padding: 6px 0; border-bottom: 1px solid var(--rl-border); word-break: break-word; }
+        .summary-grid .summary-value.empty { color: var(--rl-dim); font-style: italic; }
+        .summary-grid .full-width { grid-column: 1 / -1; }
+
+        .edit-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem; color: var(--rl-muted); transition: color 0.3s; padding: 4px 12px; border-radius: var(--rl-radius); border: 1px solid var(--rl-border); background: var(--rl-card); cursor: pointer; }
+        .edit-link:hover { color: var(--rl-primary); border-color: var(--rl-primary); }
+
+        .consent-group { margin-bottom: 20px; }
+        .consent-group label { display: flex; align-items: flex-start; gap: 12px; font-weight: 400; font-size: 0.9rem; color: var(--rl-muted); cursor: pointer; line-height: 1.5; }
+        .consent-group label .required { color: var(--rl-accent); margin-right: 2px; }
+        .consent-group label a { color: var(--rl-primary); text-decoration: underline; transition: color 0.3s; }
+        .consent-group label a:hover { color: var(--rl-primary-hover); }
+        .consent-group input[type="checkbox"] { width: 20px; height: 20px; min-width: 20px; margin-top: 2px; accent-color: var(--rl-primary); cursor: pointer; border: 2px solid var(--rl-border); border-radius: 4px; appearance: none; -webkit-appearance: none; background: var(--rl-bg); transition: all 0.3s; position: relative; }
+        .consent-group input[type="checkbox"]:checked { background: var(--rl-primary); border-color: var(--rl-primary); }
+        .consent-group input[type="checkbox"]:checked::after { content: '✓'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #1C1917; font-weight: 700; font-size: 0.8rem; }
+        .consent-group .error-hint { margin-top: 6px; padding-left: 32px; }
+
+        /* Success Message */
+        .success-message { text-align: center; padding: 20px 0; }
+        .success-message .icon { font-size: 4rem; background: var(--rl-gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: block; margin-bottom: 16px; animation: checkmark 0.8s var(--ease-spring) forwards; }
+        .success-message h2 { font-family: var(--font-head); font-weight: 800; font-size: 1.8rem; margin-bottom: 8px; }
+        .success-message p { color: var(--rl-muted); max-width: 400px; margin: 0 auto 24px; font-size: 1.05rem; line-height: 1.6; }
+        .success-message .next-steps { background: var(--rl-bg); border: 1px solid var(--rl-border); border-radius: var(--rl-radius); padding: 20px 24px; text-align: left; max-width: 400px; margin: 0 auto 24px; }
+        .success-message .next-steps li { display: flex; align-items: center; gap: 12px; padding: 8px 0; color: var(--rl-muted); font-size: 0.9rem; border-bottom: 1px solid var(--rl-border); }
+        .success-message .next-steps li:last-child { border-bottom: none; }
+        .success-message .next-steps li i { color: var(--rl-secondary); font-size: 1rem; width: 20px; text-align: center; }
+        .success-message .btn-group { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+        /* Live Feed Mini */
+        .live-feed-mini { background: var(--rl-card); border: 1px solid var(--rl-border); border-radius: var(--rl-radius); padding: 16px 20px; display: flex; flex-direction: column; gap: 8px; transition: border-color 0.3s, box-shadow 0.3s; margin-top: 40px;}
+        .feed-header { display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--rl-muted); }
+        .feed-mini-item { display: flex; align-items: center; gap: 10px; font-size: 0.85rem; color: var(--rl-muted); padding: 4px 0; border-bottom: 1px solid var(--rl-border); }
+        .feed-mini-item:last-child { border-bottom: none; }
+        .feed-mini-item i { font-size: 0.9rem; width: 18px; text-align: center; background: var(--rl-gradient-multi); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;}
+        .feed-mini-item .time { margin-left: auto; font-size: 0.65rem; color: var(--rl-dim); font-family: var(--font-mono); }
+
+        /* Responsive Form */
+        @media(max-width:768px) {
+            .form-wrapper { padding: 28px 20px; margin: 0 4px; }
+            .service-grid { grid-template-columns: repeat(2, 1fr); }
+            .progress-steps .step-dot .label { display: none; }
+            .progress-steps .step-dot .circle { width: 32px; height: 32px; font-size: 0.7rem; }
+            .progress-steps::before { left: 20px; right: 20px; }
+            .step-nav { flex-direction: column; align-items: stretch; }
+            .step-nav .btn { width: 100%; justify-content: center; }
+            .step-nav .step-indicator { text-align: center; order: -1; }
+            .step-nav .btn-back { text-align: center; justify-content: center; }
+            .hero h1 { font-size: 1.6rem; }
+            .summary-grid { grid-template-columns: 1fr; gap: 2px 0; padding: 16px; }
+            .summary-grid .summary-label { border-bottom: none; padding-bottom: 0; }
+            .summary-grid .summary-value { border-bottom: 1px solid var(--rl-border); padding-bottom: 8px; margin-bottom: 4px; }
+            .summary-grid .summary-value:last-child { border-bottom: none; }
+            .form-row { grid-template-columns: 1fr; gap: 0; }
+            .form-control { font-size: 16px; /* prevent iOS zoom */ } 
+        }
+        @media(max-width:480px) {
+            .service-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+            .service-option { padding: 12px 10px; }
+            .service-option i { font-size: 1.2rem; }
+            .service-option .name { font-size: 0.75rem; }
+            .form-wrapper { padding: 20px 14px; }
+            .step-content .step-title { font-size: 1.1rem; }
+            .success-message h2 { font-size: 1.4rem; }
+            .success-message .icon { font-size: 3rem; }
+            .success-message .btn-group { flex-direction: column; align-items: center; }
+            .success-message .btn-group .btn { width: 100%; max-width: 300px; }
+        }
+
+        /* =============================================================
+           5.  FOOTER
+           ============================================================= */
+        .footer {
+            background: var(--rl-surface); border-top: 1px solid var(--rl-border);
+            padding: 64px 0 0; margin-top: 40px; position: relative; overflow: hidden;
+        }
+        .footer::before {
+            content: ''; position: absolute; top: 0; left: -50%; width: 200%; height: 2px;
+            background: linear-gradient(90deg, transparent, var(--rl-primary), var(--rl-secondary), var(--rl-accent), var(--rl-amber), var(--rl-primary), transparent);
+            background-size: 300% 100%; animation: borderFlow 8s linear infinite; opacity: 0.6;
+        }
+        .footer-top {
+            display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px;
+            padding-bottom: 48px; border-bottom: 1px solid var(--rl-border); margin-bottom: 40px;
+        }
+        .footer-logo {
+            font-family: var(--font-head); font-weight: 800; font-size: 1.5rem;
+            letter-spacing: -0.03em; margin-bottom: 14px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+        }
+        .footer-desc { font-size: 0.98rem; color: var(--rl-muted); line-height: 1.7; max-width: 420px; margin-bottom: 20px; }
+        .footer-trust { display: flex; flex-wrap: wrap; gap: 10px; }
+        .footer-trust span {
+            display: inline-flex; align-items: center; gap: 7px; font-size: 0.78rem;
+            color: var(--rl-muted); background: var(--rl-card); border: 1px solid var(--rl-border);
+            padding: 6px 14px; border-radius: var(--rl-radius-full); transition: all 0.3s ease;
+        }
+        .footer-trust span:hover { border-color: var(--rl-primary); color: var(--rl-text); transform: translateY(-2px); box-shadow: var(--rl-shadow-glow); }
+        .footer-trust i { background: var(--rl-gradient-multi); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .footer-newsletter h4 { font-family: var(--font-head); font-size: 1.15rem; font-weight: 700; margin-bottom: 6px; }
+        .footer-newsletter > p { font-size: 0.92rem; color: var(--rl-muted); margin-bottom: 18px; }
+        .footer-form { display: flex; flex-direction: column; gap: 12px; }
+        .footer-form input {
+            width: 100%; padding: 14px 16px; border: 1.5px solid var(--rl-border);
+            border-radius: 12px; background: var(--rl-card); color: var(--rl-text);
+            font-size: 0.95rem; transition: all 0.3s ease; outline: none; font-family: var(--font-body);
+        }
+        .footer-form input:focus { border-color: var(--rl-primary); box-shadow: var(--rl-shadow-glow); }
+        .footer-form button {
+            display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+            padding: 14px 28px; background: var(--rl-gradient-cta); color: #1C1917;
+            font-weight: 700; font-size: 0.95rem; border: none; border-radius: 12px;
+            cursor: pointer; transition: all 0.3s ease; box-shadow: var(--rl-shadow-glow);
+        }
+        .footer-form button:hover { transform: scale(1.03); box-shadow: var(--rl-shadow-glow-accent), var(--rl-shadow-glow-secondary); }
+        .footer-consent { display: flex; gap: 10px; margin-top: 12px; font-size: 0.78rem; color: var(--rl-muted); line-height: 1.4; }
+        .footer-consent input { accent-color: var(--rl-primary); margin-top: 2px; flex-shrink: 0; }
+        .footer-consent a { color: var(--rl-primary); text-decoration: underline; }
+        .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px; margin-bottom: 44px; }
+        .footer-col h5 { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--rl-dim); margin-bottom: 16px; }
+        .footer-col a { display: block; font-size: 0.9rem; color: var(--rl-muted); transition: all 0.25s ease; padding: 4px 0; }
+        .footer-col a:hover { color: var(--rl-primary); transform: translateX(4px); }
+        .footer-contact li { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+        .footer-contact i { color: var(--rl-primary); font-size: 0.85rem; width: 18px; text-align: center; }
+        .footer-contact a { font-size: 0.9rem; color: var(--rl-muted); }
+        .footer-contact a:hover { color: var(--rl-primary); transform: none; }
+        .footer-social { display: flex; gap: 8px; margin-top: 16px; }
+        .footer-social a {
+            width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--rl-border);
+            display: grid; place-items: center; color: var(--rl-muted); font-size: 1rem;
+            transition: all 0.3s ease; background: var(--rl-card);
+        }
+        .footer-social a:hover { border-color: var(--rl-amber); color: var(--rl-amber); transform: translateY(-4px) scale(1.05); box-shadow: var(--rl-shadow-glow-amber); }
+        .footer-trustbar {
+            display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px;
+            padding: 24px 0; border-top: 1px solid var(--rl-border); border-bottom: 1px solid var(--rl-border); margin-bottom: 28px;
+        }
+        .trust-item {
+            display: flex; align-items: center; gap: 12px; padding: 12px 16px;
+            background: var(--rl-card); border: 1px solid var(--rl-border); border-radius: 12px; transition: all 0.3s ease;
+        }
+        .trust-item:hover { border-color: var(--rl-secondary); transform: translateY(-4px) scale(1.02); box-shadow: var(--rl-shadow-glow-secondary); }
+        .trust-item i {
+            font-size: 1.2rem; background: var(--rl-gradient-multi); -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; background-clip: text; flex-shrink: 0;
+        }
+        .trust-item .label { display: block; font-size: 0.65rem; color: var(--rl-dim); text-transform: uppercase; letter-spacing: 0.4px; }
+        .trust-item .value { display: block; font-size: 0.9rem; font-weight: 700; color: var(--rl-text); }
+        .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; padding-bottom: 20px; }
+        .footer-copy { font-size: 0.82rem; color: var(--rl-dim); }
+        .footer-legal { display: flex; gap: 8px; font-size: 0.78rem; margin-top: 4px; }
+        .footer-legal a { color: var(--rl-muted); transition: color 0.25s; }
+        .footer-legal a:hover { color: var(--rl-primary); }
+        .footer-legal .sep { color: var(--rl-border); }
+        .footer-note { text-align: center; padding: 18px 0 24px; font-size: 0.88rem; color: var(--rl-dim); border-top: 1px solid var(--rl-border); margin-top: 8px; }
+
+        @media (max-width: 900px) {
+            .footer-top { grid-template-columns: 1fr; gap: 40px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+            .footer-trustbar { grid-template-columns: repeat(3, 1fr); }
+            .footer-bottom { flex-direction: column; text-align: center; }
+            .footer-legal { justify-content: center; }
+        }
+        @media (max-width: 600px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+            .footer-trustbar { grid-template-columns: 1fr 1fr; }
+            .footer-trust { justify-content: center; }
+            .footer-desc { margin: 0 auto 20px; text-align: center; }
+            .footer-col { text-align: center; }
+            .footer-contact li { justify-content: center; }
+            .footer-social { justify-content: center; }
+        }
+        @media (max-width: 400px) { .footer-trustbar { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <!-- ===== FLOATING ELEMENTS ===== -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <div class="floating-badge" id="floatingBadge" aria-hidden="true">
+        <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <div class="text"><span class="highlight">110+</span> Menschen vertrauen mir</div>
+    </div>
+
+    <a href="https://wa.me/491608194018" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="WhatsApp schreiben">
+        <span class="pulse-ring" aria-hidden="true"></span>
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <button class="back-to-top" id="backToTop" aria-label="Nach oben">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ===== NAV ===== -->
+    <nav class="nav" id="mainNav" role="navigation" aria-label="Hauptnavigation">
+        <div class="nav-inner">
+            <a href="/" class="nav-brand" aria-label="Zur Startseite">
+                <span class="logo-mark">L</span>
+                <span class="brand-text">
+                    <span class="brand-name">Lezius</span>
+                    <span class="brand-sub">Möbelmontage</span>
+                </span>
+            </a>
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="/#services" class="nav-link" role="menuitem">Leistungen</a></li>
+                <li role="none"><a href="/#process" class="nav-link" role="menuitem">Ablauf</a></li>
+                <li role="none"><a href="/#projects" class="nav-link" role="menuitem">Projekte</a></li>
+                <li role="none"><a href="/about.html" class="nav-link" role="menuitem">Über mich</a></li>
+                <li role="none"><a href="/faq.html" class="nav-link" role="menuitem">FAQ</a></li>
+                <li role="none"><a href="/contact.html" class="nav-link" role="menuitem">Kontakt</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="tel:+491608194018" class="nav-phone-link" aria-label="Anrufen">
+                    <i class="fas fa-phone-alt"></i> +49 160 8194018
+                </a>
+                <!-- The CTA is highlighted because we are on the Anfrage page -->
+                <a href="/anfrage/" class="nav-cta active">
+                    <i class="fas fa-calendar-check"></i> <span>Anfrage</span>
+                </a>
+                <button class="theme-btn" id="themeToggle" aria-label="Design umschalten">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+                <button class="hamburger" id="navToggle" aria-controls="mobileMenu" aria-expanded="false" aria-label="Menü öffnen">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobiles Menü">
+        <button class="mobile-close" id="mobileClose" aria-label="Schließen"><i class="fas fa-times"></i></button>
+        <a href="/">Start</a>
+        <a href="/about.html">Über mich</a>
+        <a href="/#services">Leistungen</a>
+        <a href="/#process">Ablauf</a>
+        <a href="/#projects">Projekte</a>
+        <a href="/#bundles">Pakete</a>
+        <a href="/reviews.html">Referenzen</a>
+        <a href="/faq.html">FAQ</a>
+        <a href="/contact.html">Kontakt</a>
+        <a href="/anfrage/" class="mobile-cta active"><i class="fas fa-calendar-check"></i> Unverbindliche Anfrage</a>
+    </div>
+    <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+
+    <main>
+        <!-- ==================== HERO ==================== -->
+        <section class="hero" id="top">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="breadcrumb reveal">
+                        <a href="/">Start</a>
+                        <span class="sep">/</span>
+                        <span style="color:var(--rl-text);">Anfrage</span>
+                    </div>
+                    <h1 class="reveal">
+                        <span class="gold">Unverbindlich</span> anfragen
+                    </h1>
+                    <p class="hero-lead reveal">
+                        In wenigen Schritten zu Ihrem persönlichen Angebot. Ich melde mich innerhalb von 24 Stunden bei Ihnen.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== FORM ==================== -->
+        <section class="form-container" id="formContainer">
+            <div class="container">
+                <div class="form-wrapper reveal" id="formWrapper">
+
+                    <!-- Progress Steps -->
+                    <div class="progress-steps" id="progressSteps">
+                        <div class="step-dot" data-step="1">
+                            <div class="circle active" id="dot1">1</div>
+                            <span class="label active" id="label1">Service</span>
+                        </div>
+                        <div class="step-dot" data-step="2">
+                            <div class="circle" id="dot2">2</div>
+                            <span class="label" id="label2">Kontakt</span>
+                        </div>
+                        <div class="step-dot" data-step="3">
+                            <div class="circle" id="dot3">3</div>
+                            <span class="label" id="label3">Details</span>
+                        </div>
+                        <div class="step-dot" data-step="4">
+                            <div class="circle" id="dot4">4</div>
+                            <span class="label" id="label4">Prüfen</span>
+                        </div>
+                    </div>
+
+                    <!-- Progress Line -->
+                    <div class="progress-line-wrap" id="progressLineWrap">
+                        <div class="progress-line" id="progressLine"></div>
+                    </div>
+
+                    <!-- ===== STEP 1: SERVICE ===== -->
+                    <div class="step-content active" id="step1">
+                        <h3 class="step-title">Was darf ich für Sie machen? <span style="color:var(--rl-accent);">*</span></h3>
+                        <p class="step-desc">Wählen Sie die Kategorie, die am besten zu Ihrem Projekt passt. Bei Unsicherheit wählen Sie <span class="highlight">„Ich bin mir noch unsicher“</span>.</p>
+
+                        <div class="form-group">
+                            <div class="service-grid" id="serviceGrid">
+                                <div class="service-option" data-value="moebel-kuechen">
+                                    <i class="fas fa-couch"></i>
+                                    <span class="name">Möbel &amp; Küchen</span>
+                                    <span class="desc">Montage &amp; Aufbau</span>
+                                    <span class="check-mark"><i class="fas fa-check-circle"></i></span>
+                                </div>
+                                <div class="service-option" data-value="usm-haller">
+                                    <i class="fas fa-gem"></i>
+                                    <span class="name">USM Haller</span>
+                                    <span class="desc">Spezialist</span>
+                                    <span class="check-mark"><i class="fas fa-check-circle"></i></span>
+                                </div>
+                                <div class="service-option" data-value="garten-outdoor">
+                                    <i class="fas fa-tree"></i>
+                                    <span class="name">Garten &amp; Outdoor</span>
+                                    <span class="desc">Terrassen &amp; Häuser</span>
+                                    <span class="check-mark"><i class="fas fa-check-circle"></i></span>
+                                </div>
+                                <div class="service-option" data-value="demontage-umzug">
+                                    <i class="fas fa-truck"></i>
+                                    <span class="name">Demontage &amp; Umzug</span>
+                                    <span class="desc">Komplettservice</span>
+                                    <span class="check-mark"><i class="fas fa-check-circle"></i></span>
+                                </div>
+                                <div class="service-option" data-value="buero-objekt">
+                                    <i class="fas fa-building"></i>
+                                    <span class="name">Büro &amp; Objekt</span>
+                                    <span class="desc">Gewerblich</span>
+                                    <span class="check-mark"><i class="fas fa-check-circle"></i></span>
+                                </div>
+                                <div class="service-option" data-value="premium-pro">
+                                    <i class="fas fa-crown"></i>
+                                    <span class="name">Premium Pro</span>
+                                    <span class="desc">White‑Glove</span>
+                                    <span class="check-mark"><i class="fas fa-check-circle"></i></span>
+                                </div>
+                                <div class="service-option" data-value="unsicher" style="grid-column: 1 / -1; max-width: 320px; margin: 0 auto;">
+                                    <i class="fas fa-question-circle"></i>
+                                    <span class="name">Ich bin mir noch unsicher</span>
+                                    <span class="desc">Ich berate Sie gerne</span>
+                                    <span class="check-mark"><i class="fas fa-check-circle"></i></span>
+                                </div>
+                            </div>
+                            <div class="hint error-hint" id="serviceError" style="color:var(--rl-accent); display:none; margin-top:12px; text-align:center;">
+                                <i class="fas fa-exclamation-circle"></i> Bitte wählen Sie eine Option aus.
+                            </div>
+                        </div>
+
+                        <div class="step-nav" style="justify-content: flex-end;">
+                            <span class="step-indicator" style="margin-right:auto;">Schritt 1 von 4</span>
+                            <button class="btn btn-primary" id="step1Next" disabled>
+                                Weiter <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ===== STEP 2: CONTACT ===== -->
+                    <div class="step-content" id="step2">
+                        <h3 class="step-title">Wie kann ich Sie erreichen? <span style="color:var(--rl-accent);">*</span></h3>
+                        <p class="step-desc">Bitte geben Sie Ihre Kontaktdaten ein, damit ich mich schnellstmöglich melden kann.</p>
+
+                        <div class="form-group">
+                            <label for="name">Vollständiger Name <span class="required">*</span></label>
+                            <input type="text" id="name" class="form-control" placeholder="z.B. Max Mustermann" required>
+                            <div class="hint error-hint" style="color:var(--rl-accent); display:none;"><i class="fas fa-exclamation-circle"></i> Bitte geben Sie Ihren Namen ein.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-Mail-Adresse <span class="required">*</span></label>
+                            <input type="email" id="email" class="form-control" placeholder="max@mustermann.de" required>
+                            <div class="hint error-hint" style="color:var(--rl-accent); display:none;"><i class="fas fa-exclamation-circle"></i> Bitte geben Sie eine gültige E-Mail-Adresse ein.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Telefonnummer <span class="required">*</span></label>
+                            <input type="tel" id="phone" class="form-control" placeholder="z.B. 0151 12345678" required>
+                            <div class="hint">Für eventuelle Rückfragen.</div>
+                            <div class="hint error-hint" style="color:var(--rl-accent); display:none;"><i class="fas fa-exclamation-circle"></i> Bitte geben Sie Ihre Telefonnummer ein.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact_method">Bevorzugte Kontaktmethode</label>
+                            <select id="contact_method" class="form-control">
+                                <option value="phone">Telefon</option>
+                                <option value="email" selected>E-Mail</option>
+                                <option value="whatsapp">WhatsApp</option>
+                                <option value="any">Egal – Hauptsache schnell</option>
+                            </select>
+                        </div>
+
+                        <div class="step-nav">
+                            <button class="btn-back" id="step2Back"><i class="fas fa-arrow-left"></i> Zurück</button>
+                            <span class="step-indicator">Schritt 2 von 4</span>
+                            <button class="btn btn-primary" id="step2Next">Weiter <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- ===== STEP 3: DETAILS ===== -->
+                    <div class="step-content" id="step3">
+                        <h3 class="step-title">Details zu Ihrem Projekt</h3>
+                        <p class="step-desc">Je detaillierter Ihre Angaben, desto passgenauer kann ich das Angebot erstellen.</p>
+
+                        <div class="form-group">
+                            <label for="address">Einsatzort (Adresse) <span class="required">*</span></label>
+                            <input type="text" id="address" class="form-control" placeholder="Straße, Hausnummer, PLZ, Ort" required>
+                            <div class="hint">Wo soll die Montage stattfinden?</div>
+                            <div class="hint error-hint" style="color:var(--rl-accent); display:none;"><i class="fas fa-exclamation-circle"></i> Bitte geben Sie eine Adresse ein.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="preferred_date">Wunschtermin (ungefähr)</label>
+                            <input type="text" id="preferred_date" class="form-control" placeholder="z.B. Nächste Woche, flexibel, April 2026">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Was soll gemacht werden? <span class="required">*</span></label>
+                            <textarea id="description" class="form-control" placeholder="Beschreiben Sie kurz Ihr Projekt, Anzahl der Möbel, Besonderheiten etc. ..." required></textarea>
+                            <div class="hint error-hint" style="color:var(--rl-accent); display:none;"><i class="fas fa-exclamation-circle"></i> Bitte beschreiben Sie Ihr Projekt.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="budget">Budgetvorstellung (optional)</label>
+                            <select id="budget" class="form-control">
+                                <option value="">– Bitte wählen –</option>
+                                <option value="under-300">Unter 300 €</option>
+                                <option value="300-600">300 – 600 €</option>
+                                <option value="600-1000">600 – 1.000 €</option>
+                                <option value="1000-1500">1.000 – 1.500 €</option>
+                                <option value="over-1500">Über 1.500 €</option>
+                                <option value="unknown">Ich bin unsicher</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="urgency">Dringlichkeit</label>
+                            <select id="urgency" class="form-control">
+                                <option value="flexible">Flexibel – ich habe Zeit</option>
+                                <option value="within-week">Innerhalb einer Woche</option>
+                                <option value="within-month">Innerhalb eines Monats</option>
+                                <option value="urgent">Sehr dringend</option>
+                            </select>
+                        </div>
+
+                        <div class="step-nav">
+                            <button class="btn-back" id="step3Back"><i class="fas fa-arrow-left"></i> Zurück</button>
+                            <span class="step-indicator">Schritt 3 von 4</span>
+                            <button class="btn btn-primary" id="step3Next">Überprüfen <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- ===== STEP 4: CONFIRMATION ===== -->
+                    <div class="step-content" id="step4">
+                        <h3 class="step-title">Ihre Angaben im Überblick</h3>
+                        <p class="step-desc">Bitte prüfen Sie alle Angaben sorgfältig. Sie können jederzeit zu einem vorherigen Schritt zurückkehren.</p>
+
+                        <div class="summary-grid" id="summaryGrid">
+                            <div class="summary-label">Service</div>
+                            <div class="summary-value"><span class="service-tag" id="sumService">—</span></div>
+
+                            <div class="summary-label">Name</div>
+                            <div class="summary-value" id="sumName">—</div>
+
+                            <div class="summary-label">E-Mail</div>
+                            <div class="summary-value" id="sumEmail">—</div>
+
+                            <div class="summary-label">Telefon</div>
+                            <div class="summary-value" id="sumPhone">—</div>
+
+                            <div class="summary-label">Kontaktweg</div>
+                            <div class="summary-value" id="sumContact">—</div>
+
+                            <div class="summary-label">Adresse</div>
+                            <div class="summary-value" id="sumAddress">—</div>
+
+                            <div class="summary-label">Wunschtermin</div>
+                            <div class="summary-value" id="sumDate">—</div>
+
+                            <div class="summary-label">Budget</div>
+                            <div class="summary-value" id="sumBudget">—</div>
+
+                            <div class="summary-label">Dringlichkeit</div>
+                            <div class="summary-value" id="sumUrgency">—</div>
+
+                            <div class="summary-label full-width" style="border-bottom:none; padding-bottom:0;">Beschreibung</div>
+                            <div class="summary-value full-width" id="sumDesc" style="border-bottom:none; padding-bottom:0; font-style:italic;">—</div>
+                        </div>
+
+                        <div style="text-align:center; margin-bottom:24px;">
+                            <button class="edit-link" id="editDataBtn">
+                                <i class="fas fa-pen"></i> Angaben bearbeiten
+                            </button>
+                        </div>
+
+                        <div class="consent-group">
+                            <label for="consent">
+                                <input type="checkbox" id="consent">
+                                <span>
+                                    <span class="required">*</span> Ich stimme zu, dass meine Daten zur Bearbeitung meiner Anfrage verarbeitet werden.
+                                    Die <a href="/legal/datenschutz.html" target="_blank">Datenschutzerklärung</a> habe ich zur Kenntnis genommen.
+                                </span>
+                            </label>
+                            <div class="hint error-hint" id="consentError" style="color:var(--rl-accent); display:none;">
+                                <i class="fas fa-exclamation-circle"></i> Bitte stimmen Sie der Datenschutzerklärung zu.
+                            </div>
+                        </div>
+
+                        <div class="step-nav">
+                            <button class="btn-back" id="step4Back"><i class="fas fa-arrow-left"></i> Zurück</button>
+                            <span class="step-indicator">Schritt 4 von 4</span>
+                            <button class="btn btn-primary" id="step4Submit" disabled>
+                                <i class="fas fa-paper-plane"></i> Anfrage absenden
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ===== SUCCESS ===== -->
+                    <div class="step-content" id="stepSuccess">
+                        <div class="success-message">
+                            <span class="icon"><i class="fas fa-check-circle"></i></span>
+                            <h2>Vielen Dank für Ihre Anfrage!</h2>
+                            <p>Ich habe Ihre Nachricht erhalten und melde mich innerhalb von <strong>24 Stunden</strong> bei Ihnen.</p>
+
+                            <ul class="next-steps">
+                                <li><i class="fas fa-envelope"></i> Sie erhalten gleich eine Bestätigungs-E-Mail</li>
+                                <li><i class="fas fa-phone-alt"></i> Ich melde mich für mögliche Rückfragen</li>
+                                <li><i class="fas fa-file-invoice-dollar"></i> Ihr persönliches, festes Angebot folgt</li>
+                            </ul>
+
+                            <div class="btn-group">
+                                <a href="/" class="btn btn-primary magnetic-btn">
+                                    <i class="fas fa-home"></i> Zur Startseite
+                                </a>
+                                <a href="/services.html" class="btn btn-secondary magnetic-btn">
+                                    <i class="fas fa-th-list"></i> Services entdecken
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== LIVE FEED (mini) ==================== -->
+        <section class="container" style="padding-bottom:40px;">
+            <div class="live-feed-mini" style="margin-top:0;">
+                <div class="feed-header">
+                    <span><span class="dot"></span> Aktuelle Anfragen</span>
+                    <span style="font-size:0.65rem; color:var(--rl-dim);"><i class="fas fa-sync-alt" style="margin-right:4px;"></i> Live</span>
+                </div>
+                <div class="feed-mini-item">
+                    <i class="fas fa-gem"></i>
+                    <span>Neue USM Haller Anfrage aus München</span>
+                    <span class="time">vor 12 min</span>
+                </div>
+                <div class="feed-mini-item">
+                    <i class="fas fa-utensils"></i>
+                    <span>Küchenanfrage aus Augsburg</span>
+                    <span class="time">vor 1 h</span>
+                </div>
+                <div class="feed-mini-item">
+                    <i class="fas fa-truck"></i>
+                    <span>Umzug Premium Anfrage für Familie Schmidt</span>
+                    <span class="time">vor 3 h</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-top">
+                <div>
+                    <div class="footer-logo">
+                        <span class="logo-mark">L</span>
+                        <span>
+                            <span style="font-weight:800;">Lezius</span><br>
+                            <span style="font-size:0.7rem;color:var(--rl-primary);letter-spacing:0.8px;text-transform:uppercase;">Möbelmontage</span>
+                        </span>
+                    </div>
+                    <p class="footer-desc">
+                        Professionelle Möbel- und Systemmontage in München und Augsburg.
+                        Präzise, staubarm und mit dokumentierter Übergabe.
+                    </p>
+                    <div class="footer-trust">
+                        <span><i class="fas fa-shield-alt"></i> 5 Mio. € versichert</span>
+                        <span><i class="fas fa-star"></i> 5,0 ★ (110+)</span>
+                        <span><i class="fas fa-clock"></i> Antwort &lt; 24 h</span>
+                        <span><i class="fas fa-hand-holding-heart"></i> 12 Monate Garantie</span>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Projekt-Updates</h4>
+                    <p>Gelegentliche Hinweise zu Terminen und Leistungen – nur bei Interesse.</p>
+                    <form class="footer-form" id="newsletterForm">
+                        <input type="email" id="newsletterEmail" placeholder="Ihre E-Mail-Adresse" required aria-label="E-Mail-Adresse" />
+                        <button type="submit"><i class="fas fa-paper-plane"></i> Anmelden</button>
+                    </form>
+                    <div class="footer-consent">
+                        <input type="checkbox" id="consentFooter" required />
+                        <label for="consentFooter">Ich stimme der <a href="/legal/datenschutz.html">Datenschutzerklärung</a> zu.</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h5>Leistungen</h5>
+                    <a href="/services.html">Alle Leistungen</a>
+                    <a href="/services/moebel-kuechen.html">Möbel &amp; Küchen</a>
+                    <a href="/services/usm-haller.html">USM Haller</a>
+                    <a href="/services/garten-outdoor.html">Garten &amp; Outdoor</a>
+                    <a href="/services/demontage-umzug.html">Demontage &amp; Umzug</a>
+                    <a href="/services/premium-pro.html">Premium Pro</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Pakete</h5>
+                    <a href="/bundles/">Alle Pakete</a>
+                    <a href="/bundles/kuechen-komplett.html">Küchen-Komplett</a>
+                    <a href="/bundles/usm-all-in.html">USM All-In</a>
+                    <a href="/bundles/umzug-premium.html">Umzug Premium</a>
+                    <h5 style="margin-top:18px;">Hilfe</h5>
+                    <a href="/faq.html">FAQ</a>
+                    <a href="/contact.html">Kontakt</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Über</h5>
+                    <a href="/about.html">Über mich</a>
+                    <a href="/reviews.html">Referenzen</a>
+                    <a href="/anfrage/">Anfrage stellen</a>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Kontakt</h5>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone-alt"></i> <a href="tel:+491608194018">+49 160 8194018</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/491608194018" target="_blank" rel="noopener">WhatsApp</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@raphael-lezius.de">info@raphael-lezius.de</a></li>
+                    </ul>
+                    <h5 style="margin-top:18px;">Rechtliches</h5>
+                    <a href="/legal/impressum.html">Impressum</a>
+                    <a href="/legal/datenschutz.html">Datenschutz</a>
+                    <a href="/legal/agb.html">AGB</a>
+                    <a href="/legal/widerruf.html">Widerruf</a>
+                    <a href="/legal/cookie.html">Cookie-Richtlinie</a>
+                </div>
+            </div>
+
+            <div class="footer-trustbar">
+                <div class="trust-item">
+                    <i class="fas fa-users"></i>
+                    <div>
+                        <span class="label">Kunden</span>
+                        <span class="value">110+</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-star"></i>
+                    <div>
+                        <span class="label">Bewertung</span>
+                        <span class="value">5,0 ★</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-bolt"></i>
+                    <div>
+                        <span class="label">Reaktion</span>
+                        <span class="value">&lt; 24 h</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                        <span class="label">Versicherung</span>
+                        <span class="value">5 Mio. €</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <div>
+                        <span class="label">Garantie</span>
+                        <span class="value">12 Monate</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-award"></i>
+                    <div>
+                        <span class="label">Erfahrung</span>
+                        <span class="value">8+ Jahre</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    <p class="footer-copy">© <span id="year">2026</span> Lezius Möbelmontage · Augsburg &amp; München</p>
+                    <div class="footer-legal">
+                        <a href="/legal/impressum.html">Impressum</a>
+                        <span class="sep">·</span>
+                        <a href="/legal/datenschutz.html">Datenschutz</a>
+                        <span class="sep">·</span>
+                        <a href="/legal/agb.html">AGB</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-note">
+                Danke für Ihr Interesse. Eine präzise Montage beginnt mit einer klaren Abstimmung.
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        (function() {
+            'use strict';
+
+            /* ── Helpers ── */
+            function debounce(fn, ms) {
+                var timer;
+                return function() {
+                    var args = arguments;
+                    var ctx = this;
+                    clearTimeout(timer);
+                    timer = setTimeout(function() { fn.apply(ctx, args); }, ms || 200);
+                };
+            }
+
+            /* ── Theme ── */
+            function getStoredTheme() {
+                var stored = localStorage.getItem('rl-theme');
+                if (stored) return stored;
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+            function applyTheme(theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+                localStorage.setItem('rl-theme', theme);
+                document.querySelectorAll('[data-theme-icon]').forEach(function(icon) {
+                    icon.className = theme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+                });
+                var meta = document.getElementById('themeColorMeta');
+                if (meta) meta.content = theme === 'dark' ? '#0B0A09' : '#F9F7F2';
+            }
+            applyTheme(getStoredTheme());
+            document.getElementById('themeToggle')?.addEventListener('click', () => {
+                const current = document.documentElement.getAttribute('data-theme') || 'dark';
+                applyTheme(current === 'dark' ? 'light' : 'dark');
+            });
+
+            /* ── Nav & Mobile Menu ── */
+            const menu = document.getElementById('mobileMenu');
+            const backdrop = document.getElementById('navBackdrop');
+            const toggle = document.getElementById('navToggle');
+            const closeBtn = document.getElementById('mobileClose');
+
+            function openMenu() {
+                menu?.classList.add('open');
+                backdrop?.classList.add('active');
+                toggle?.setAttribute('aria-expanded', 'true');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeMenu() {
+                menu?.classList.remove('open');
+                backdrop?.classList.remove('active');
+                toggle?.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }
+            toggle?.addEventListener('click', () => menu?.classList.contains('open') ? closeMenu() : openMenu());
+            backdrop?.addEventListener('click', closeMenu);
+            closeBtn?.addEventListener('click', closeMenu);
+            menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+            // Scroll progress & Nav hide
+            const progress = document.getElementById('scrollProgress');
+            const nav = document.getElementById('mainNav');
+            const backTop = document.getElementById('backToTop');
+            let lastScroll = 0;
+
+            function onScroll() {
+                const scrollY = window.scrollY;
+                const docH = document.documentElement.scrollHeight - window.innerHeight;
+                if (progress) progress.style.width = (docH > 0 ? (scrollY / docH) * 100 : 0) + '%';
+
+                if (nav) {
+                    if (scrollY > 80) {
+                        nav.classList.add('scrolled');
+                        if (scrollY > lastScroll && scrollY > 200) nav.classList.add('hidden');
+                        else nav.classList.remove('hidden');
+                    } else {
+                        nav.classList.remove('scrolled', 'hidden');
+                    }
+                }
+                lastScroll = scrollY;
+                if (backTop) backTop.classList.toggle('visible', scrollY > 400);
+            }
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+            backTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+            /* ── Reveal on Scroll ── */
+            const reveals = document.querySelectorAll('.reveal');
+            if ('IntersectionObserver' in window) {
+                const io = new IntersectionObserver((entries) => {
+                    entries.forEach(e => {
+                        if (e.isIntersecting) {
+                            e.target.classList.add('visible');
+                            io.unobserve(e.target);
+                        }
+                    });
+                }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+                reveals.forEach(el => io.observe(el));
+            } else {
+                reveals.forEach(el => el.classList.add('visible'));
+            }
+
+            // Year
+            const yearEl = document.getElementById('year');
+            if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+            /* ============================================================
+               MULTI-STEP FORM LOGIC
+               ============================================================ */
+            var formData = {
+                service: '',
+                name: '',
+                email: '',
+                phone: '',
+                contact_method: 'email',
+                address: '',
+                preferred_date: '',
+                description: '',
+                budget: '',
+                urgency: 'flexible',
+                consent: false
+            };
+
+            var currentStep = 1;
+            var totalSteps = 4;
+            var isSubmitting = false;
+
+            var steps = {
+                1: document.getElementById('step1'),
+                2: document.getElementById('step2'),
+                3: document.getElementById('step3'),
+                4: document.getElementById('step4'),
+                success: document.getElementById('stepSuccess')
+            };
+
+            var dots = {
+                1: document.getElementById('dot1'),
+                2: document.getElementById('dot2'),
+                3: document.getElementById('dot3'),
+                4: document.getElementById('dot4')
+            };
+
+            var labels = {
+                1: document.getElementById('label1'),
+                2: document.getElementById('label2'),
+                3: document.getElementById('label3'),
+                4: document.getElementById('label4')
+            };
+
+            var progressLine = document.getElementById('progressLine');
+            var progressLineWrap = document.getElementById('progressLineWrap');
+            var progressSteps = document.getElementById('progressSteps');
+            var formWrapper = document.getElementById('formWrapper');
+
+            // --- Step Navigation ---
+            function goToStep(step) {
+                // Hide all standard steps
+                Object.keys(steps).forEach(function(key) {
+                    if (steps[key]) steps[key].classList.remove('active');
+                });
+
+                // Show target step
+                if (steps[step]) steps[step].classList.add('active');
+
+                // Update UI for Steps 1-4
+                if (step <= totalSteps) {
+                    for (var i = 1; i <= totalSteps; i++) {
+                        if (dots[i]) {
+                            dots[i].className = 'circle';
+                            if (i < step) dots[i].classList.add('done');
+                            else if (i === step) dots[i].classList.add('active');
+                        }
+                        if (labels[i]) {
+                            labels[i].classList.remove('active');
+                            if (i === step) labels[i].classList.add('active');
+                        }
+                    }
+                    var percent = ((step - 1) / (totalSteps - 1)) * 100;
+                    if(progressLine) progressLine.style.width = percent + '%';
+                }
+
+                currentStep = step;
+
+                // Scroll to top of form gently
+                if(formWrapper) {
+                    var yOffset = formWrapper.getBoundingClientRect().top + window.scrollY - 100;
+                    window.scrollTo({ top: yOffset, behavior: 'smooth' });
+                }
+            }
+
+            // --- Step 1 ---
+            var serviceOptions = document.querySelectorAll('.service-option');
+            var serviceError = document.getElementById('serviceError');
+            var step1Next = document.getElementById('step1Next');
+
+            serviceOptions.forEach(function(opt) {
+                opt.addEventListener('click', function() {
+                    serviceOptions.forEach(function(o) { o.classList.remove('selected'); });
+                    this.classList.add('selected');
+                    formData.service = this.getAttribute('data-value');
+                    serviceError.style.display = 'none';
+                    step1Next.disabled = false;
+                });
+            });
+
+            // --- Validation ---
+            function validateStep(step) {
+                var valid = true;
+
+                if (step === 1) {
+                    if (!formData.service) {
+                        serviceError.style.display = 'block';
+                        valid = false;
+                    } else {
+                        serviceError.style.display = 'none';
+                    }
+                }
+
+                if (step === 2) {
+                    var name = document.getElementById('name');
+                    var email = document.getElementById('email');
+                    var phone = document.getElementById('phone');
+                    var nameErr = name.parentElement.querySelector('.error-hint');
+                    var emailErr = email.parentElement.querySelector('.error-hint');
+                    var phoneErr = phone.parentElement.querySelector('.error-hint');
+
+                    if (!name.value.trim()) {
+                        name.classList.add('error');
+                        if (nameErr) nameErr.style.display = 'block';
+                        valid = false;
+                    } else {
+                        name.classList.remove('error');
+                        if (nameErr) nameErr.style.display = 'none';
+                        formData.name = name.value.trim();
+                    }
+
+                    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!email.value.trim() || !emailPattern.test(email.value.trim())) {
+                        email.classList.add('error');
+                        if (emailErr) emailErr.style.display = 'block';
+                        valid = false;
+                    } else {
+                        email.classList.remove('error');
+                        if (emailErr) emailErr.style.display = 'none';
+                        formData.email = email.value.trim();
+                    }
+
+                    if (!phone.value.trim()) {
+                        phone.classList.add('error');
+                        if (phoneErr) phoneErr.style.display = 'block';
+                        valid = false;
+                    } else {
+                        phone.classList.remove('error');
+                        if (phoneErr) phoneErr.style.display = 'none';
+                        formData.phone = phone.value.trim();
+                    }
+
+                    formData.contact_method = document.getElementById('contact_method').value;
+                }
+
+                if (step === 3) {
+                    var address = document.getElementById('address');
+                    var description = document.getElementById('description');
+                    var addressErr = address.parentElement.querySelector('.error-hint');
+                    var descErr = description.parentElement.querySelector('.error-hint');
+
+                    if (!address.value.trim()) {
+                        address.classList.add('error');
+                        if (addressErr) addressErr.style.display = 'block';
+                        valid = false;
+                    } else {
+                        address.classList.remove('error');
+                        if (addressErr) addressErr.style.display = 'none';
+                        formData.address = address.value.trim();
+                    }
+
+                    if (!description.value.trim()) {
+                        description.classList.add('error');
+                        if (descErr) descErr.style.display = 'block';
+                        valid = false;
+                    } else {
+                        description.classList.remove('error');
+                        if (descErr) descErr.style.display = 'none';
+                        formData.description = description.value.trim();
+                    }
+
+                    formData.preferred_date = document.getElementById('preferred_date').value.trim();
+                    formData.budget = document.getElementById('budget').value;
+                    formData.urgency = document.getElementById('urgency').value;
+                }
+
+                if (step === 4) {
+                    var consent = document.getElementById('consent');
+                    var consentErr = document.getElementById('consentError');
+                    if (!consent.checked) {
+                        consentErr.style.display = 'block';
+                        valid = false;
+                    } else {
+                        consentErr.style.display = 'none';
+                        formData.consent = true;
+                    }
+                }
+
+                return valid;
+            }
+
+            // --- Format Summary ---
+            function updateConfirmation() {
+                var serviceMap = {
+                    'moebel-kuechen': 'Möbel & Küchen',
+                    'usm-haller': 'USM Haller',
+                    'garten-outdoor': 'Garten & Outdoor',
+                    'demontage-umzug': 'Demontage & Umzug',
+                    'buero-objekt': 'Büro & Objekt',
+                    'premium-pro': 'Premium Pro',
+                    'unsicher': 'Ich bin mir noch unsicher'
+                };
+                var contactMap = {
+                    'phone': 'Telefon',
+                    'email': 'E-Mail',
+                    'whatsapp': 'WhatsApp',
+                    'any': 'Egal – Hauptsache schnell'
+                };
+                var budgetMap = {
+                    'under-300': 'Unter 300 €',
+                    '300-600': '300 – 600 €',
+                    '600-1000': '600 – 1.000 €',
+                    '1000-1500': '1.000 – 1.500 €',
+                    'over-1500': 'Über 1.500 €',
+                    'unknown': 'Ich bin unsicher'
+                };
+                var urgencyMap = {
+                    'flexible': 'Flexibel – ich habe Zeit',
+                    'within-week': 'Innerhalb einer Woche',
+                    'within-month': 'Innerhalb eines Monats',
+                    'urgent': 'Sehr dringend'
+                };
+
+                document.getElementById('sumService').textContent = serviceMap[formData.service] || '—';
+                document.getElementById('sumName').textContent = formData.name || '—';
+                document.getElementById('sumEmail').textContent = formData.email || '—';
+                document.getElementById('sumPhone').textContent = formData.phone || '—';
+                document.getElementById('sumContact').textContent = contactMap[formData.contact_method] || '—';
+                document.getElementById('sumAddress').textContent = formData.address || '—';
+                document.getElementById('sumDate').textContent = formData.preferred_date || '—';
+                
+                var elBudget = document.getElementById('sumBudget');
+                elBudget.textContent = formData.budget ? budgetMap[formData.budget] : 'Nicht angegeben';
+                if(!formData.budget) elBudget.classList.add('empty'); else elBudget.classList.remove('empty');
+
+                document.getElementById('sumUrgency').textContent = urgencyMap[formData.urgency] || '—';
+                document.getElementById('sumDesc').textContent = formData.description || '—';
+            }
+
+            // --- Submit Logic ---
+            function submitForm() {
+                if (isSubmitting) return;
+                isSubmitting = true;
+
+                var btn = document.getElementById('step4Submit');
+                var originalText = btn.innerHTML;
+
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Wird gesendet…';
+                btn.disabled = true;
+
+                // Log Daten (in Produktion: AJAX POST an Server / Formspree / Email)
+                console.log('📋 Anfrage-Daten (final):', formData);
+
+                // Simulation API call
+                setTimeout(function() {
+                    // Hide progress bar for success
+                    if(progressSteps) progressSteps.style.display = 'none';
+                    if(progressLineWrap) progressLineWrap.style.display = 'none';
+
+                    goToStep('success');
+
+                    // Track conversion (optional)
+                    if (typeof gtag !== 'undefined') gtag('event', 'conversion', { 'send_to': 'AW-CONVERSION_ID' });
+
+                }, 1800);
+            }
+
+            // --- Button Listeners ---
+            step1Next.addEventListener('click', function() { if (validateStep(1)) goToStep(2); });
+            document.getElementById('step2Next').addEventListener('click', function() { if (validateStep(2)) goToStep(3); });
+            document.getElementById('step3Next').addEventListener('click', function() {
+                if (validateStep(3)) {
+                    updateConfirmation();
+                    goToStep(4);
+                    // Check consent state on entry
+                    var consent = document.getElementById('consent');
+                    var submitBtn = document.getElementById('step4Submit');
+                    submitBtn.disabled = !consent.checked;
+                }
+            });
+            document.getElementById('step4Submit').addEventListener('click', function() { if (validateStep(4)) submitForm(); });
+            
+            // Edit Button in Step 4
+            document.getElementById('editDataBtn').addEventListener('click', function() { goToStep(1); });
+
+            // Back buttons
+            document.getElementById('step2Back').addEventListener('click', function() { goToStep(1); });
+            document.getElementById('step3Back').addEventListener('click', function() { goToStep(2); });
+            document.getElementById('step4Back').addEventListener('click', function() { goToStep(3); });
+
+            // Consent listener
+            document.getElementById('consent').addEventListener('change', function() {
+                var btn = document.getElementById('step4Submit');
+                btn.disabled = !this.checked;
+                if(this.checked) document.getElementById('consentError').style.display = 'none';
+            });
+
+            // Enter key mapping for inputs
+            document.querySelectorAll('#name, #email, #phone').forEach(function(input) {
+                input.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') { e.preventDefault(); document.getElementById('step2Next').click(); }
+                });
+            });
+            document.querySelectorAll('#address, #preferred_date').forEach(function(input) {
+                input.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') { e.preventDefault(); document.getElementById('step3Next').click(); }
+                });
+            });
+
+            // Real-time validation clear
+            document.querySelectorAll('.form-control').forEach(function(input) {
+                input.addEventListener('input', function() {
+                    if (this.value.trim()) {
+                        this.classList.remove('error');
+                        var err = this.parentElement.querySelector('.error-hint');
+                        if (err) err.style.display = 'none';
+                    }
+                });
+            });
+
+            // Initial State setup
+            progressLine.style.width = '0%';
+            step1Next.disabled = true;
+
+        })();
+    </script>
+</body>
+</html>

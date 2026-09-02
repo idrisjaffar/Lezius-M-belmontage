@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Büro & Objekt Montage · Raphael Lezius – Premium Service</title>
+    <meta name="theme-color" content="#0B0A09" id="themeColorMeta">
+    <meta name="description" content="Professionelle Büro- und Objektmontage in München & Augsburg. Termingerecht, minimaler Betriebsausfall, gewerblich versichert – für Unternehmen und Kanzleien.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* ============================================================
+           1. CSS VARIABLES & RESET (Dark & Light Mode)
+           ============================================================ */
+        :root {
+            --rl-primary: #D4A574;
+            --rl-primary-hover: #E4B98A;
+            --rl-primary-dark: #B88A55;
+            --rl-secondary: #2E9A8C;
+            --rl-secondary-hover: #3DB09F;
+            --rl-secondary-dark: #1F7A6E;
+            --rl-accent: #E88D6A;
+            --rl-amber: #F5B942;
+            --rl-bg: #0B0A09;
+            --rl-surface: #141210;
+            --rl-card: #1A1815;
+            --rl-border: rgba(212, 165, 116, 0.14);
+            --rl-text: #F5F1EB;
+            --rl-muted: #A9A299;
+            --rl-dim: #6B6560;
+            --rl-glass: rgba(11, 10, 9, 0.88);
+            --rl-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+            --rl-shadow-sm: 0 8px 24px rgba(0, 0, 0, 0.35);
+            --rl-shadow-glow: 0 8px 32px rgba(212, 165, 116, 0.25);
+            --rl-shadow-glow-secondary: 0 8px 32px rgba(46, 154, 140, 0.25);
+            --rl-shadow-glow-accent: 0 8px 32px rgba(232, 141, 106, 0.25);
+            --rl-gradient-cta: linear-gradient(135deg, #E88D6A 0%, #D4A574 50%, #2E9A8C 100%);
+            --rl-gradient-gold: linear-gradient(135deg, #F5B942, #D4A574);
+            --rl-gradient-multi: linear-gradient(135deg, #E88D6A, #D4A574, #2E9A8C, #F5B942);
+            --rl-gradient-subtle: linear-gradient(160deg, rgba(212, 165, 116, 0.08), transparent 70%);
+            --rl-nav-height: 68px;
+            --rl-radius: 16px;
+            --rl-radius-full: 999px;
+            --font-head: 'Space Grotesk', system-ui, sans-serif;
+            --font-body: 'Inter', system-ui, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            --ease: cubic-bezier(0.22, 1, 0.36, 1);
+            --transition: 0.3s var(--ease);
+        }
+
+        [data-theme="light"] {
+            --rl-primary: #A67C4A;
+            --rl-primary-hover: #C08F5A;
+            --rl-secondary: #2A7A6E;
+            --rl-accent: #D97A54;
+            --rl-amber: #D9A335;
+            --rl-bg: #F9F7F2;
+            --rl-surface: #FFFFFF;
+            --rl-card: #FFFFFF;
+            --rl-border: rgba(28, 25, 23, 0.08);
+            --rl-text: #1C1917;
+            --rl-muted: #5C564E;
+            --rl-dim: #8A837A;
+            --rl-glass: rgba(255, 255, 255, 0.92);
+            --rl-shadow: 0 16px 40px rgba(28, 25, 23, 0.08);
+            --rl-shadow-glow: 0 8px 32px rgba(166, 124, 74, 0.20);
+            --rl-shadow-glow-secondary: 0 8px 32px rgba(42, 122, 110, 0.20);
+            --rl-gradient-cta: linear-gradient(135deg, #D97A54 0%, #A67C4A 50%, #2A7A6E 100%);
+            --rl-gradient-gold: linear-gradient(135deg, #D9A335, #A67C4A);
+            --rl-gradient-multi: linear-gradient(135deg, #D97A54, #A67C4A, #2A7A6E, #D9A335);
+            --rl-gradient-subtle: linear-gradient(160deg, rgba(166, 124, 74, 0.06), transparent 70%);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
+        body { background: var(--rl-bg); color: var(--rl-text); font-family: var(--font-body); line-height: 1.65; transition: background var(--transition), color var(--transition); overflow-x: hidden; }
+        a { color: inherit; text-decoration: none; }
+        button { font-family: inherit; border: none; background: none; cursor: pointer; color: inherit; }
+        ul { list-style: none; }
+
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: var(--rl-bg); }
+        ::-webkit-scrollbar-thumb { background: var(--rl-gradient-multi); border-radius: 10px; border: 2px solid var(--rl-bg); }
+
+        .container { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 clamp(18px, 4vw, 28px); }
+        .gold-text { background: var(--rl-gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+        /* ============================================================
+           2. ANIMATIONS & REVEAL
+           ============================================================ */
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        @keyframes pulse-dot { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.6); opacity: 0.4; } }
+        @keyframes borderFlow { 0% { background-position: 0% 0%; } 100% { background-position: 300% 0%; } }
+        @keyframes soft-pulse { 0%, 100% { transform: scale(1); opacity: 0.6; } 50% { transform: scale(1.15); opacity: 1; } }
+
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.7s var(--ease); }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* ============================================================
+           3. BUTTONS
+           ============================================================ */
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 28px; border-radius: 12px; font-weight: 600; font-size: 0.95rem; transition: all 0.3s var(--ease); cursor: pointer; min-height: 52px; position: relative; z-index: 1; }
+        .btn-primary { background: var(--rl-gradient-cta); color: #1C1917; box-shadow: var(--rl-shadow-glow); }
+        .btn-primary:hover { transform: translateY(-3px) scale(1.02); box-shadow: var(--rl-shadow-glow-accent), var(--rl-shadow-glow-secondary); }
+        .btn-secondary { background: var(--rl-card); border: 1px solid var(--rl-border); color: var(--rl-text); }
+        .btn-secondary:hover { border-color: var(--rl-primary); color: var(--rl-primary); box-shadow: var(--rl-shadow-glow); transform: translateY(-2px); }
+        .magnetic-btn { transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1); }
+
+        /* ============================================================
+           4. NAVIGATION (Flache Struktur, Startseiten-Standard)
+           ============================================================ */
+        .rl-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; height: var(--rl-nav-height); display: flex; align-items: center; background: var(--rl-glass); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border-bottom: 1px solid var(--rl-border); transition: transform 0.4s var(--ease), box-shadow 0.3s ease; }
+        .rl-nav.hidden { transform: translateY(-100%); }
+        .rl-nav.scrolled { box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15); }
+        .rl-nav__inner { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 32px); display: flex; align-items: center; justify-content: space-between; height: 100%; }
+        
+        .rl-nav__brand { display: flex; align-items: center; gap: 12px; font-family: var(--font-head); font-weight: 800; font-size: 1.25rem; letter-spacing: -0.03em; color: var(--rl-text); white-space: nowrap; }
+        .logo-mark { width: 36px; height: 36px; border-radius: 10px; background: var(--rl-gradient-cta); color: #1C1917; font-weight: 800; font-size: 1.05rem; display: grid; place-items: center; box-shadow: var(--rl-shadow-glow); }
+        .brand-text { display: flex; flex-direction: column; line-height: 1.15; }
+        .brand-name { font-size: 1.1rem; }
+        .brand-sub { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.8px; text-transform: uppercase; color: var(--rl-primary); }
+        
+        .rl-nav__links { display: flex; align-items: center; gap: 4px; }
+        .rl-nav__links a { padding: 8px 16px; font-size: 0.88rem; font-weight: 500; color: var(--rl-muted); border-radius: 8px; transition: all 0.25s ease; white-space: nowrap; display: flex; align-items: center; min-height: 44px; }
+        .rl-nav__links a:hover { color: var(--rl-text); background: rgba(212,165,116,0.06); }
+        .rl-nav__links a.active { color: var(--rl-primary); }
+
+        .rl-nav__actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+        .nav-cta { display: inline-flex; align-items: center; gap: 6px; padding: 8px 18px; border-radius: var(--rl-radius-full); background: var(--rl-gradient-cta); color: #1C1917; font-weight: 700; font-size: 0.82rem; transition: all 0.3s ease; box-shadow: var(--rl-shadow-glow); min-height: 44px; }
+        .nav-cta:hover { transform: scale(1.04); box-shadow: var(--rl-shadow-glow-accent), var(--rl-shadow-glow-secondary); }
+        
+        .theme-toggle { width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--rl-border); background: var(--rl-card); display: grid; place-items: center; color: var(--rl-muted); transition: all 0.3s var(--ease); cursor: pointer; }
+        .theme-toggle:hover { border-color: var(--rl-amber); color: var(--rl-amber); transform: rotate(12deg); }
+        
+        .rl-nav__hamburger { display: none; flex-direction: column; gap: 5px; padding: 6px; background: transparent; cursor: pointer; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
+        .rl-nav__hamburger span { width: 22px; height: 2px; background: var(--rl-text); border-radius: 4px; transition: 0.3s ease; }
+        
+        .nav-backdrop { position: fixed; inset: 0; z-index: 998; background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(4px); opacity: 0; visibility: hidden; transition: 0.4s ease; }
+        .nav-backdrop.active { opacity: 1; visibility: visible; }
+        
+        .rl-nav__mobile { position: fixed; top: 0; right: 0; bottom: 0; width: 85%; max-width: 380px; z-index: 999; background: var(--rl-glass); backdrop-filter: blur(24px); transform: translateX(100%); transition: transform 0.4s var(--ease); overflow-y: auto; padding: 20px 0 40px; box-shadow: -10px 0 40px rgba(0, 0, 0, 0.3); display: flex; flex-direction: column; align-items: center; gap: 4px; padding-top: 70px; }
+        .rl-nav__mobile.open { transform: translateX(0); }
+        .mobile-close { position: absolute; top: 16px; right: 16px; width: 44px; height: 44px; border-radius: 50%; background: var(--rl-card); border: 1px solid var(--rl-border); color: var(--rl-text); font-size: 1.2rem; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: 0.3s ease; }
+        .mobile-close:hover { transform: rotate(90deg); background: rgba(212, 165, 116, 0.08); }
+        .mobile-menu-inner { display: flex; flex-direction: column; align-items: center; gap: 8px; width: 100%; padding: 20px 24px; }
+        .mobile-menu-inner a { font-size: 1.1rem; font-weight: 500; color: var(--rl-muted); padding: 12px 0; width: 100%; text-align: center; min-height: 48px; display: flex; align-items: center; justify-content: center; gap: 8px; transition: 0.25s; }
+        .mobile-menu-inner a:hover { color: var(--rl-primary); transform: translateX(4px); }
+        .mobile-menu-inner .mobile-cta { width: 100%; margin-top: 8px; background: var(--rl-gradient-cta); color: #1C1917; padding: 16px 28px; border-radius: var(--rl-radius-full); font-weight: 700; box-shadow: var(--rl-shadow-glow); }
+
+        @media(max-width:900px) {
+            .rl-nav__links { display: none; }
+            .rl-nav__hamburger { display: flex; }
+            .nav-cta span { display: none; }
+            .nav-cta { padding: 8px 12px; min-width: 44px; }
+            .rl-nav__brand { font-size: 1.05rem; }
+        }
+
+        /* ============================================================
+           5. FLOATING & BARS
+           ============================================================ */
+        .scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--rl-gradient-multi); z-index: 100000; width: 0%; box-shadow: var(--rl-shadow-glow); transition: width 0.1s linear; }
+        .whatsapp-float { position: fixed; bottom: 28px; right: 28px; z-index: 9999; width: 60px; height: 60px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 32px rgba(37, 211, 102, 0.35); color: #fff; font-size: 2rem; transition: 0.3s; }
+        .whatsapp-float:hover { transform: scale(1.08); box-shadow: 0 12px 40px rgba(37, 211, 102, 0.5); }
+        .back-to-top { position: fixed; bottom: 28px; left: 28px; z-index: 9998; width: 44px; height: 44px; border-radius: 50%; background: rgba(46, 154, 140, 0.12); border: 1px solid rgba(46, 154, 140, 0.25); color: var(--rl-secondary); font-size: 1.2rem; display: none; align-items: center; justify-content: center; backdrop-filter: blur(8px); transition: 0.3s; cursor: pointer; }
+        .back-to-top.visible { display: flex; }
+        .back-to-top:hover { background: rgba(46, 154, 140, 0.2); transform: translateY(-3px); }
+
+        .mobile-call-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 950; background: var(--rl-glass); backdrop-filter: blur(16px); border-top: 1px solid var(--rl-border); padding: 10px 12px; grid-template-columns: 1fr 1fr; gap: 8px; }
+        .mobile-call-bar a { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 8px; border-radius: 10px; font-size: 0.88rem; font-weight: 700; min-height: 48px; }
+        .mobile-call-bar .call-btn { background: var(--rl-secondary); color: #fff; }
+        .mobile-call-bar .inq-btn { background: var(--rl-gradient-cta); color: #1C1917; }
+        @media(max-width:768px) {
+            .mobile-call-bar { display: grid; }
+            .whatsapp-float { bottom: 84px; right: 16px; width: 50px; height: 50px; font-size: 1.6rem; }
+            .back-to-top { bottom: 84px; left: 16px; }
+            body { padding-bottom: 76px; }
+        }
+
+        /* Custom Cursor */
+        .cursor-dot, .cursor-ring { position: fixed; top: 0; left: 0; border-radius: 50%; pointer-events: none; z-index: 99999; transform: translate(-50%, -50%); display: none; }
+        @media(pointer: fine) { .cursor-dot, .cursor-ring { display: block; } }
+        .cursor-dot { width: 8px; height: 8px; background: var(--rl-secondary); mix-blend-mode: difference; }
+        .cursor-ring { width: 38px; height: 38px; border: 1.5px solid rgba(46, 154, 140, 0.45); transition: 0.35s; }
+
+        /* ============================================================
+           6. BÜRO & OBJEKT SPECIFIC CONTENT STYLES
+           ============================================================ */
+        .service-hero { padding: calc(var(--rl-nav-height) + 80px) 0 60px; background: radial-gradient(ellipse 60% 50% at 20% 30%, rgba(46, 154, 140, 0.08), transparent 55%), var(--rl-bg); position: relative; overflow: hidden; text-align: center; }
+        .service-hero .hero-glow { position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(212, 165, 116, 0.05) 0%, transparent 70%); top: -200px; right: -150px; pointer-events: none; animation: soft-pulse 14s ease-in-out infinite; }
+        .service-hero .breadcrumb { display: flex; justify-content: center; gap: 8px; font-size: 0.85rem; color: var(--rl-dim); font-family: var(--font-mono); margin-bottom: 24px; position: relative; z-index: 1; }
+        .service-hero .breadcrumb a { color: var(--rl-primary); transition: color 0.3s; }
+        .service-hero .breadcrumb .sep { opacity: 0.3; }
+        
+        .service-hero .tag { display: inline-block; background: rgba(46, 154, 140, 0.12); color: var(--rl-secondary); padding: 4px 18px; border-radius: var(--rl-radius-full); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; border: 1px solid rgba(46, 154, 140, 0.2); margin-bottom: 16px; position: relative; z-index: 1; }
+        .service-hero h1 { font-family: var(--font-head); font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -1.2px; line-height: 1.1; margin-bottom: 16px; position: relative; z-index: 1; }
+        .service-hero .subhead { font-size: 1.1rem; color: var(--rl-muted); max-width: 680px; margin: 0 auto 32px; line-height: 1.6; position: relative; z-index: 1; }
+        .service-hero .hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+
+        .hero-trust-bar { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid var(--rl-border); padding-top: 30px; position: relative; z-index: 1;}
+        .hero-trust-item { display: flex; align-items: center; gap: 10px; color: var(--rl-dim); font-size: 0.9rem; font-weight: 500; }
+        .hero-trust-item i { color: var(--rl-secondary); font-size: 1.2rem; }
+
+        /* ── Brand Strip ── */
+        .brand-strip-section { padding: 30px 0; border-bottom: 1px solid var(--rl-border); background: var(--rl-surface); }
+        .brand-strip-wrap { display: flex; align-items: center; justify-content: center; gap: 36px; flex-wrap: wrap; }
+        .brand-pill { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 600; color: var(--rl-dim); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 1px; }
+        .brand-pill i { color: var(--rl-primary); font-size: 0.75rem; }
+
+        /* ── Re-Framing ── */
+        .reframing-section { padding: 80px 0; background: var(--rl-surface); border-bottom: 1px solid var(--rl-border); }
+        .reframing-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; max-width: 1000px; margin: 40px auto 0; }
+        .reframing-card { background: var(--rl-card); border: 1px solid var(--rl-border); border-radius: var(--rl-radius); padding: 32px; transition: 0.3s; display: flex; gap: 20px; align-items: flex-start; }
+        .reframing-card:hover { border-color: var(--rl-secondary); transform: translateY(-4px); box-shadow: var(--rl-shadow-glow-secondary); }
+        .reframing-card .icon { font-size: 2.2rem; color: var(--rl-secondary); flex-shrink: 0; background: rgba(46, 154, 140, 0.1); padding: 14px; border-radius: 12px; }
+        .reframing-card h4 { font-family: var(--font-head); font-size: 1.25rem; font-weight: 700; margin-bottom: 10px; color: var(--rl-text); }
+        .reframing-card p { font-size: 0.95rem; color: var(--rl-muted); line-height: 1.6; }
+
+        /* ── Case Study Spotlight ── */
+        .spotlight-section { padding: 80px 0; }
+        .spotlight-box { background: linear-gradient(145deg, var(--rl-card), rgba(212, 165, 116, 0.05)); border: 1px solid var(--rl-border); border-radius: var(--rl-radius); padding: 48px 40px; max-width: 1000px; margin: 40px auto 0; box-shadow: var(--rl-shadow-sm); position: relative; overflow: hidden; }
+        .spotlight-box::after { content: 'CASE STUDY'; position: absolute; top: 20px; right: 28px; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: var(--rl-primary); letter-spacing: 2px; background: rgba(212, 165, 116, 0.1); padding: 4px 12px; border-radius: 20px; }
+        .spotlight-content h3 { font-family: var(--font-head); font-size: 1.8rem; font-weight: 800; margin-bottom: 16px; }
+        .spotlight-content p { color: var(--rl-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 24px; }
+        .spotlight-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; border-top: 1px solid var(--rl-border); padding-top: 24px; margin-top: 20px; }
+        .spotlight-stat .val { font-family: var(--font-head); font-size: 1.8rem; font-weight: 800; color: var(--rl-primary); display: block; line-height: 1.1; }
+        .spotlight-stat .lbl { font-size: 0.85rem; color: var(--rl-dim); }
+
+        /* ── Services Grid ── */
+        .services-section { padding: 80px 0; background: var(--rl-surface); border-top: 1px solid var(--rl-border); border-bottom: 1px solid var(--rl-border); }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+        .service-item { background: var(--rl-card); border: 1px solid var(--rl-border); border-radius: var(--rl-radius); padding: 32px 24px; text-align: center; transition: 0.3s; }
+        .service-item:hover { border-color: var(--rl-primary); transform: translateY(-4px); box-shadow: var(--rl-shadow-glow); }
+        .service-item .icon { font-size: 2.2rem; margin-bottom: 16px; background: var(--rl-gradient-multi); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .service-item h4 { font-family: var(--font-head); font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; color: var(--rl-text); }
+        .service-item p { font-size: 0.9rem; color: var(--rl-muted); line-height: 1.6; }
+
+        /* ── Compliance / Facility Assurance ── */
+        .compliance-section { padding: 70px 0; }
+        .compliance-box { background: var(--rl-card); border-left: 4px solid var(--rl-secondary); border-radius: 0 var(--rl-radius) var(--rl-radius) 0; padding: 36px 40px; max-width: 900px; margin: 0 auto; box-shadow: var(--rl-shadow-sm); }
+        .compliance-box h3 { font-family: var(--font-head); font-size: 1.35rem; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
+        .compliance-box h3 i { color: var(--rl-secondary); }
+        .compliance-box p { color: var(--rl-muted); font-size: 0.95rem; line-height: 1.65; margin-bottom: 16px; }
+        .compliance-box ul { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .compliance-box ul li { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--rl-text); }
+        .compliance-box ul li i { color: var(--rl-secondary); }
+
+        /* ── Pricing ── */
+        .pricing-section { padding: 80px 0; background: var(--rl-surface); border-top: 1px solid var(--rl-border); border-bottom: 1px solid var(--rl-border); }
+        .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+        .pricing-card { background: var(--rl-card); border: 1px solid var(--rl-border); border-radius: var(--rl-radius); padding: 36px 28px; transition: 0.3s; display: flex; flex-direction: column; }
+        .pricing-card:hover { transform: translateY(-6px); box-shadow: var(--rl-shadow-glow); border-color: var(--rl-primary); }
+        .pricing-card.featured { background: linear-gradient(160deg, rgba(46, 154, 140, 0.08), transparent 70%); border-color: rgba(46, 154, 140, 0.4); }
+        .pricing-card .badge { display: inline-block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; background: rgba(212, 165, 116, 0.12); color: var(--rl-primary); padding: 4px 12px; border-radius: 20px; font-family: var(--font-mono); margin-bottom: 12px; align-self: flex-start; }
+        .pricing-card.featured .badge { background: rgba(46, 154, 140, 0.15); color: var(--rl-secondary); }
+        .pricing-card h3 { font-family: var(--font-head); font-size: 1.4rem; font-weight: 700; margin-bottom: 8px; color: var(--rl-text); }
+        .pricing-card .price { font-family: var(--font-head); font-size: 2.5rem; font-weight: 800; background: var(--rl-gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; margin-bottom: 4px; }
+        .pricing-card .price-note { font-size: 0.8rem; color: var(--rl-dim); margin-bottom: 24px; display: block; }
+        .pricing-features { list-style: none; padding: 0; margin-bottom: 30px; flex-grow: 1; }
+        .pricing-features li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; color: var(--rl-muted); margin-bottom: 12px; }
+        .pricing-features li i { color: var(--rl-secondary); font-size: 0.9rem; margin-top: 2px; }
+        .pricing-card .btn { width: 100%; margin-top: auto; }
+
+        /* ── Process ── */
+        .process-section { padding: 80px 0; }
+        .process-timeline { display: flex; flex-direction: column; gap: 32px; position: relative; padding-left: 32px; max-width: 700px; margin: 40px auto 0; }
+        .process-timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: var(--rl-border); }
+        .process-step { position: relative; padding-left: 40px; }
+        .process-step .step-marker { position: absolute; left: -32px; top: 4px; width: 20px; height: 20px; border-radius: 50%; background: var(--rl-gradient-gold); border: 3px solid var(--rl-bg); box-shadow: 0 0 0 4px var(--rl-border); transition: 0.3s; }
+        .process-step:hover .step-marker { transform: scale(1.2); box-shadow: 0 0 0 4px var(--rl-primary); }
+        .process-step .step-num { font-family: var(--font-head); font-size: 1.8rem; font-weight: 800; color: var(--rl-border); line-height: 1; margin-bottom: 8px; transition: 0.3s; }
+        .process-step:hover .step-num { color: var(--rl-primary); }
+        .process-step h3 { font-family: var(--font-head); font-weight: 700; font-size: 1.25rem; margin-bottom: 8px; }
+        .process-step p { color: var(--rl-muted); font-size: 0.95rem; line-height: 1.6; }
+
+        /* ── FAQ ── */
+        .faq-section { padding: 80px 0; background: var(--rl-surface); border-top: 1px solid var(--rl-border); }
+        .faq-grid { max-width: 800px; margin: 40px auto 0; display: flex; flex-direction: column; gap: 12px; }
+        .faq-item { background: var(--rl-card); border: 1px solid var(--rl-border); border-radius: var(--rl-radius); overflow: hidden; transition: 0.3s; }
+        .faq-item:hover { border-color: var(--rl-primary); }
+        .faq-question { display: flex; justify-content: space-between; align-items: center; padding: 20px 24px; cursor: pointer; font-weight: 600; font-size: 1rem; background: transparent; border: none; width: 100%; text-align: left; color: var(--rl-text); font-family: var(--font-body); }
+        .faq-question i { color: var(--rl-primary); transition: transform 0.3s; }
+        .faq-item.open .faq-question i { transform: rotate(180deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; padding: 0 24px; color: var(--rl-muted); font-size: 0.95rem; line-height: 1.6; }
+        .faq-item.open .faq-answer { max-height: 300px; padding: 0 24px 20px; }
+
+        /* ── Responsive ── */
+        @media(max-width: 992px) {
+            .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+            .reframing-grid { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .spotlight-stats { grid-template-columns: 1fr; gap: 16px; }
+        }
+        @media(max-width: 768px) {
+            .service-hero h1 { font-size: 2.2rem; }
+            .service-hero .hero-actions { flex-direction: column; align-items: center; }
+            .service-hero .hero-actions .btn { width: 100%; max-width: 320px; min-width: unset; }
+            .pricing-grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
+            .reframing-card { flex-direction: column; align-items: center; text-align: center; }
+            .services-grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
+            .compliance-box ul { grid-template-columns: 1fr; }
+            .compliance-box { padding: 24px; border-left: none; border-top: 4px solid var(--rl-secondary); border-radius: var(--rl-radius); }
+            .spotlight-box { padding: 32px 24px; }
+            .process-timeline { padding-left: 20px; }
+            .process-step { padding-left: 30px; }
+            .process-step .step-marker { left: -24px; width: 16px; height: 16px; }
+        }
+
+        /* ============================================================
+           7. FOOTER (Flach, wie Startseite)
+           ============================================================ */
+        .rl-footer { background: var(--rl-surface); border-top: 1px solid var(--rl-border); padding: 64px 0 0; margin-top: 40px; position: relative; overflow: hidden; }
+        .rl-footer::before { content: ''; position: absolute; top: 0; left: -50%; width: 200%; height: 2px; background: linear-gradient(90deg, transparent, var(--rl-primary), var(--rl-secondary), var(--rl-accent), var(--rl-amber), var(--rl-primary), transparent); background-size: 300% 100%; animation: borderFlow 8s linear infinite; opacity: 0.6; }
+        .rl-footer__top { display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; padding-bottom: 48px; border-bottom: 1px solid var(--rl-border); margin-bottom: 40px; }
+        .rl-footer__logo { font-family: var(--font-head); font-weight: 800; font-size: 1.5rem; margin-bottom: 14px; display: flex; align-items: center; gap: 14px; }
+        .rl-footer__logo span { background: var(--rl-gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .rl-footer__description { font-size: 0.98rem; color: var(--rl-muted); line-height: 1.7; max-width: 420px; margin-bottom: 20px; }
+        .rl-footer__trust { display: flex; flex-wrap: wrap; gap: 10px; }
+        .rl-footer__trust span { font-size: 0.78rem; color: var(--rl-muted); background: var(--rl-card); border: 1px solid var(--rl-border); padding: 6px 14px; border-radius: var(--rl-radius-full); }
+        .rl-footer__trust i { color: var(--rl-primary); }
+        
+        .rl-footer__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px; margin-bottom: 44px; }
+        .rl-footer__col h5 { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--rl-dim); margin-bottom: 16px; letter-spacing: 0.5px; }
+        .rl-footer__col a { display: block; font-size: 0.9rem; color: var(--rl-muted); padding: 4px 0; transition: 0.25s; }
+        .rl-footer__col a:hover { color: var(--rl-primary); transform: translateX(4px); }
+        .rl-footer__contact li { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-size: 0.9rem; color: var(--rl-muted); }
+        .rl-footer__contact i { color: var(--rl-primary); width: 18px; text-align: center; }
+        
+        .rl-footer__trustbar { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; padding: 24px 0; border-top: 1px solid var(--rl-border); border-bottom: 1px solid var(--rl-border); margin-bottom: 28px; }
+        .trust-item-f { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: var(--rl-card); border: 1px solid var(--rl-border); border-radius: 12px; }
+        .trust-item-f i { font-size: 1.2rem; background: var(--rl-gradient-multi); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .trust-item-f .label { display: block; font-size: 0.65rem; color: var(--rl-dim); text-transform: uppercase; }
+        .trust-item-f .value { display: block; font-size: 0.9rem; font-weight: 700; color: var(--rl-text); }
+        
+        .rl-footer__bottom { display: flex; justify-content: space-between; align-items: center; padding-bottom: 20px; font-size: 0.82rem; color: var(--rl-dim); }
+        .rl-footer__legal { display: flex; gap: 8px; }
+        .rl-footer__legal a { color: var(--rl-muted); }
+        .rl-footer__legal a:hover { color: var(--rl-primary); }
+
+        @media(max-width: 900px) {
+            .rl-footer__top { grid-template-columns: 1fr; }
+            .rl-footer__grid { grid-template-columns: 1fr 1fr; }
+            .rl-footer__trustbar { grid-template-columns: repeat(3, 1fr); }
+            .rl-footer__bottom { flex-direction: column; gap: 16px; text-align: center; }
+        }
+        @media(max-width: 600px) {
+            .rl-footer__grid { grid-template-columns: 1fr; text-align: center;}
+            .rl-footer__trustbar { grid-template-columns: 1fr 1fr; }
+            .rl-footer__contact li { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== FLOATING ELEMENTS ===== -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    
+    <a href="https://wa.me/491608194018" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="WhatsApp schreiben">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <button class="back-to-top" id="backToTop" aria-label="Nach oben"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- Mobile Call Bar -->
+    <div class="mobile-call-bar" id="mobileCallBar">
+        <a href="tel:+491608194018" class="call-btn"><i class="fas fa-phone-alt"></i> Anrufen</a>
+        <a href="/anfrage/" class="inq-btn"><i class="fas fa-calendar-check"></i> Anfrage</a>
+    </div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="rl-nav" id="mainNav" role="navigation" aria-label="Hauptnavigation">
+        <div class="rl-nav__inner">
+            <a href="/" class="rl-nav__brand" aria-label="Startseite">
+                <span class="logo-mark">L</span>
+                <span class="brand-text">
+                    <span class="brand-name">Lezius</span>
+                    <span class="brand-sub">Möbelmontage</span>
+                </span>
+            </a>
+            
+            <ul class="rl-nav__links" role="menubar">
+                <li role="none"><a href="/services.html" class="active" role="menuitem">Services</a></li>
+                <li role="none"><a href="/bundles/" role="menuitem">Bundles</a></li>
+                <li role="none"><a href="/about.html" role="menuitem">Über mich</a></li>
+                <li role="none"><a href="/faq.html" role="menuitem">FAQ</a></li>
+                <li role="none"><a href="/contact.html" role="menuitem">Kontakt</a></li>
+            </ul>
+
+            <div class="rl-nav__actions">
+                <a href="/anfrage/" class="nav-cta magnetic-btn"><i class="fas fa-calendar-check"></i> <span>Anfrage</span></a>
+                <button class="theme-toggle" data-theme-toggle aria-label="Design umschalten"><i class="fas fa-moon" data-theme-icon></i></button>
+                <button class="rl-nav__hamburger" id="navToggle" aria-expanded="false" aria-label="Menü öffnen">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="rl-nav__mobile" id="mobileMenu" role="dialog" aria-hidden="true">
+        <button class="mobile-close" id="mobileClose" aria-label="Schließen"><i class="fas fa-times"></i></button>
+        <div class="mobile-menu-inner">
+            <a href="/" class="mobile-link">Start</a>
+            <a href="/services.html" class="mobile-link" style="color:var(--rl-primary);">Services</a>
+            <a href="/bundles/" class="mobile-link">Bundles</a>
+            <a href="/about.html" class="mobile-link">Über mich</a>
+            <a href="/faq.html" class="mobile-link">FAQ</a>
+            <a href="/contact.html" class="mobile-link">Kontakt</a>
+            <a href="/anfrage/" class="mobile-cta magnetic-btn"><i class="fas fa-calendar-check"></i> Unverbindliche Anfrage</a>
+        </div>
+    </div>
+    <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+
+        <!-- ── HERO ── -->
+        <section class="service-hero" id="top">
+            <div class="hero-glow"></div>
+            <div class="container">
+                <div class="breadcrumb reveal">
+                    <a href="/">Start</a> <span>/</span> <a href="/services.html">Services</a> <span>/</span> <span style="color:var(--rl-text);">Büro & Objekt</span>
+                </div>
+                
+                <div class="tag reveal">🏢 B2B & Gewerblich</div>
+                
+                <h1 class="reveal">Büro & <span class="gold-text">Objekt</span> Montage</h1>
+                
+                <p class="subhead reveal">Arbeitsplätze, die motivieren – montiert ohne Betriebsunterbrechung. Diskrete, termingerechte und gewerblich versicherte Montage für Unternehmen und Kanzleien in München & Augsburg.</p>
+                
+                <div class="hero-trust-bar reveal">
+                    <div class="hero-trust-item"><i class="fas fa-moon"></i> After-Hours & Wochenende</div>
+                    <div class="hero-trust-item"><i class="fas fa-shield-alt"></i> 5 Mio. € Gewerbe-Haftpflicht</div>
+                    <div class="hero-trust-item"><i class="fas fa-project-diagram"></i> Sauberes Kabelmanagement</div>
+                </div>
+
+                <div class="hero-actions reveal" style="margin-top: 40px;">
+                    <a href="#preise" class="btn btn-primary magnetic-btn"><i class="fas fa-tag"></i> Preise & Pakete</a>
+                    <a href="/anfrage/" class="btn btn-secondary magnetic-btn"><i class="fas fa-paper-plane"></i> Direkte B2B-Anfrage</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── BRAND STRIP (Neu statt Ticker) ── -->
+        <section class="brand-strip-section">
+            <div class="container">
+                <div class="brand-strip-wrap reveal">
+                    <span style="font-size:0.75rem; color:var(--rl-dim); font-family:var(--font-mono); font-weight:700;">ERFAHRUNG MIT SYSTEMEN VON:</span>
+                    <div class="brand-pill"><i class="fas fa-circle"></i> Vitra</div>
+                    <div class="brand-pill"><i class="fas fa-circle"></i> Steelcase</div>
+                    <div class="brand-pill"><i class="fas fa-circle"></i> USM Haller</div>
+                    <div class="brand-pill"><i class="fas fa-circle"></i> König + Neurath</div>
+                    <div class="brand-pill"><i class="fas fa-circle"></i> Sedus</div>
+                    <div class="brand-pill"><i class="fas fa-circle"></i> Bene</div>
+                    <div class="brand-pill"><i class="fas fa-circle"></i> IKEA for Business</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── RE-FRAMING: Warum Profi fürs Büro? ── -->
+        <section class="reframing-section" id="vorteil">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="gold-text" style="font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; font-family:var(--font-mono);">Der B2B-Vorteil</span>
+                    <h2 style="font-family:var(--font-head); font-size:2.2rem; margin-top:8px;">Arbeiten lassen, <span class="gold-text">ohne Betriebsausfall</span></h2>
+                    <p>Ein Büroaufbau kostet normalerweise Nerven, Schmutz und vor allem: teure Arbeitszeit Ihrer Mitarbeiter. Ich löse dieses Problem für Sie.</p>
+                </div>
+                <div class="reframing-grid">
+                    <div class="reframing-card reveal">
+                        <div class="icon"><i class="fas fa-user-clock"></i></div>
+                        <div>
+                            <h4>Der "unsichtbare" Montagepartner</h4>
+                            <p>Ihre Teams sollen ungestört arbeiten können. Deshalb biete ich gezielt Montagen <strong>nach Feierabend, freitagnachmittags oder am Wochenende</strong> an. Wenn Ihre Mitarbeiter am nächsten Morgen ins Büro kommen, sind die neuen Arbeitsplätze staubfrei und einsatzbereit.</p>
+                        </div>
+                    </div>
+                    <div class="reframing-card reveal" style="transition-delay: 0.1s;">
+                        <div class="icon"><i class="fas fa-network-wired"></i></div>
+                        <div>
+                            <h4>Sicherheit & Clean Desk Policy</h4>
+                            <p>Büromöbel aufbauen ist das Eine – aber ein Kabelsalat unter dem Schreibtisch ist ein Arbeitsschutz- und Brandrisiko. Ich integriere Kabelwannen, verlege Zuleitungen stolperfrei und sorge für ein absolut aufgeräumtes Erscheinungsbild.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── CASE STUDY SPOTLIGHT (Echtes Vertrauen statt Ticker) ── -->
+        <section class="spotlight-section">
+            <div class="container">
+                <div class="spotlight-box reveal">
+                    <div class="spotlight-content">
+                        <span style="font-size:0.8rem; font-weight:700; color:var(--rl-secondary); font-family:var(--font-mono); text-transform:uppercase;">Projekt-Spotlight</span>
+                        <h3>Scale-Up Office, München (Werksviertel)</h3>
+                        <p>Ein wachsendes Tech-Unternehmen benötigte die kurzfristige Ausstattung einer neuen Bürofläche mit 20 höhenverstellbaren Tischen, Rollcontainern, Konferenztisch und Akustikwänden. Zeitfenster: Freitag 17:00 Uhr bis Sonntag 15:00 Uhr.</p>
+                        <p><strong>Ergebnis:</strong> Vollständige Montage, Integration der Monitorarme und Kabelkanäle sowie Entsorgung von 65 Kubikmetern Verpackungskarton vor Montagmorgen 08:00 Uhr – 0 Stunden Arbeitsausfall für das Team.</p>
+                        
+                        <div class="spotlight-stats">
+                            <div class="spotlight-stat">
+                                <span class="val">20</span>
+                                <span class="lbl">Workstations montiert</span>
+                            </div>
+                            <div class="spotlight-stat">
+                                <span class="val">0 Std.</span>
+                                <span class="lbl">Betriebsausfall</span>
+                            </div>
+                            <div class="spotlight-stat">
+                                <span class="val">100%</span>
+                                <span class="lbl">Abnahme ohne Mängel</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── SERVICES GRID ── -->
+        <section class="services-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 style="font-family:var(--font-head); font-size:2.2rem;">Leistungsspektrum für Unternehmen</h2>
+                </div>
+                <div class="services-grid">
+                    <div class="service-item reveal">
+                        <div class="icon"><i class="fas fa-laptop-house"></i></div>
+                        <h4>Arbeitsplätze & Ergonomie</h4>
+                        <p>Montage von elektromotorischen Sitz-Steh-Schreibtischen, Rollcontainern und ergonomischen Bürostühlen inkl. Nivellierung.</p>
+                    </div>
+                    <div class="service-item reveal" style="transition-delay: 0.1s;">
+                        <div class="icon"><i class="fas fa-users"></i></div>
+                        <h4>Konferenzräume</h4>
+                        <p>Aufbau von Konferenztischen, Präsentationswänden, Whiteboards und der Einbau von Tisch-Steckdosen (Bodentanks).</p>
+                    </div>
+                    <div class="service-item reveal" style="transition-delay: 0.2s;">
+                        <div class="icon"><i class="fas fa-volume-mute"></i></div>
+                        <h4>Akustik & Trennwände</h4>
+                        <p>Montage von schallabsorbierenden Tisch-Panels, Decken-Segeln und mobilen Raumtrennern zur Optimierung der Akustik.</p>
+                    </div>
+                    <div class="service-item reveal">
+                        <div class="icon"><i class="fas fa-archive"></i></div>
+                        <h4>Archiv & Stauraum</h4>
+                        <p>Montage von Flügeltürenschränken, Schiebetürensystemen, Schwerlastregalen und USM Haller Systemen.</p>
+                    </div>
+                    <div class="service-item reveal" style="transition-delay: 0.1s;">
+                        <div class="icon"><i class="fas fa-concierge-bell"></i></div>
+                        <h4>Empfang & Lounge</h4>
+                        <p>Repräsentative Thekenanlagen, Wartebereich-Möbel und Kaffeeküchen für einen perfekten ersten Eindruck.</p>
+                    </div>
+                    <div class="service-item reveal" style="transition-delay: 0.2s;">
+                        <div class="icon"><i class="fas fa-box-open"></i></div>
+                        <h4>Bündelung & Entsorgung</h4>
+                        <p>Kompaktes Zusammenlegen und Sortieren von Verpackungsmüll. Optional fachgerechte Entsorgung über Wertstoffhöfe.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── FACILITY & COMPLIANCE (Sicherheit für den Mieter) ── -->
+        <section class="compliance-section">
+            <div class="container reveal">
+                <div class="compliance-box">
+                    <h3><i class="fas fa-clipboard-check"></i> Facility Management & Eigentümerschutz</h3>
+                    <p>In modernen Büroimmobilien (insbesondere in München und Augsburg) fordern Vermieter strikten Schutz der Allgemeinflächen. Ich arbeite nach geprüften B2B-Standards:</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Aufzug- & Türrahmenschutz bei Materialtransport</li>
+                        <li><i class="fas fa-check-circle"></i> Verwendung von Abdeckvlies auf Gewerbe-Teppichböden</li>
+                        <li><i class="fas fa-check-circle"></i> 5 Mio. € Betriebshaftpflichtnachweis zur Vorlage</li>
+                        <li><i class="fas fa-check-circle"></i> Digitales Übergabeprotokoll inkl. Mängelfreiheits-Bestätigung</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── PRICING ── -->
+        <section class="pricing-section" id="preise">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="gold-text" style="font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; font-family:var(--font-mono);">Kalkulation</span>
+                    <h2 style="font-family:var(--font-head); font-size:2.2rem; margin-top:8px;">Transparente B2B-Pakete</h2>
+                    <p>Faire Konditionen für Gewerbekunden. Alle Preise verstehen sich netto zzgl. gesetzlicher MwSt.</p>
+                </div>
+                
+                <div class="pricing-grid">
+                    <div class="pricing-card reveal">
+                        <span class="badge">Einzelplatz</span>
+                        <h3>Büro-Erweiterung</h3>
+                        <div class="price">ab 179 €</div>
+                        <span class="price-note">Für neue Teammitglieder</span>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 1x Sitz-Steh-Schreibtisch</li>
+                            <li><i class="fas fa-check"></i> 1x Bürostuhl & Rollcontainer</li>
+                            <li><i class="fas fa-check"></i> Basis Kabelmanagement</li>
+                            <li><i class="fas fa-check"></i> Funktionsprüfung & Justierung</li>
+                        </ul>
+                        <a href="/anfrage/" class="btn btn-secondary magnetic-btn">Anfragen</a>
+                    </div>
+                    
+                    <div class="pricing-card featured reveal" style="transition-delay: 0.1s;">
+                        <span class="badge">Beliebtes Bundle</span>
+                        <h3>Teambüro (bis 4 Plätze)</h3>
+                        <div class="price">ab 499 €</div>
+                        <span class="price-note">Für Startups & Kanzleien</span>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Bis zu 4 Arbeitsplätze</li>
+                            <li><i class="fas fa-check"></i> Schrankwand / Sideboard</li>
+                            <li><i class="fas fa-check"></i> Professionelles Kabelmanagement</li>
+                            <li><i class="fas fa-check"></i> Vor-Ort Bautenschutz inklusive</li>
+                        </ul>
+                        <a href="/anfrage/" class="btn btn-primary magnetic-btn">Termin anfragen</a>
+                    </div>
+                    
+                    <div class="pricing-card reveal" style="transition-delay: 0.2s;">
+                        <span class="badge">Großobjekt</span>
+                        <h3>Büroetage / Filiale</h3>
+                        <div class="price">Individuell</div>
+                        <span class="price-note">Maßgeschneidertes Festpreisangebot</span>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Montage ganzer Etagen & Serien</li>
+                            <li><i class="fas fa-check"></i> Konferenz- & Loungebereiche</li>
+                            <li><i class="fas fa-check"></i> After-Hours & Wochenendmontage</li>
+                            <li><i class="fas fa-check"></i> Vorab-Besichtigung & Ablaufplan</li>
+                        </ul>
+                        <a href="/anfrage/" class="btn btn-secondary magnetic-btn">Projekt anfragen</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── PROCESS ── -->
+        <section class="process-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 style="font-family:var(--font-head); font-size:2.2rem;">Projektorganisation in 4 Schritten</h2>
+                </div>
+                <div class="process-timeline reveal">
+                    <div class="process-step">
+                        <div class="step-marker"></div>
+                        <div class="step-num">01</div>
+                        <h3>Bedarfsanalyse & Pläne</h3>
+                        <p>Sie senden mir Grundrisse, Stücklisten oder Skizzen. Ich prüfe die Logistik (Anfahrt, Aufzüge, Raummaße) und erstelle ein verbindliches B2B-Angebot.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-marker"></div>
+                        <div class="step-num">02</div>
+                        <h3>Terminabstimmung</h3>
+                        <p>Wir stimmen das Montagefenster ab – exakt getaktet mit Ihren Möbel-Lieferanten und Ihrem Arbeitsalltag (auf Wunsch am Wochenende).</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-marker"></div>
+                        <div class="step-num">03</div>
+                        <h3>Montage & Einmessung</h3>
+                        <p>Fachgerechter Aufbau auf Bodenschutz. Lasergestützte Ausrichtung aller Tische und saubere Verlegung der Verkabelung.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-marker"></div>
+                        <div class="step-num">04</div>
+                        <h3>Digitale Abnahme & Übergabe</h3>
+                        <p>Gemeinsamer Rundgang mit dem Office- oder Facility-Manager. Übergabeprotokoll und steuerkonforme Firmenrechnung mit ausgewiesener MwSt.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── FAQ ── -->
+        <section class="faq-section" id="faq">
+            <div class="container reveal">
+                <h2 style="font-family:var(--font-head); font-size:2.2rem; text-align:center; margin-bottom:10px;">Häufige Fragen (B2B)</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <button class="faq-question"><span>Können Sie auch außerhalb regulärer Arbeitszeiten montieren?</span> <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-answer">Ja, das ist bei Büroprojekten mein Standard. Um Ihren Geschäftsbetrieb nicht zu stören, biete ich Montagen abends (ab 18:00 Uhr) oder komplett samstags/sonntags an. So sind Ihre Büros am Montagmorgen sofort arbeitsbereit.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question"><span>Übernehmen Sie auch die Montage von Monitoren und Whiteboards?</span> <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-answer">Ja. Die fachgerechte Wandmontage von Whiteboards, Akustikpaneelen und Monitorhalterungen gehört fest zum Leistungsumfang. Vorab wird die Wandbeschaffenheit (z. B. Gipskarton vs. Beton) geprüft, um die richtigen Dübelsysteme einzusetzen.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question"><span>Was geschieht mit den großen Mengen an Verpackungsmüll?</span> <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-answer">Ich zerlege Kartons und Styropor platzsparend und bündle sie transportfähig. Auf Wunsch übernehme ich gegen eine transparente Entsorgungspauschale den Abtransport zum Gewerbe-Wertstoffhof.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── CTA ── -->
+        <section style="padding: 20px 0 80px; text-align:center;">
+            <div class="container reveal">
+                <div style="background:var(--rl-card); box-shadow:var(--rl-shadow-sm); padding:48px 24px; border:1px solid var(--rl-border); border-radius:var(--rl-radius);">
+                    <h2 style="font-family:var(--font-head); font-size:2rem; margin-bottom:12px;">Planen Sie neue Arbeitsplätze?</h2>
+                    <p style="color:var(--rl-muted); margin-bottom:24px;">Senden Sie mir Ihre Artikelliste oder rufen Sie direkt an für ein verbindliches Firmenangebot.</p>
+                    <a href="/anfrage/" class="btn btn-primary magnetic-btn" style="padding:16px 36px; font-size:1.05rem;"><i class="fas fa-paper-plane"></i> Firmenanfrage stellen</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER (Flach, wie Startseite) ===== -->
+    <footer class="rl-footer" role="contentinfo">
+        <div class="container">
+            <div class="rl-footer__top">
+                <div>
+                    <div class="rl-footer__logo">
+                        Raphael <span>Lezius</span>
+                    </div>
+                    <p class="rl-footer__description">Premium Montage mit echter Leidenschaft – millimetergenau, staubfrei und immer mit Herz in München & Augsburg.</p>
+                    <div class="rl-footer__trust">
+                        <span><i class="fas fa-shield-alt"></i> 5 Mio. € versichert</span>
+                        <span><i class="fas fa-star"></i> 5.0 ★ (110+)</span>
+                        <span><i class="fas fa-clock"></i> Antwort &lt; 24 h</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="font-family:var(--font-head); font-size:1.15rem; font-weight:700; margin-bottom:10px;"><i class="fas fa-envelope-open-text" style="color:var(--rl-primary); margin-right:8px;"></i> Bleiben Sie verbunden</h4>
+                    <p style="font-size:0.92rem; color:var(--rl-muted); margin-bottom:16px;">Monatliche Tipps und Einblicke – nur wenn Sie möchten.</p>
+                    <form id="newsletterForm" style="display:flex; flex-direction:column; gap:12px; max-width:350px;">
+                        <input type="email" placeholder="Ihre E-Mail-Adresse" required style="padding:14px; border-radius:12px; border:1px solid var(--rl-border); background:var(--rl-card); color:var(--rl-text); outline:none;">
+                        <button type="submit" class="magnetic-btn" style="padding:14px; border-radius:12px; border:none; background:var(--rl-gradient-cta); color:#1C1917; font-weight:700; cursor:pointer;"><i class="fas fa-paper-plane"></i> Anmelden</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="rl-footer__grid">
+                <div class="rl-footer__col">
+                    <h5>Services</h5>
+                    <a href="/services.html">Alle Services</a>
+                    <a href="/services/moebel-kuechen.html">Möbel &amp; Küchen</a>
+                    <a href="/services/usm-haller.html">USM Haller</a>
+                    <a href="/services/demontage-umzug.html">Demontage &amp; Umzug</a>
+                    <a href="/services/buero-objekt.html" style="color:var(--rl-primary);">Büro &amp; Objekt</a>
+                </div>
+                <div class="rl-footer__col">
+                    <h5>Bundles</h5>
+                    <a href="/bundles/">Übersicht</a>
+                    <a href="/bundles/kuechen-komplett.html">Küchen-Komplett</a>
+                    <a href="/bundles/usm-all-in.html">USM All-In</a>
+                    <a href="/bundles/umzug-montage.html">Umzugs-Montage</a>
+                </div>
+                <div class="rl-footer__col">
+                    <h5>Über</h5>
+                    <a href="/about.html">Profil</a>
+                    <a href="/faq.html">FAQ</a>
+                    <a href="/reviews.html">Kundenstimmen</a>
+                </div>
+                <div class="rl-footer__col">
+                    <h5>Kontakt & Rechtliches</h5>
+                    <ul class="rl-footer__contact">
+                        <li><i class="fas fa-phone-alt"></i> <a href="tel:+491608194018">+49 160 8194018</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@raphael-lezius.de">info@raphael-lezius.de</a></li>
+                    </ul>
+                    <div style="margin-top:16px;">
+                        <a href="/legal/impressum.html">Impressum</a>
+                        <a href="/legal/datenschutz.html">Datenschutz</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rl-footer__trustbar">
+                <div class="trust-item-f"><i class="fas fa-users"></i><div><span class="label">Kunden</span><span class="value">110+</span></div></div>
+                <div class="trust-item-f"><i class="fas fa-star"></i><div><span class="label">Bewertung</span><span class="value">5,0 ★</span></div></div>
+                <div class="trust-item-f"><i class="fas fa-bolt"></i><div><span class="label">Reaktion</span><span class="value">&lt; 24 h</span></div></div>
+                <div class="trust-item-f"><i class="fas fa-shield-alt"></i><div><span class="label">Versicherung</span><span class="value">5 Mio. €</span></div></div>
+                <div class="trust-item-f"><i class="fas fa-heart"></i><div><span class="label">Garantie</span><span class="value">1 Jahr</span></div></div>
+                <div class="trust-item-f"><i class="fas fa-award"></i><div><span class="label">Erfahrung</span><span class="value">8+ Jahre</span></div></div>
+            </div>
+
+            <div class="rl-footer__bottom">
+                <p>© 2026 Raphael Lezius · Mit Sorgfalt gemacht in Augsburg</p>
+                <div class="rl-footer__legal">
+                    <a href="/legal/impressum.html">Impressum</a> <span class="sep">·</span>
+                    <a href="/legal/datenschutz.html">Datenschutz</a> <span class="sep">·</span>
+                    <a href="/legal/agb.html">AGB</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        (function() {
+            'use strict';
+
+            /* ── Theme ── */
+            function applyTheme(theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+                localStorage.setItem('rl-theme', theme);
+                document.querySelectorAll('[data-theme-icon]').forEach(icon => {
+                    icon.className = theme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+                });
+                const meta = document.getElementById('themeColorMeta');
+                if (meta) meta.content = theme === 'dark' ? '#0B0A09' : '#F9F7F2';
+            }
+            applyTheme(localStorage.getItem('rl-theme') || 'dark');
+            
+            document.querySelectorAll('[data-theme-toggle]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const current = document.documentElement.getAttribute('data-theme') || 'dark';
+                    applyTheme(current === 'dark' ? 'light' : 'dark');
+                });
+            });
+
+            /* ── Mobile Menu ── */
+            const nav = document.getElementById('mainNav');
+            const menu = document.getElementById('mobileMenu');
+            const backdrop = document.getElementById('navBackdrop');
+            const toggleBtn = document.getElementById('navToggle');
+            const closeBtn = document.getElementById('mobileClose');
+
+            function toggleMenu(show) {
+                if(menu) menu.classList.toggle('open', show);
+                if(backdrop) backdrop.classList.toggle('active', show);
+                document.body.style.overflow = show ? 'hidden' : '';
+            }
+            toggleBtn?.addEventListener('click', () => toggleMenu(true));
+            closeBtn?.addEventListener('click', () => toggleMenu(false));
+            backdrop?.addEventListener('click', () => toggleMenu(false));
+            menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
+
+            /* ── Sticky Nav & Progress ── */
+            const progress = document.getElementById('scrollProgress');
+            const backTop = document.getElementById('backToTop');
+            let lastScroll = 0;
+
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.scrollY;
+                const docH = document.documentElement.scrollHeight - window.innerHeight;
+                if (progress) progress.style.width = (docH > 0 ? (currentScroll / docH) * 100 : 0) + '%';
+
+                if (nav) {
+                    if (currentScroll > 80) {
+                        nav.classList.add('scrolled');
+                        nav.classList.toggle('hidden', currentScroll > lastScroll && currentScroll > 200);
+                    } else {
+                        nav.classList.remove('scrolled', 'hidden');
+                    }
+                }
+                if (backTop) backTop.classList.toggle('visible', currentScroll > 400);
+                lastScroll = currentScroll;
+            }, { passive: true });
+
+            backTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+            /* ── Scroll Reveal ── */
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            /* ── FAQ Accordion ── */
+            document.querySelectorAll('.faq-item').forEach(item => {
+                const btn = item.querySelector('.faq-question');
+                btn?.addEventListener('click', () => {
+                    const isOpen = item.classList.contains('open');
+                    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                    if (!isOpen) item.classList.add('open');
+                });
+            });
+
+            /* ── Magnetic Buttons & Custom Cursor ── */
+            if (window.matchMedia('(pointer: fine)').matches && !('ontouchstart' in window)) {
+                document.querySelectorAll('.magnetic-btn').forEach(btn => {
+                    btn.addEventListener('mousemove', (e) => {
+                        const rect = btn.getBoundingClientRect();
+                        const x = e.clientX - rect.left - rect.width / 2;
+                        const y = e.clientY - rect.top - rect.height / 2;
+                        btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px) scale(1.02)`;
+                    });
+                    btn.addEventListener('mouseleave', () => {
+                        btn.style.transform = 'translate(0,0) scale(1)';
+                    });
+                });
+
+                const dot = document.getElementById('cursorDot');
+                const ring = document.getElementById('cursorRing');
+                if (dot && ring) {
+                    let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+                    document.addEventListener('mousemove', e => {
+                        mouseX = e.clientX; mouseY = e.clientY;
+                        dot.style.left = mouseX + 'px'; dot.style.top = mouseY + 'px';
+                    });
+                    function animateRing() {
+                        ringX += (mouseX - ringX) * 0.18;
+                        ringY += (mouseY - ringY) * 0.18;
+                        ring.style.left = ringX + 'px'; ring.style.top = ringY + 'px';
+                        requestAnimationFrame(animateRing);
+                    }
+                    animateRing();
+                }
+            }
+
+            /* ── Newsletter ── */
+            const nlForm = document.getElementById('newsletterForm');
+            if(nlForm) {
+                nlForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const btn = nlForm.querySelector('button');
+                    const orig = btn.innerHTML;
+                    btn.innerHTML = '<i class="fas fa-check"></i> Angemeldet!';
+                    setTimeout(() => { btn.innerHTML = orig; nlForm.reset(); }, 2500);
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
